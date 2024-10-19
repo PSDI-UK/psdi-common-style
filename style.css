@@ -1,3 +1,58 @@
+:root {
+  color-scheme: light dark;
+
+  /* Define variables for PSDI common color scheme */
+  --psdi-bg-color-light: #FFFFFF;
+  --psdi-bg-color-semilight: #BBBBBB;
+  --psdi-bg-color-mid: #909090;
+  --psdi-bg-color-semidark: #303030;
+  --psdi-bg-color-dark: #000000;
+
+  --psdi-bg-color-hero: #002169;
+
+  --psdi-alt-color-blue-light: #3D7CC9;
+  --psdi-alt-color-blue-dark: #1b3657;
+  --psdi-alt-color-yellow-light: #FF9E18;
+  --psdi-alt-color-yellow-dark: #633e0b;
+  --psdi-alt-color-green-light: #5AA2AE;
+  --psdi-alt-color-green-dark: #233f44;
+  --psdi-alt-color-red-light: #993366;
+  --psdi-alt-color-red-dark: #662244;
+
+  --psdi-text-color-light-default: #DDDDDD;
+  --psdi-text-color-light-heading: #FFFFFF;
+  --psdi-text-color-dark-default: #212121;
+  --psdi-text-color-dark-heading: #041e42;
+
+  /* Set specific colors to use based on color scheme - light-mode here, as default */
+  --psdi-bg-color: var(--psdi-bg-color-light);
+  --psdi-bg-color-alt: var(--psdi-bg-color-semilight);
+
+  --psdi-alt-color-blue: var(--psdi-bg-color-light);
+  --psdi-alt-color-yellow: var(--psdi-bg-color-light);
+  --psdi-alt-color-green: var(--psdi-bg-color-light);
+  --psdi-alt-color-red: var(--psdi-bg-color-light);
+
+  --psdi-text-color-default: var(--psdi-text-color-light-default);
+  --psdi-text-color-heading: var(--psdi-text-color-light-heading);
+
+}
+
+[data-theme='dark'] {
+
+  /* Set dark mode colors here */
+  --psdi-bg-color: var(--psdi-bg-color-dark);
+  --psdi-bg-color-alt: var(--psdi-bg-color-semidark);
+
+  --psdi-alt-color-blue: var(--psdi-bg-color-dark);
+  --psdi-alt-color-yellow: var(--psdi-bg-color-dark);
+  --psdi-alt-color-green: var(--psdi-bg-color-dark);
+  --psdi-alt-color-red: var(--psdi-bg-color-dark);
+
+  --psdi-text-color-default: var(--psdi-text-color-dark-default);
+  --psdi-text-color-heading: var(--psdi-text-color-dark-heading);
+}
+
 * {
   box-sizing: border-box;
 }
