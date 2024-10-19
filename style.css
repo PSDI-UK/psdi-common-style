@@ -18,18 +18,22 @@
   --psdi-alt-color-blue-light: #a3cdff;
   --psdi-alt-color-blue-semilight: #8BB1DF;
   --psdi-alt-color-blue-mid: #3D7CC9;
+  --psdi-alt-color-blue-semidark: #2f5d96;
   --psdi-alt-color-blue-dark: #1b3657;
   --psdi-alt-color-yellow-light: #fff6e9;
   --psdi-alt-color-yellow-semilight: #FFECD1;
   --psdi-alt-color-yellow-mid: #FF9E18;
+  --psdi-alt-color-yellow-semidark: #af6e13;
   --psdi-alt-color-yellow-dark: #633e0b;
   --psdi-alt-color-green-light: #c2f6ff;
   --psdi-alt-color-green-semilight: #9CC7CF;
   --psdi-alt-color-green-mid: #5AA2AE;
+  --psdi-alt-color-green-semidark: #3a666e;
   --psdi-alt-color-green-dark: #233f44;
   --psdi-alt-color-red-light: #fff4fa;
   --psdi-alt-color-red-semilight: #EBD7E1;
   --psdi-alt-color-red-mid: #993366;
+  --psdi-alt-color-red-semidark: #832b57;
   --psdi-alt-color-red-dark: #662244;
 
   --psdi-text-color-light: #DDDDDD;
@@ -70,17 +74,17 @@
   --psdi-bg-color-alt: var(--psdi-bg-color-semidark);
 
   --psdi-alt-color-blue: var(--psdi-alt-color-blue-dark);
-  --psdi-alt-color-blue-semipale: var(--psdi-alt-color-blue-mid);
-  --psdi-alt-color-blue-pale: var(--psdi-alt-color-blue-semilight);
+  --psdi-alt-color-blue-semipale: var(--psdi-alt-color-blue-semidark);
+  --psdi-alt-color-blue-pale: var(--psdi-alt-color-blue-mid);
   --psdi-alt-color-yellow: var(--psdi-alt-color-yellow-dark);
-  --psdi-alt-color-yellow-semipale: var(--psdi-alt-color-yellow-mid);
-  --psdi-alt-color-yellow-pale: var(--psdi-alt-color-yellow-semilight);
+  --psdi-alt-color-yellow-semipale: var(--psdi-alt-color-yellow-semidark);
+  --psdi-alt-color-yellow-pale: var(--psdi-alt-color-yellow-mid);
   --psdi-alt-color-green: var(--psdi-alt-color-green-dark);
-  --psdi-alt-color-green-semipale: var(--psdi-alt-color-green-mid);
-  --psdi-alt-color-green-pale: var(--psdi-alt-color-green-semilight);
+  --psdi-alt-color-green-semipale: var(--psdi-alt-color-green-semidark);
+  --psdi-alt-color-green-pale: var(--psdi-alt-color-green-mid);
   --psdi-alt-color-red: var(--psdi-alt-color-red-dark);
-  --psdi-alt-color-red-semipale: var(--psdi-alt-color-red-mid);
-  --psdi-alt-color-red-pale: var(--psdi-alt-color-red-semilight);
+  --psdi-alt-color-red-semipale: var(--psdi-alt-color-red-semidark);
+  --psdi-alt-color-red-pale: var(--psdi-alt-color-red-mid);
 
   --psdi-text-color: var(--psdi-text-color-light);
   --psdi-text-color-heading: var(--psdi-text-color-light-heading);
@@ -98,7 +102,7 @@ body {
   min-height: 100vh;
   font-family: var(--psdi-font-body);
   font-size: 36px;
-  background-color: var(--psdi-bg-color-default);
+  background-color: var(--psdi-bg-color);
   color: var(--psdi-text-color);
   display: flex;
   flex-direction: column;
