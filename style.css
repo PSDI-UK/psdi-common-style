@@ -1,6 +1,4 @@
 :root {
-  color-scheme: light dark;
-
   /* Define variables for PSDI common color scheme */
   --psdi-bg-color-light: #FFFFFF;
   --psdi-bg-color-semilight: #BBBBBB;
@@ -8,7 +6,7 @@
   --psdi-bg-color-semidark: #303030;
   --psdi-bg-color-dark: #000000;
 
-  --psdi-bg-color-hero: #002169;
+  --psdi-bg-color-hero: #041E42;
 
   --psdi-alt-color-blue-light: #3D7CC9;
   --psdi-alt-color-blue-dark: #1b3657;
@@ -19,22 +17,26 @@
   --psdi-alt-color-red-light: #993366;
   --psdi-alt-color-red-dark: #662244;
 
-  --psdi-text-color-light-default: #DDDDDD;
+  --psdi-text-color-light: #DDDDDD;
   --psdi-text-color-light-heading: #FFFFFF;
-  --psdi-text-color-dark-default: #212121;
+  --psdi-text-color-dark: #212121;
   --psdi-text-color-dark-heading: #041e42;
 
   /* Set specific colors to use based on color scheme - light-mode here, as default */
   --psdi-bg-color: var(--psdi-bg-color-light);
   --psdi-bg-color-alt: var(--psdi-bg-color-semilight);
 
-  --psdi-alt-color-blue: var(--psdi-bg-color-light);
-  --psdi-alt-color-yellow: var(--psdi-bg-color-light);
-  --psdi-alt-color-green: var(--psdi-bg-color-light);
-  --psdi-alt-color-red: var(--psdi-bg-color-light);
+  --psdi-alt-color-blue: var(--psdi-alt-color-blue-light);
+  --psdi-alt-color-yellow: var(--psdi-alt-color-yellow-light);
+  --psdi-alt-color-green: var(--psdi-alt-color-green-light);
+  --psdi-alt-color-red: var(--psdi-alt-color-red-light);
 
-  --psdi-text-color-default: var(--psdi-text-color-light-default);
-  --psdi-text-color-heading: var(--psdi-text-color-light-heading);
+  --psdi-text-color: var(--psdi-text-color-dark);
+  --psdi-text-color-heading: var(--psdi-text-color-dark-heading);
+  --psdi-text-color-hero: var(--psdi-text-color-light);
+  --psdi-text-color-hero-heading: var(--psdi-text-color-light-heading);
+  --psdi-text-color-alt: var(--psdi-text-color-dark);
+  --psdi-text-color-alt-heading: var(--psdi-text-color-dark-heading);
 
 }
 
@@ -44,13 +46,17 @@
   --psdi-bg-color: var(--psdi-bg-color-dark);
   --psdi-bg-color-alt: var(--psdi-bg-color-semidark);
 
-  --psdi-alt-color-blue: var(--psdi-bg-color-dark);
-  --psdi-alt-color-yellow: var(--psdi-bg-color-dark);
-  --psdi-alt-color-green: var(--psdi-bg-color-dark);
-  --psdi-alt-color-red: var(--psdi-bg-color-dark);
+  --psdi-alt-color-blue: var(--psdi-alt-color-blue-dark);
+  --psdi-alt-color-yellow: var(--psdi-alt-color-yellow-dark);
+  --psdi-alt-color-green: var(--psdi-alt-color-green-dark);
+  --psdi-alt-color-red: var(--psdi-alt-color-red-dark);
 
-  --psdi-text-color-default: var(--psdi-text-color-dark-default);
-  --psdi-text-color-heading: var(--psdi-text-color-dark-heading);
+  --psdi-text-color: var(--psdi-text-color-light);
+  --psdi-text-color-heading: var(--psdi-text-color-light-heading);
+  --psdi-text-color-hero: var(--psdi-text-color-light);
+  --psdi-text-color-hero-heading: var(--psdi-text-color-light-heading);
+  --psdi-text-color-alt: var(--psdi-text-color-light);
+  --psdi-text-color-alt-heading: var(--psdi-text-color-light-heading);
 }
 
 * {
@@ -60,8 +66,9 @@
 body {
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
-  color: #1F2937;
   font-size: 36px;
+  background-color: var(--psdi-bg-color-default);
+  color: var(--psdi-text-color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -88,41 +95,23 @@ body>* {
   flex: 0 1 1200px;
 }
 
-.header,
-.hero-panel,
-.footer {
-  background-color: #1F2937;
+.hero-panel {
+  background-color: var(--psdi-bg-color-hero);
+  color: var(--psdi-text-color-hero);
 }
 
-.header,
-.hero-panel,
-.footer,
-button {
-  color: #F9FAF8;
+.samples-panel {
+  background-color: var(--psdi-bg-color-alt);
+  color: var(--psdi-text-color);
 }
 
 button {
-  background-color: #3882F6;
+  background-color: var(--psdi-alt-color-blue);
+  color: var(--psdi-text-color);
   border-radius: 8px;
   font: 18px;
   padding: 6px;
   width: 150px;
-}
-
-.secondary-text-light,
-.secondary-text-light a {
-  font-size: 18px;
-  color: #E5E7EB;
-  text-decoration: none;
-}
-
-.secondary-text-light a:hover {
-  color: #cbcfd6;
-}
-
-.secondary-text-dark {
-  font-size: 18px;
-  color: rgb(100, 100, 100);
 }
 
 .header .max-width-box {
@@ -249,10 +238,6 @@ li {
   text-align: center;
 }
 
-.quote-panel {
-  background-color: #E5E7EB;
-}
-
 .quote-panel .max-width-box {
   display: flex;
   justify-content: stretch;
@@ -278,7 +263,6 @@ li {
   align-self: end;
   font-size: 24px;
   font-weight: 700;
-  color: #1F2937;
 }
 
 .action-panel .max-width-box {
@@ -289,7 +273,7 @@ li {
 }
 
 .action-box {
-  background-color: #3882F6;
+  background-color: var(--psdi-alt-color-green);
   flex: 0 1 128px;
   padding: 64px 8px;
   margin: 64px 0px;
@@ -300,12 +284,12 @@ li {
 }
 
 .action-heading {
-  color: #E5E7EB;
+  color: var(--psdi-text-color-heading);
   font-size: 24px;
   font-weight: bold;
 }
 
 .action-button {
-  border: 2px solid #E5E7EB;
+  border: none;
   margin: 8px;
 }
