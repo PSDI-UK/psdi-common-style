@@ -2,8 +2,8 @@
   /* Define variables for PSDI common style */
 
   /* Font */
-  --psdi-font-body: 'Lato', Helvetica, Arial, Lucida, sans-serif;
-  --psdi-font-heading: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  --psdi-font-body: Lato, Helvetica, Arial, Lucida, sans-serif;
+  --psdi-font-heading: Oswald, Helvetica, Arial, Lucida, sans-serif;
 
 
   /* Color scheme variables */
@@ -37,13 +37,17 @@
   --psdi-alt-color-red-dark: #662244;
 
   --psdi-text-color-light: #DDDDDD;
+  --psdi-text-color-light-pale: #AAAAAA;
   --psdi-text-color-light-heading: #FFFFFF;
   --psdi-text-color-dark: #212121;
+  --psdi-text-color-dark-pale: #666666;
   --psdi-text-color-dark-heading: #041e42;
 
   /* Set specific colors to use based on color scheme - light-mode here, as default */
   --psdi-bg-color: var(--psdi-bg-color-light);
   --psdi-bg-color-alt: var(--psdi-bg-color-semilight);
+
+  --psdi-bg-color-img: var(--psdi-bg-color-light);
 
   --psdi-alt-color-blue: var(--psdi-alt-color-blue-mid);
   --psdi-alt-color-blue-semipale: var(--psdi-alt-color-blue-semilight);
@@ -59,6 +63,8 @@
   --psdi-alt-color-red-pale: var(--psdi-alt-color-red-light);
 
   --psdi-text-color: var(--psdi-text-color-dark);
+  --psdi-text-color-img: var(--psdi-text-color-dark);
+  --psdi-text-color-pale: var(--psdi-text-color-dark-pale);
   --psdi-text-color-heading: var(--psdi-text-color-dark-heading);
   --psdi-text-color-hero: var(--psdi-text-color-light);
   --psdi-text-color-hero-heading: var(--psdi-text-color-light-heading);
@@ -72,6 +78,8 @@
   /* Set dark mode colors here */
   --psdi-bg-color: var(--psdi-bg-color-dark);
   --psdi-bg-color-alt: var(--psdi-bg-color-semidark);
+
+  --psdi-bg-color-img: var(--psdi-bg-color-light);
 
   --psdi-alt-color-blue: var(--psdi-alt-color-blue-dark);
   --psdi-alt-color-blue-semipale: var(--psdi-alt-color-blue-semidark);
@@ -87,6 +95,8 @@
   --psdi-alt-color-red-pale: var(--psdi-alt-color-red-mid);
 
   --psdi-text-color: var(--psdi-text-color-light);
+  --psdi-text-color-img: var(--psdi-text-color-dark);
+  --psdi-text-color-pale: var(--psdi-text-color-light-pale);
   --psdi-text-color-heading: var(--psdi-text-color-light-heading);
   --psdi-text-color-hero: var(--psdi-text-color-light);
   --psdi-text-color-hero-heading: var(--psdi-text-color-light-heading);
@@ -126,6 +136,7 @@ a {
 }
 
 a:hover {
+  color: var(--psdi-text-color-pale);
   text-decoration: none;
 }
 
@@ -144,6 +155,11 @@ button:hover {
 
 button:active {
   background-color: var(--psdi-alt-color-blue-pale);
+}
+
+img {
+  background-color: var(--psdi-bg-color-img);
+  color: var(--psdi-text-color-img);
 }
 
 body>* {
