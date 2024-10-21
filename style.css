@@ -1,110 +1,126 @@
 :root {
-  /* Define variables for PSDI common style */
+  /* ------------------------------------ */
+  /* --- PSDI Common Style Definition --- */
+  /* ------------------------------------ */
 
-  /* Font */
-  --psdi-font-body: Lato, Helvetica, Arial, Lucida, sans-serif;
+  /* Fonts */
+  --psdi-font-body   : Lato, Helvetica, Arial, Lucida, sans-serif;
   --psdi-font-heading: Oswald, Helvetica, Arial, Lucida, sans-serif;
 
 
-  /* Color scheme variables */
-  --psdi-bg-color-light: #FFFFFF;
-  --psdi-bg-color-semilight: #BBBBBB;
-  --psdi-bg-color-mid: #909090;
-  --psdi-bg-color-semidark: #303030;
-  --psdi-bg-color-dark: #000000;
+  /* Color scheme */
 
-  --psdi-bg-color-hero-light: #96CAF4;
+  /* Light mode background colors for primary, secondary, and hero sections */
+  --psdi-bg-color-light    : #FFFFFF;
+  --psdi-bg-color-semilight: #BBBBBB;
   --psdi-bg-color-hero-dark: #041E42;
 
-  --psdi-alt-color-blue-light: #a3cdff;
-  --psdi-alt-color-blue-semilight: #8BB1DF;
-  --psdi-alt-color-blue-mid: #3D7CC9;
-  --psdi-alt-color-blue-semidark: #2f5d96;
-  --psdi-alt-color-blue-dark: #1b3657;
-  --psdi-alt-color-yellow-light: #fff6e9;
-  --psdi-alt-color-yellow-semilight: #FFECD1;
-  --psdi-alt-color-yellow-mid: #FF9E18;
-  --psdi-alt-color-yellow-semidark: #af6e13;
-  --psdi-alt-color-yellow-dark: #633e0b;
-  --psdi-alt-color-green-light: #c2f6ff;
-  --psdi-alt-color-green-semilight: #9CC7CF;
-  --psdi-alt-color-green-mid: #5AA2AE;
-  --psdi-alt-color-green-semidark: #3a666e;
-  --psdi-alt-color-green-dark: #233f44;
-  --psdi-alt-color-red-light: #fff4fa;
-  --psdi-alt-color-red-semilight: #EBD7E1;
-  --psdi-alt-color-red-mid: #993366;
-  --psdi-alt-color-red-semidark: #832b57;
-  --psdi-alt-color-red-dark: #662244;
+  /* Dark mode background colors for primary, secondary, and hero sections */
+  --psdi-bg-color-dark      : #000000;
+  --psdi-bg-color-semidark  : #303030;
+  --psdi-bg-color-hero-light: #96CAF4;
 
-  --psdi-text-color-light: #DDDDDD;
-  --psdi-text-color-light-pale: #AAAAAA;
+  /* Alternate colors available for various uses */
+  --psdi-alt-color-blue-light    : #a3cdff;
+  --psdi-alt-color-blue-semilight: #8BB1DF;
+  --psdi-alt-color-blue-mid      : #3D7CC9;
+  --psdi-alt-color-blue-semidark : #2f5d96;
+  --psdi-alt-color-blue-dark     : #1b3657;
+
+  --psdi-alt-color-yellow-light    : #fff6e9;
+  --psdi-alt-color-yellow-semilight: #FFECD1;
+  --psdi-alt-color-yellow-mid      : #FF9E18;
+  --psdi-alt-color-yellow-semidark : #af6e13;
+  --psdi-alt-color-yellow-dark     : #633e0b;
+
+  --psdi-alt-color-green-light    : #c2f6ff;
+  --psdi-alt-color-green-semilight: #9CC7CF;
+  --psdi-alt-color-green-mid      : #5AA2AE;
+  --psdi-alt-color-green-semidark : #3a666e;
+  --psdi-alt-color-green-dark     : #233f44;
+
+  --psdi-alt-color-red-light    : #fff4fa;
+  --psdi-alt-color-red-semilight: #EBD7E1;
+  --psdi-alt-color-red-mid      : #993366;
+  --psdi-alt-color-red-semidark : #832b57;
+  --psdi-alt-color-red-dark     : #662244;
+
+  /* Light mode text colors - default, faded, and more prominent */
+  --psdi-text-color-light        : #DDDDDD;
+  --psdi-text-color-light-pale   : #AAAAAA;
   --psdi-text-color-light-heading: #FFFFFF;
-  --psdi-text-color-dark: #212121;
-  --psdi-text-color-dark-pale: #666666;
+
+  /* Light mode text colors - default, faded, and more prominent */
+  --psdi-text-color-dark        : #212121;
+  --psdi-text-color-dark-pale   : #666666;
   --psdi-text-color-dark-heading: #041e42;
 
+  /* ------------------------------------------ */
+  /* --- PSDI Common Style Definition (end) --- */
+  /* ------------------------------------------ */
+
+
   /* Set specific colors to use based on color scheme - light-mode here, as default */
-  --psdi-bg-color: var(--psdi-bg-color-light);
+  --psdi-bg-color     : var(--psdi-bg-color-light);
   --psdi-bg-color-hero: var(--psdi-bg-color-hero-dark);
-  --psdi-bg-color-alt: var(--psdi-bg-color-semilight);
+  --psdi-bg-color-alt : var(--psdi-bg-color-semilight);
 
   --psdi-bg-color-img: var(--psdi-bg-color-light);
 
-  --psdi-alt-color-blue: var(--psdi-alt-color-blue-mid);
-  --psdi-alt-color-blue-semipale: var(--psdi-alt-color-blue-semilight);
-  --psdi-alt-color-blue-pale: var(--psdi-alt-color-blue-light);
-  --psdi-alt-color-yellow: var(--psdi-alt-color-yellow-mid);
+  --psdi-alt-color-blue           : var(--psdi-alt-color-blue-mid);
+  --psdi-alt-color-blue-semipale  : var(--psdi-alt-color-blue-semilight);
+  --psdi-alt-color-blue-pale      : var(--psdi-alt-color-blue-light);
+  --psdi-alt-color-yellow         : var(--psdi-alt-color-yellow-mid);
   --psdi-alt-color-yellow-semipale: var(--psdi-alt-color-yellow-semilight);
-  --psdi-alt-color-yellow-pale: var(--psdi-alt-color-yellow-light);
-  --psdi-alt-color-green: var(--psdi-alt-color-green-mid);
-  --psdi-alt-color-green-semipale: var(--psdi-alt-color-green-semilight);
-  --psdi-alt-color-green-pale: var(--psdi-alt-color-green-light);
-  --psdi-alt-color-red: var(--psdi-alt-color-red-mid);
-  --psdi-alt-color-red-semipale: var(--psdi-alt-color-red-semilight);
-  --psdi-alt-color-red-pale: var(--psdi-alt-color-red-light);
+  --psdi-alt-color-yellow-pale    : var(--psdi-alt-color-yellow-light);
+  --psdi-alt-color-green          : var(--psdi-alt-color-green-mid);
+  --psdi-alt-color-green-semipale : var(--psdi-alt-color-green-semilight);
+  --psdi-alt-color-green-pale     : var(--psdi-alt-color-green-light);
+  --psdi-alt-color-red            : var(--psdi-alt-color-red-mid);
+  --psdi-alt-color-red-semipale   : var(--psdi-alt-color-red-semilight);
+  --psdi-alt-color-red-pale       : var(--psdi-alt-color-red-light);
 
-  --psdi-text-color: var(--psdi-text-color-dark);
-  --psdi-text-color-img: var(--psdi-text-color-dark);
-  --psdi-text-color-pale: var(--psdi-text-color-dark-pale);
-  --psdi-text-color-heading: var(--psdi-text-color-dark-heading);
-  --psdi-text-color-hero: var(--psdi-text-color-light);
+  --psdi-text-color             : var(--psdi-text-color-dark);
+  --psdi-text-color-img         : var(--psdi-text-color-dark);
+  --psdi-text-color-pale        : var(--psdi-text-color-dark-pale);
+  --psdi-text-color-heading     : var(--psdi-text-color-dark-heading);
+  --psdi-text-color-hero        : var(--psdi-text-color-light);
   --psdi-text-color-hero-heading: var(--psdi-text-color-light-heading);
-  --psdi-text-color-alt: var(--psdi-text-color-dark);
-  --psdi-text-color-alt-heading: var(--psdi-text-color-dark-heading);
+  --psdi-text-color-alt         : var(--psdi-text-color-dark);
+  --psdi-text-color-alt-heading : var(--psdi-text-color-dark-heading);
 
 }
 
 [data-theme='dark'] {
 
   /* Set dark mode colors here */
-  --psdi-bg-color: var(--psdi-bg-color-dark);
+  --psdi-bg-color     : var(--psdi-bg-color-dark);
   --psdi-bg-color-hero: var(--psdi-bg-color-hero-light);
-  --psdi-bg-color-alt: var(--psdi-bg-color-semidark);
+  --psdi-bg-color-alt : var(--psdi-bg-color-semidark);
 
   --psdi-bg-color-img: var(--psdi-bg-color-light);
 
-  --psdi-alt-color-blue: var(--psdi-alt-color-blue-dark);
-  --psdi-alt-color-blue-semipale: var(--psdi-alt-color-blue-semidark);
-  --psdi-alt-color-blue-pale: var(--psdi-alt-color-blue-mid);
-  --psdi-alt-color-yellow: var(--psdi-alt-color-yellow-dark);
+  --psdi-alt-color-blue           : var(--psdi-alt-color-blue-dark);
+  --psdi-alt-color-blue-semipale  : var(--psdi-alt-color-blue-semidark);
+  --psdi-alt-color-blue-pale      : var(--psdi-alt-color-blue-mid);
+  --psdi-alt-color-yellow         : var(--psdi-alt-color-yellow-dark);
   --psdi-alt-color-yellow-semipale: var(--psdi-alt-color-yellow-semidark);
-  --psdi-alt-color-yellow-pale: var(--psdi-alt-color-yellow-mid);
-  --psdi-alt-color-green: var(--psdi-alt-color-green-dark);
-  --psdi-alt-color-green-semipale: var(--psdi-alt-color-green-semidark);
-  --psdi-alt-color-green-pale: var(--psdi-alt-color-green-mid);
-  --psdi-alt-color-red: var(--psdi-alt-color-red-dark);
-  --psdi-alt-color-red-semipale: var(--psdi-alt-color-red-semidark);
-  --psdi-alt-color-red-pale: var(--psdi-alt-color-red-mid);
+  --psdi-alt-color-yellow-pale    : var(--psdi-alt-color-yellow-mid);
+  --psdi-alt-color-green          : var(--psdi-alt-color-green-dark);
+  --psdi-alt-color-green-semipale : var(--psdi-alt-color-green-semidark);
+  --psdi-alt-color-green-pale     : var(--psdi-alt-color-green-mid);
+  --psdi-alt-color-red            : var(--psdi-alt-color-red-dark);
+  --psdi-alt-color-red-semipale   : var(--psdi-alt-color-red-semidark);
+  --psdi-alt-color-red-pale       : var(--psdi-alt-color-red-mid);
 
-  --psdi-text-color: var(--psdi-text-color-light);
-  --psdi-text-color-img: var(--psdi-text-color-dark);
-  --psdi-text-color-pale: var(--psdi-text-color-light-pale);
-  --psdi-text-color-heading: var(--psdi-text-color-light-heading);
-  --psdi-text-color-hero: var(--psdi-text-color-dark);
+  --psdi-text-color             : var(--psdi-text-color-light);
+  --psdi-text-color-img         : var(--psdi-text-color-dark);
+  --psdi-text-color-pale        : var(--psdi-text-color-light-pale);
+  --psdi-text-color-heading     : var(--psdi-text-color-light-heading);
+  --psdi-text-color-hero        : var(--psdi-text-color-dark);
   --psdi-text-color-hero-heading: var(--psdi-text-color-light-heading);
-  --psdi-text-color-alt: var(--psdi-text-color-light);
-  --psdi-text-color-alt-heading: var(--psdi-text-color-light-heading);
+  --psdi-text-color-alt         : var(--psdi-text-color-light);
+  --psdi-text-color-alt-heading : var(--psdi-text-color-light-heading);
 }
 
 * {
@@ -112,16 +128,16 @@
 }
 
 body {
-  min-height: 100vh;
-  font-family: var(--psdi-font-body);
-  font-size: 36px;
+  min-height      : 100vh;
+  font-family     : var(--psdi-font-body);
+  font-size       : 36px;
   background-color: var(--psdi-bg-color);
-  color: var(--psdi-text-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0px;
-  margin: 0px;
+  color           : var(--psdi-text-color);
+  display         : flex;
+  flex-direction  : column;
+  justify-content : space-between;
+  padding         : 0px;
+  margin          : 0px;
 }
 
 h1,
@@ -134,22 +150,22 @@ h6 {
 }
 
 a {
-  color: var(--psdi-text-color);
+  color      : var(--psdi-text-color);
   font-weight: bold;
 }
 
 a:hover {
-  color: var(--psdi-text-color-pale);
+  color          : var(--psdi-text-color-pale);
   text-decoration: none;
 }
 
 button {
   background-color: var(--psdi-alt-color-blue);
-  color: var(--psdi-text-color);
-  border-radius: 8px;
-  font: 18px;
-  padding: 6px;
-  width: 150px;
+  color           : var(--psdi-text-color);
+  border-radius   : 8px;
+  font            : 18px;
+  padding         : 6px;
+  width           : 150px;
 }
 
 button:hover {
@@ -162,12 +178,12 @@ button:active {
 
 img {
   background-color: var(--psdi-bg-color-img);
-  color: var(--psdi-text-color-img);
+  color           : var(--psdi-text-color-img);
 }
 
 body>* {
   flex-grow: 1;
-  padding: 8px 0;
+  padding  : 8px 0;
 }
 
 .header,
@@ -176,7 +192,7 @@ body>* {
 }
 
 *:has(> .max-width-box) {
-  display: flex;
+  display        : flex;
   justify-content: center;
 }
 
@@ -186,56 +202,56 @@ body>* {
 
 .hero-panel {
   background-color: var(--psdi-bg-color-hero);
-  color: var(--psdi-text-color-hero);
+  color           : var(--psdi-text-color-hero);
 }
 
 .samples-panel {
   background-color: var(--psdi-bg-color-alt);
-  color: var(--psdi-text-color);
+  color           : var(--psdi-text-color);
 }
 
 .header .max-width-box {
-  display: flex;
-  flex-shrink: 1;
+  display        : flex;
+  flex-shrink    : 1;
   justify-content: space-between;
-  align-items: center;
-  padding: 8px;
+  align-items    : center;
+  padding        : 8px;
 }
 
 .header-logo {
   font-family: var(--psdi-font-heading);
-  font-size: 48px;
-  margin: 0 16px;
+  font-size  : 48px;
+  margin     : 0 16px;
 }
 
 .header-links {
-  display: flex;
+  display        : flex;
   justify-content: end;
-  gap: 32px;
-  row-gap: 16px;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0 16px;
-  padding: 0;
+  gap            : 32px;
+  row-gap        : 16px;
+  flex-wrap      : wrap;
+  list-style     : none;
+  margin         : 0 16px;
+  padding        : 0;
 }
 
 li {
-  margin: 0;
+  margin : 0;
   padding: 0;
 }
 
 .hero-panel .max-width-box {
-  display: flex;
+  display        : flex;
   justify-content: space-between;
-  gap: 16px;
-  padding: 0 16px 16px 16px;
+  gap            : 16px;
+  padding        : 0 16px 16px 16px;
 }
 
 .hero-text {
-  display: flex;
+  display       : flex;
   flex-direction: column;
-  align-items: start;
-  gap: 2px;
+  align-items   : start;
+  gap           : 2px;
 }
 
 .hero-button {
@@ -243,43 +259,43 @@ li {
 }
 
 .hero-heading {
-  font-size: 48px;
+  font-size  : 48px;
   font-weight: 900;
 }
 
 .hero-image {
-  width: 200px;
-  height: 250px;
-  object-fit: cover;
+  width          : 200px;
+  height         : 250px;
+  object-fit     : cover;
   object-position: 65% 100%;
 }
 
 .samples-panel .max-width-box {
-  display: flex;
-  flex-direction: column;
+  display        : flex;
+  flex-direction : column;
   justify-content: center;
-  align-items: center;
+  align-items    : center;
 }
 
 .samples-heading {
-  font-size: 36px;
-  font-weight: 900;
+  font-size    : 36px;
+  font-weight  : 900;
   margin-bottom: 32px;
 }
 
 .samples-display {
-  display: flex;
+  display        : flex;
   justify-content: stretch;
 }
 
 .sample-card {
-  flex: 0 1 250px;
-  padding: 8px 2px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex           : 0 1 250px;
+  padding        : 8px 2px;
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
   justify-content: baseline;
-  gap: 8px;
+  gap            : 8px;
 }
 
 .big-flexigap {
@@ -291,10 +307,10 @@ li {
 }
 
 .sample-image {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border: 4px solid teal;
+  width        : 200px;
+  height       : 200px;
+  object-fit   : cover;
+  border       : 4px solid teal;
   border-radius: 8px;
 }
 
@@ -319,53 +335,53 @@ li {
 }
 
 .quote-panel .max-width-box {
-  display: flex;
+  display        : flex;
   justify-content: stretch;
-  padding: 0 16px;
+  padding        : 0 16px;
 }
 
 .quote-display {
-  flex: 0 1 1050px;
-  display: flex;
-  flex-direction: column;
+  flex           : 0 1 1050px;
+  display        : flex;
+  flex-direction : column;
   justify-content: center;
 }
 
 .quote {
-  flex-grow: 0;
-  align-self: start;
-  font-size: 36px;
+  flex-grow  : 0;
+  align-self : start;
+  font-size  : 36px;
   font-weight: 300;
-  font-style: italic;
+  font-style : italic;
 }
 
 .attribution {
-  align-self: end;
-  font-size: 24px;
+  align-self : end;
+  font-size  : 24px;
   font-weight: 700;
 }
 
 .action-panel .max-width-box {
-  display: flex;
-  flex-direction: column;
+  display        : flex;
+  flex-direction : column;
   justify-content: center;
-  align-items: stretch;
+  align-items    : stretch;
 }
 
 .action-box {
   background-color: var(--psdi-alt-color-green);
-  flex: 0 1 128px;
-  padding: 64px 8px;
-  margin: 64px 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 16px;
+  flex            : 0 1 128px;
+  padding         : 64px 8px;
+  margin          : 64px 0px;
+  display         : flex;
+  justify-content : space-between;
+  align-items     : center;
+  border-radius   : 16px;
 }
 
 .action-heading {
-  color: var(--psdi-text-color-heading);
-  font-size: 24px;
+  color      : var(--psdi-text-color-heading);
+  font-size  : 24px;
   font-weight: bold;
 }
 
