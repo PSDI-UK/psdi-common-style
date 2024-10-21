@@ -1,7 +1,11 @@
 :root {
-  /* ------------------------------------ */
-  /* --- PSDI Common Style Definition --- */
-  /* ------------------------------------ */
+  /* PSDI Common Style Definition                                            */
+  /* ----------------------------                                            */
+  /*                                                                         */
+  /* This file defines the common PSDI style scheme. The variable            */
+  /* definitions here can be modified to alter this scheme, and they will be */
+  /* included and used appropriately by the various builders.                */
+
 
   /* Fonts */
   --psdi-font-body   : Lato, Helvetica, Arial, Lucida, sans-serif;
@@ -54,9 +58,5 @@
   --psdi-text-color-dark        : #212121;
   --psdi-text-color-dark-pale   : #666666;
   --psdi-text-color-dark-heading: #041e42;
-
-  /* ------------------------------------------ */
-  /* --- PSDI Common Style Definition (end) --- */
-  /* ------------------------------------------ */
 
 }
