@@ -13,7 +13,8 @@
   --psdi-bg-color-semidark: #303030;
   --psdi-bg-color-dark: #000000;
 
-  --psdi-bg-color-hero: #041E42;
+  --psdi-bg-color-hero-light: #96CAF4;
+  --psdi-bg-color-hero-dark: #041E42;
 
   --psdi-alt-color-blue-light: #a3cdff;
   --psdi-alt-color-blue-semilight: #8BB1DF;
@@ -45,6 +46,7 @@
 
   /* Set specific colors to use based on color scheme - light-mode here, as default */
   --psdi-bg-color: var(--psdi-bg-color-light);
+  --psdi-bg-color-hero: var(--psdi-bg-color-hero-dark);
   --psdi-bg-color-alt: var(--psdi-bg-color-semilight);
 
   --psdi-bg-color-img: var(--psdi-bg-color-light);
@@ -77,6 +79,7 @@
 
   /* Set dark mode colors here */
   --psdi-bg-color: var(--psdi-bg-color-dark);
+  --psdi-bg-color-hero: var(--psdi-bg-color-hero-light);
   --psdi-bg-color-alt: var(--psdi-bg-color-semidark);
 
   --psdi-bg-color-img: var(--psdi-bg-color-light);
@@ -98,7 +101,7 @@
   --psdi-text-color-img: var(--psdi-text-color-dark);
   --psdi-text-color-pale: var(--psdi-text-color-light-pale);
   --psdi-text-color-heading: var(--psdi-text-color-light-heading);
-  --psdi-text-color-hero: var(--psdi-text-color-light);
+  --psdi-text-color-hero: var(--psdi-text-color-dark);
   --psdi-text-color-hero-heading: var(--psdi-text-color-light-heading);
   --psdi-text-color-alt: var(--psdi-text-color-light);
   --psdi-text-color-alt-heading: var(--psdi-text-color-light-heading);
