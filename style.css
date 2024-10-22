@@ -22,9 +22,9 @@
   --text-color-alt         : var(--psdi-text-color-secondary-body);
   --text-color-alt-heading : var(--psdi-text-color-secondary-heading);
 
-}
+  /* }
 
-[data-theme='dark'] {
+[data-theme='dark'] { */
 
   /* Set dark mode colors here */
   --bg-color     : var(--psdi-dm-bg-color-default);
@@ -38,13 +38,13 @@
   --alt-color-blue-pale    : var(--psdi-bg-color-info-dark);
   --alt-color-green        : var(--psdi-bg-color-success-darkest);
 
-  --text-color             : var(--text-color-light);
-  --text-color-img         : var(--text-color-dark);
-  --text-color-heading     : var(--text-color-light-heading);
-  --text-color-hero        : var(--text-color-dark);
-  --text-color-hero-heading: var(--text-color-light-heading);
-  --text-color-alt         : var(--text-color-light);
-  --text-color-alt-heading : var(--text-color-light-heading);
+  --text-color             : var(--psdi-dm-text-color-default-body);
+  --text-color-heading     : var(--psdi-dm-text-color-default-heading);
+  --text-color-img         : var(--psdi-text-color-default-body);
+  --text-color-hero        : var(--psdi-dm-text-color-primary-body);
+  --text-color-hero-heading: var(--psdi-dm-text-color-primary-heading);
+  --text-color-alt         : var(--psdi-dm-text-color-secondary-body);
+  --text-color-alt-heading : var(--psdi-dm-text-color-secondary-heading);
 }
 
 * {
@@ -130,7 +130,7 @@ body>* {
 
 .samples-panel {
   background-color: var(--bg-color-alt);
-  color           : var(--text-color);
+  color           : var(--text-color-alt);
 }
 
 .header .max-width-box {
@@ -204,6 +204,7 @@ li {
   font-size    : 36px;
   font-weight  : 900;
   margin-bottom: 32px;
+  color        : var(--text-color-alt-heading);
 }
 
 .samples-display {
@@ -235,22 +236,6 @@ li {
   object-fit   : cover;
   border       : 4px solid teal;
   border-radius: 8px;
-}
-
-.sample-image.i1 {
-  object-position: 10% 50%;
-}
-
-.sample-image.i2 {
-  object-position: 10% 50%;
-}
-
-.sample-image.i3 {
-  object-position: 30% 50%;
-}
-
-.sample-image.i4 {
-  object-position: 50% 50%;
 }
 
 .sample-text {
