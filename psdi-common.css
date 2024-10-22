@@ -64,13 +64,13 @@
   /* Secondary color (dark mode) */
   --psdi-dm-text-color-secondary-body   : var(--psdi-dark-text-color-body);
   --psdi-dm-text-color-secondary-heading: var(--psdi-dark-text-color-heading);
-  --psdi-dm-bg-color-primary            : #bbbbbb;
-  --psdi-dm-bg-color-primary-dark       : #a8a8a8;
-  --psdi-dm-bg-color-primary-darker     : #9f9f9f;
-  --psdi-dm-bg-color-primary-darkest    : #838383;
-  --psdi-dm-bg-color-primary-light      : #cecece;
-  --psdi-dm-bg-color-primary-lighter    : #d7d7d7;
-  --psdi-dm-bg-color-primary-lightest   : #f3f3f3;
+  --psdi-dm-bg-color-secondary          : #bbbbbb;
+  --psdi-dm-bg-color-secondary-dark     : #a8a8a8;
+  --psdi-dm-bg-color-secondary-darker   : #9f9f9f;
+  --psdi-dm-bg-color-secondary-darkest  : #838383;
+  --psdi-dm-bg-color-secondary-light    : #cecece;
+  --psdi-dm-bg-color-secondary-lighter  : #d7d7d7;
+  --psdi-dm-bg-color-secondary-lightest : #f3f3f3;
 
   /* Success color */
   --psdi-bg-color-success         : #5aa2ae;
