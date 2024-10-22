@@ -22,9 +22,9 @@
   --text-color-alt         : var(--psdi-text-color-secondary-body);
   --text-color-alt-heading : var(--psdi-text-color-secondary-heading);
 
-  /* }
+}
 
-[data-theme='dark'] { */
+[data-theme='dark'] {
 
   /* Set dark mode colors here */
   --bg-color     : var(--psdi-dm-bg-color-default);
