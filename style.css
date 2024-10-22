@@ -3,66 +3,48 @@
 :root {
 
   /* Set specific colors to use based on color scheme - light-mode here, as default */
-  --psdi-bg-color     : var(--psdi-bg-color-light);
-  --psdi-bg-color-hero: var(--psdi-bg-color-hero-dark);
-  --psdi-bg-color-alt : var(--psdi-bg-color-semilight);
+  --bg-color     : var(--psdi-bg-color-default);
+  --bg-color-hero: var(--psdi-bg-color-primary);
+  --bg-color-alt : var(--psdi-bg-color-secondary);
 
-  --psdi-bg-color-img: var(--psdi-bg-color-light);
+  --bg-color-img: var(--psdi-bg-color-info);
 
-  --psdi-alt-color-blue           : var(--psdi-alt-color-blue-mid);
-  --psdi-alt-color-blue-semipale  : var(--psdi-alt-color-blue-semilight);
-  --psdi-alt-color-blue-pale      : var(--psdi-alt-color-blue-light);
-  --psdi-alt-color-yellow         : var(--psdi-alt-color-yellow-mid);
-  --psdi-alt-color-yellow-semipale: var(--psdi-alt-color-yellow-semilight);
-  --psdi-alt-color-yellow-pale    : var(--psdi-alt-color-yellow-light);
-  --psdi-alt-color-green          : var(--psdi-alt-color-green-mid);
-  --psdi-alt-color-green-semipale : var(--psdi-alt-color-green-semilight);
-  --psdi-alt-color-green-pale     : var(--psdi-alt-color-green-light);
-  --psdi-alt-color-red            : var(--psdi-alt-color-red-mid);
-  --psdi-alt-color-red-semipale   : var(--psdi-alt-color-red-semilight);
-  --psdi-alt-color-red-pale       : var(--psdi-alt-color-red-light);
+  --alt-color-blue         : var(--psdi-bg-color-info);
+  --alt-color-blue-semipale: var(--psdi-bg-color-info-light);
+  --alt-color-blue-pale    : var(--psdi-bg-color-info-lighter);
+  --alt-color-green        : var(--psdi-bg-color-success);
 
-  --psdi-text-color             : var(--psdi-text-color-dark);
-  --psdi-text-color-img         : var(--psdi-text-color-dark);
-  --psdi-text-color-pale        : var(--psdi-text-color-dark-pale);
-  --psdi-text-color-heading     : var(--psdi-text-color-dark-heading);
-  --psdi-text-color-hero        : var(--psdi-text-color-light);
-  --psdi-text-color-hero-heading: var(--psdi-text-color-light-heading);
-  --psdi-text-color-alt         : var(--psdi-text-color-dark);
-  --psdi-text-color-alt-heading : var(--psdi-text-color-dark-heading);
+  --text-color             : var(--psdi-text-color-default-body);
+  --text-color-heading     : var(--psdi-text-color-default-heading);
+  --text-color-img         : var(--psdi-text-color-default-body);
+  --text-color-hero        : var(--psdi-text-color-primary-body);
+  --text-color-hero-heading: var(--psdi-text-color-primary-heading);
+  --text-color-alt         : var(--psdi-text-color-secondary-body);
+  --text-color-alt-heading : var(--psdi-text-color-secondary-heading);
 
 }
 
 [data-theme='dark'] {
 
   /* Set dark mode colors here */
-  --psdi-bg-color     : var(--psdi-bg-color-dark);
-  --psdi-bg-color-hero: var(--psdi-bg-color-hero-light);
-  --psdi-bg-color-alt : var(--psdi-bg-color-semidark);
+  --bg-color     : var(--psdi-dm-bg-color-default);
+  --bg-color-hero: var(--psdi-dm-bg-color-primary);
+  --bg-color-alt : var(--psdi-dm-bg-color-secondary);
 
-  --psdi-bg-color-img: var(--psdi-bg-color-light);
+  --bg-color-img: var(--psdi-dm-bg-color-info-darkest);
 
-  --psdi-alt-color-blue           : var(--psdi-alt-color-blue-dark);
-  --psdi-alt-color-blue-semipale  : var(--psdi-alt-color-blue-semidark);
-  --psdi-alt-color-blue-pale      : var(--psdi-alt-color-blue-mid);
-  --psdi-alt-color-yellow         : var(--psdi-alt-color-yellow-dark);
-  --psdi-alt-color-yellow-semipale: var(--psdi-alt-color-yellow-semidark);
-  --psdi-alt-color-yellow-pale    : var(--psdi-alt-color-yellow-mid);
-  --psdi-alt-color-green          : var(--psdi-alt-color-green-dark);
-  --psdi-alt-color-green-semipale : var(--psdi-alt-color-green-semidark);
-  --psdi-alt-color-green-pale     : var(--psdi-alt-color-green-mid);
-  --psdi-alt-color-red            : var(--psdi-alt-color-red-dark);
-  --psdi-alt-color-red-semipale   : var(--psdi-alt-color-red-semidark);
-  --psdi-alt-color-red-pale       : var(--psdi-alt-color-red-mid);
+  --alt-color-blue         : var(--psdi-bg-color-info-darkest);
+  --alt-color-blue-semipale: var(--psdi-bg-color-info-darker);
+  --alt-color-blue-pale    : var(--psdi-bg-color-info-dark);
+  --alt-color-green        : var(--psdi-bg-color-success-darkest);
 
-  --psdi-text-color             : var(--psdi-text-color-light);
-  --psdi-text-color-img         : var(--psdi-text-color-dark);
-  --psdi-text-color-pale        : var(--psdi-text-color-light-pale);
-  --psdi-text-color-heading     : var(--psdi-text-color-light-heading);
-  --psdi-text-color-hero        : var(--psdi-text-color-dark);
-  --psdi-text-color-hero-heading: var(--psdi-text-color-light-heading);
-  --psdi-text-color-alt         : var(--psdi-text-color-light);
-  --psdi-text-color-alt-heading : var(--psdi-text-color-light-heading);
+  --text-color             : var(--text-color-light);
+  --text-color-img         : var(--text-color-dark);
+  --text-color-heading     : var(--text-color-light-heading);
+  --text-color-hero        : var(--text-color-dark);
+  --text-color-hero-heading: var(--text-color-light-heading);
+  --text-color-alt         : var(--text-color-light);
+  --text-color-alt-heading : var(--text-color-light-heading);
 }
 
 * {
@@ -71,10 +53,10 @@
 
 body {
   min-height      : 100vh;
-  font-family     : var(--psdi-font-body);
+  font-family     : var(--font-body);
   font-size       : 36px;
-  background-color: var(--psdi-bg-color);
-  color           : var(--psdi-text-color);
+  background-color: var(--bg-color);
+  color           : var(--text-color);
   display         : flex;
   flex-direction  : column;
   justify-content : space-between;
@@ -88,22 +70,21 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--psdi-font-heading);
+  font-family: var(--font-heading);
 }
 
 a {
-  color      : var(--psdi-text-color);
+  color      : var(--text-color);
   font-weight: bold;
 }
 
 a:hover {
-  color          : var(--psdi-text-color-pale);
   text-decoration: none;
 }
 
 button {
-  background-color: var(--psdi-alt-color-blue);
-  color           : var(--psdi-text-color);
+  background-color: var(--alt-color-blue);
+  color           : var(--text-color);
   border-radius   : 8px;
   font            : 18px;
   padding         : 6px;
@@ -111,16 +92,16 @@ button {
 }
 
 button:hover {
-  background-color: var(--psdi-alt-color-blue-semipale);
+  background-color: var(--alt-color-blue-semipale);
 }
 
 button:active {
-  background-color: var(--psdi-alt-color-blue-pale);
+  background-color: var(--alt-color-blue-pale);
 }
 
 img {
-  background-color: var(--psdi-bg-color-img);
-  color           : var(--psdi-text-color-img);
+  background-color: var(--bg-color-img);
+  color           : var(--text-color-img);
 }
 
 body>* {
@@ -143,13 +124,13 @@ body>* {
 }
 
 .hero-panel {
-  background-color: var(--psdi-bg-color-hero);
-  color           : var(--psdi-text-color-hero);
+  background-color: var(--bg-color-hero);
+  color           : var(--text-color-hero);
 }
 
 .samples-panel {
-  background-color: var(--psdi-bg-color-alt);
-  color           : var(--psdi-text-color);
+  background-color: var(--bg-color-alt);
+  color           : var(--text-color);
 }
 
 .header .max-width-box {
@@ -161,7 +142,7 @@ body>* {
 }
 
 .header-logo {
-  font-family: var(--psdi-font-heading);
+  font-family: var(--font-heading);
   font-size  : 48px;
   margin     : 0 16px;
 }
@@ -311,7 +292,7 @@ li {
 }
 
 .action-box {
-  background-color: var(--psdi-alt-color-green);
+  background-color: var(--alt-color-green);
   flex            : 0 1 128px;
   padding         : 64px 8px;
   margin          : 64px 0px;
@@ -322,7 +303,7 @@ li {
 }
 
 .action-heading {
-  color      : var(--psdi-text-color-heading);
+  color      : var(--text-color-heading);
   font-size  : 24px;
   font-weight: bold;
 }
@@ -330,4 +311,9 @@ li {
 .action-button {
   border: none;
   margin: 8px;
+}
+
+.footer {
+  background-color: var(--bg-color-hero);
+  color           : var(--text-color-hero-heading);
 }
