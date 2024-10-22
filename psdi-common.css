@@ -11,52 +11,101 @@
   --psdi-font-body   : Lato, Helvetica, Arial, Lucida, sans-serif;
   --psdi-font-heading: Oswald, Helvetica, Arial, Lucida, sans-serif;
 
+  /* Background and text colors */
 
-  /* Color scheme */
+  --psdi-dark-text-color-body    : #212121;
+  --psdi-dark-text-color-heading : #000000;
+  --psdi-light-text-color-body   : #ffffff;
+  --psdi-light-text-color-heading: #ffffff;
 
-  /* Light mode background colors for primary, secondary, and hero sections */
-  --psdi-bg-color-light    : #FFFFFF;
-  --psdi-bg-color-semilight: #BBBBBB;
-  --psdi-bg-color-hero-dark: #041E42;
+  /* Default color (light mode) */
+  --psdi-text-color-default-body   : var(--psdi-dark-text-color-body);
+  --psdi-text-color-default-heading: var(--psdi-dark-text-color-heading);
+  --psdi-bg-color-default          : #ffffff;
 
-  /* Dark mode background colors for primary, secondary, and hero sections */
-  --psdi-bg-color-dark      : #000000;
-  --psdi-bg-color-semidark  : #303030;
-  --psdi-bg-color-hero-light: #96CAF4;
+  /* Default color (dark mode) */
+  --psdi-dm-text-color-default-body   : var(--psdi-light-text-color-body);
+  --psdi-dm-text-color-default-heading: var(--psdi-light-text-color-heading);
+  --psdi-dm-bg-color-default          : #000000;
 
-  /* Alternate colors available for various uses */
-  --psdi-alt-color-blue-light    : #a3cdff;
-  --psdi-alt-color-blue-semilight: #8BB1DF;
-  --psdi-alt-color-blue-mid      : #3D7CC9;
-  --psdi-alt-color-blue-semidark : #2f5d96;
-  --psdi-alt-color-blue-dark     : #1b3657;
+  /* Primary color (light mode) - used for Hero panel and footer */
+  --psdi-text-color-primary-body   : var(--psdi-light-text-color-body);
+  --psdi-text-color-primary-heading: var(--psdi-light-text-color-heading);
+  --psdi-bg-color-primary          : #041e42;
+  --psdi-bg-color-primary-dark     : #041b3b;
+  --psdi-bg-color-primary-darker   : #031938;
+  --psdi-bg-color-primary-darkest  : #03152e;
+  --psdi-bg-color-primary-light    : #042149;
+  --psdi-bg-color-primary-lighter  : #05224c;
+  --psdi-bg-color-primary-lightest : #052756;
 
-  --psdi-alt-color-yellow-light    : #fff6e9;
-  --psdi-alt-color-yellow-semilight: #FFECD1;
-  --psdi-alt-color-yellow-mid      : #FF9E18;
-  --psdi-alt-color-yellow-semidark : #af6e13;
-  --psdi-alt-color-yellow-dark     : #633e0b;
+  /* Primary color (dark mode) */
+  --psdi-dm-text-color-primary-body   : var(--psdi-dark-text-color-body);
+  --psdi-dm-text-color-primary-heading: var(--psdi-dark-text-color-heading);
+  --psdi-dm-bg-color-primary          : #96caf4;
+  --psdi-dm-bg-color-primary-dark     : #72b8f0;
+  --psdi-dm-bg-color-primary-darker   : #61afee;
+  --psdi-dm-bg-color-primary-darkest  : #2b94e9;
+  --psdi-dm-bg-color-primary-light    : #badcf8;
+  --psdi-dm-bg-color-primary-lighter  : #cbe5fa;
+  --psdi-dm-bg-color-primary-lightest : #ffffff;
 
-  --psdi-alt-color-green-light    : #c2f6ff;
-  --psdi-alt-color-green-semilight: #9CC7CF;
-  --psdi-alt-color-green-mid      : #5AA2AE;
-  --psdi-alt-color-green-semidark : #3a666e;
-  --psdi-alt-color-green-dark     : #233f44;
+  /* Secondary color (light mode) */
+  --psdi-text-color-secondary-body   : var(--psdi-dark-text-color-body);
+  --psdi-text-color-secondary-heading: var(--psdi-dark-text-color-heading);
+  --psdi-bg-color-secondary          : #e5e1e6;
+  --psdi-bg-color-secondary-dark     : #cfc8d1;
+  --psdi-bg-color-secondary-darker   : #c5bcc7;
+  --psdi-bg-color-secondary-darkest  : #a497a8;
+  --psdi-bg-color-secondary-light    : #f0edf0;
+  --psdi-bg-color-secondary-lighter  : #fbfafb;
+  --psdi-bg-color-secondary-lightest : #ffffff;
 
-  --psdi-alt-color-red-light    : #fff4fa;
-  --psdi-alt-color-red-semilight: #EBD7E1;
-  --psdi-alt-color-red-mid      : #993366;
-  --psdi-alt-color-red-semidark : #832b57;
-  --psdi-alt-color-red-dark     : #662244;
+  /* Secondary color (dark mode) */
+  --psdi-dm-text-color-secondary-body   : var(--psdi-dark-text-color-body);
+  --psdi-dm-text-color-secondary-heading: var(--psdi-dark-text-color-heading);
+  --psdi-dm-bg-color-primary            : #bbbbbb;
+  --psdi-dm-bg-color-primary-dark       : #a8a8a8;
+  --psdi-dm-bg-color-primary-darker     : #9f9f9f;
+  --psdi-dm-bg-color-primary-darkest    : #838383;
+  --psdi-dm-bg-color-primary-light      : #cecece;
+  --psdi-dm-bg-color-primary-lighter    : #d7d7d7;
+  --psdi-dm-bg-color-primary-lightest   : #f3f3f3;
 
-  /* Light mode text colors - default, faded, and more prominent */
-  --psdi-text-color-light        : #DDDDDD;
-  --psdi-text-color-light-pale   : #AAAAAA;
-  --psdi-text-color-light-heading: #FFFFFF;
+  /* Success color */
+  --psdi-bg-color-success         : #5aa2ae;
+  --psdi-bg-color-success-dark    : #4e949f;
+  --psdi-bg-color-success-darker  : #4a8c97;
+  --psdi-bg-color-success-darkest : #3d737c;
+  --psdi-bg-color-success-light   : #6cacb7;
+  --psdi-bg-color-success-lighter : #75b1bb;
+  --psdi-bg-color-success-lightest: #8fc0c8;
 
-  /* Light mode text colors - default, faded, and more prominent */
-  --psdi-text-color-dark        : #212121;
-  --psdi-text-color-dark-pale   : #666666;
-  --psdi-text-color-dark-heading: #041e42;
+  /* Info color */
+  --psdi-bg-color-info         : #3d7cc9;
+  --psdi-bg-color-info-dark    : #336fb8;
+  --psdi-bg-color-info-darker  : #3069ae;
+  --psdi-bg-color-info-darkest : #28578f;
+  --psdi-bg-color-info-light   : #518acf;
+  --psdi-bg-color-info-lighter : #5c91d2;
+  --psdi-bg-color-info-lightest: #7aa6da;
+
+  /* Warning color */
+  --psdi-bg-color-warning         : #ff9e18;
+  --psdi-bg-color-warning-dark    : #fb9200;
+  --psdi-bg-color-warning-darker  : #ed8a00;
+  --psdi-bg-color-warning-darkest : #c37100;
+  --psdi-bg-color-warning-light   : #ffaa34;
+  --psdi-bg-color-warning-lighter : #ffb042;
+  --psdi-bg-color-warning-lightest: #ffc16c;
+
+  /* Danger color */
+  --psdi-bg-color-danger         : #993366;
+  --psdi-bg-color-danger-dark    : #8a2e5c;
+  --psdi-bg-color-danger-darker  : #822b57;
+  --psdi-bg-color-danger-darkest : #6b2447;
+  --psdi-bg-color-danger-light   : #a83870;
+  --psdi-bg-color-danger-lighter : #b03b75;
+  --psdi-bg-color-danger-lightest: #c24785;
 
 }
