@@ -321,7 +321,7 @@ ul {
 }
 
 .footer__col {
-  margin : 0 16px;
+  margin : 0 1rem;
   padding: 0;
   flex   : 1 1 300px;
 }
