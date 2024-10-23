@@ -310,6 +310,7 @@ ul {
 .footer {
   background-color: var(--ifm-color-primary);
   color           : var(--ifm-hero-text-color);
+  padding         : 2rem;
 }
 
 .row {
