@@ -53,8 +53,8 @@
 
 body {
   min-height      : 100vh;
-  font-family     : var(--font-body);
-  font-size       : 36px;
+  font-family     : var(--psdi-font-body);
+  font-size       : 17px;
   background-color: var(--bg-color);
   color           : var(--text-color);
   display         : flex;
@@ -70,7 +70,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-heading);
+  font-family: var(--psdi-font-heading);
 }
 
 a {
@@ -139,7 +139,7 @@ body>* {
 }
 
 .max-width-box {
-  flex: 0 1 1200px;
+  flex: 0 1 1440px;
 }
 
 .hero-panel {
@@ -331,11 +331,11 @@ ul {
 .footer__col {
   margin : 0 16px;
   padding: 0;
-  flex   : 0 0 400px;
+  flex   : 1 1 300px;
 }
 
 .footer__col:has(img) {
-  padding-top: 2rem;
+  padding-top: 0rem;
 }
 
 .footer__title {
@@ -344,9 +344,9 @@ ul {
 }
 
 .footer__items li {
-  padding: 16px 0;
+  padding: 0.5rem 0;
 }
 
 .footer img {
-  height: 6rem;
+  height: 4rem;
 }
