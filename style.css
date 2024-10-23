@@ -54,7 +54,7 @@
 body {
   min-height      : 100vh;
   font-family     : var(--psdi-font-body);
-  font-size       : 17px;
+  font-size       : 16px;
   background-color: var(--bg-color);
   color           : var(--text-color);
   display         : flex;
@@ -158,6 +158,39 @@ body>* {
   justify-content: space-between;
   align-items    : center;
   padding        : 8px;
+}
+
+.header-left {
+  display       : flex;
+  flex-direction: row;
+  align-items   : center;
+}
+
+.navbar__brand {
+  display       : flex;
+  flex-direction: row;
+  align-items   : center;
+  padding       : 0 0.75rem;
+}
+
+.navbar__logo img {
+  height: 2rem;
+}
+
+.navbar__title {
+  padding-left: 0.5rem;
+  font-weight : 900;
+}
+
+.navbar__item {
+  padding    : 0.5rem 0.75rem;
+  font-weight: 500;
+}
+
+.header-right {
+  display       : flex;
+  flex-direction: row;
+  align-items   : center;
 }
 
 .header-logo {
