@@ -74,7 +74,7 @@ h6 {
 }
 
 a {
-  color      : var(--text-color);
+  color      : inherit;
   font-weight: bold;
 }
 
@@ -102,6 +102,22 @@ button:active {
 img {
   background-color: var(--bg-color-img);
   color           : var(--text-color-img);
+}
+
+.lm-only {
+  display: inherit;
+}
+
+.lm-only[data-theme='dark'] {
+  display: none;
+}
+
+.dm-only {
+  display: none;
+}
+
+.dm-only[data-theme='dark'] {
+  display: inherit;
 }
 
 body>* {
