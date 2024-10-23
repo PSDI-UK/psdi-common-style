@@ -2,49 +2,20 @@
 
 :root {
 
-  /* Set specific colors to use based on color scheme - light-mode here, as default */
-  --bg-color     : var(--psdi-bg-color-default);
-  --bg-color-hero: var(--psdi-bg-color-primary);
-  --bg-color-alt : var(--psdi-bg-color-secondary);
-
-  --bg-color-img: var(--psdi-bg-color-info);
-
-  --alt-color-blue         : var(--psdi-bg-color-info);
-  --alt-color-blue-semipale: var(--psdi-bg-color-info-light);
-  --alt-color-blue-pale    : var(--psdi-bg-color-info-lighter);
-  --alt-color-green        : var(--psdi-bg-color-success);
-
-  --text-color             : var(--psdi-text-color-default-body);
-  --text-color-heading     : var(--psdi-text-color-default-heading);
-  --text-color-img         : var(--psdi-text-color-default-body);
-  --text-color-hero        : var(--psdi-text-color-primary-body);
-  --text-color-hero-heading: var(--psdi-text-color-primary-heading);
-  --text-color-alt         : var(--psdi-text-color-secondary-body);
-  --text-color-alt-heading : var(--psdi-text-color-secondary-heading);
+  --alt-color-blue         : var(--ifm-color-info);
+  --alt-color-blue-semipale: var(--ifm-color-info-light);
+  --alt-color-blue-pale    : var(--ifm-color-info-lighter);
+  --alt-color-green        : var(--ifm-color-success);
 
 }
 
 [data-theme='dark'] {
 
-  /* Set dark mode colors here */
-  --bg-color     : var(--psdi-dm-bg-color-default);
-  --bg-color-hero: var(--psdi-dm-bg-color-primary);
-  --bg-color-alt : var(--psdi-dm-bg-color-secondary);
+  --alt-color-blue         : var(--ifm-color-info-darkest);
+  --alt-color-blue-semipale: var(--ifm-color-info-darker);
+  --alt-color-blue-pale    : var(--ifm-color-info-dark);
+  --alt-color-green        : var(--ifm-color-success-darkest);
 
-  --bg-color-img: var(--psdi-dm-bg-color-info-darkest);
-
-  --alt-color-blue         : var(--psdi-bg-color-info-darkest);
-  --alt-color-blue-semipale: var(--psdi-bg-color-info-darker);
-  --alt-color-blue-pale    : var(--psdi-bg-color-info-dark);
-  --alt-color-green        : var(--psdi-bg-color-success-darkest);
-
-  --text-color             : var(--psdi-dm-text-color-default-body);
-  --text-color-heading     : var(--psdi-dm-text-color-default-heading);
-  --text-color-img         : var(--psdi-text-color-default-body);
-  --text-color-hero        : var(--psdi-dm-text-color-primary-body);
-  --text-color-hero-heading: var(--psdi-dm-text-color-primary-heading);
-  --text-color-alt         : var(--psdi-dm-text-color-secondary-body);
-  --text-color-alt-heading : var(--psdi-dm-text-color-secondary-heading);
 }
 
 * {
@@ -53,24 +24,15 @@
 
 body {
   min-height      : 100vh;
-  font-family     : var(--psdi-font-body);
-  font-size       : 16px;
-  background-color: var(--bg-color);
-  color           : var(--text-color);
+  font-family     : var(--ifm-font-family-base);
+  font-size       : var(--ifm-font-size-base);
+  background-color: var(--ifm-background-color);
+  color           : var(--ifm-font-color-base);
   display         : flex;
   flex-direction  : column;
   justify-content : space-between;
   padding         : 0px;
   margin          : 0px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--psdi-font-heading);
 }
 
 a {
@@ -84,7 +46,7 @@ a:hover {
 
 button {
   background-color: var(--alt-color-blue);
-  color           : var(--text-color);
+  color           : var(--ifm-font-color-base);
   border-radius   : 8px;
   font            : 18px;
   padding         : 6px;
@@ -97,10 +59,6 @@ button:hover {
 
 button:active {
   background-color: var(--alt-color-blue-pale);
-}
-
-img {
-  color: var(--text-color-img);
 }
 
 .lm-only {
@@ -143,13 +101,13 @@ body>* {
 }
 
 .hero-panel {
-  background-color: var(--bg-color-hero);
-  color           : var(--text-color-hero);
+  background-color: var(--ifm-color-primary);
+  color           : var(--ifm-hero-text-color);
 }
 
 .samples-panel {
-  background-color: var(--bg-color-alt);
-  color           : var(--text-color-alt);
+  background-color: var(--ifm-background-color-secondary);
+  color           : var(--ifm-font-color-secondary);
 }
 
 .header .max-width-box {
@@ -255,7 +213,7 @@ ul {
   font-size    : 36px;
   font-weight  : 900;
   margin-bottom: 32px;
-  color        : var(--text-color-alt-heading);
+  color        : var(--ifm-heading-color-secondary);
 }
 
 .samples-display {
@@ -339,7 +297,7 @@ ul {
 }
 
 .action-heading {
-  color      : var(--text-color-heading);
+  color      : var(--ifm-heading-color);
   font-size  : 24px;
   font-weight: bold;
 }
@@ -350,8 +308,8 @@ ul {
 }
 
 .footer {
-  background-color: var(--bg-color-hero);
-  color           : var(--text-color-hero-heading);
+  background-color: var(--ifm-color-primary);
+  color           : var(--ifm-hero-text-color);
 }
 
 .row {
@@ -372,7 +330,7 @@ ul {
 }
 
 .footer__title {
-  color      : var(--text-color-hero-heading);
+  color      : var(--ifm-heading-color);
   font-weight: bold;
 }
 

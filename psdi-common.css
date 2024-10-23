@@ -7,9 +7,10 @@
   /* included and used appropriately by the various builders.                */
 
 
-  /* Fonts */
-  --psdi-font-body   : Lato, Helvetica, Arial, Lucida, sans-serif;
-  --psdi-font-heading: Oswald, Helvetica, Arial, Lucida, sans-serif;
+  /* Font */
+  --ifm-font-size-base  : 17px;
+  --ifm-line-height-base: 1.65;
+  --ifm-font-family-base: Lato, Helvetica, Arial, Lucida, sans-serif;
 
   /* Background and text colors */
 
@@ -29,26 +30,22 @@
   --psdi-dm-bg-color-default          : #000000;
 
   /* Primary color (light mode) - used for Hero panel and footer */
-  --psdi-text-color-primary-body   : var(--psdi-light-text-color-body);
-  --psdi-text-color-primary-heading: var(--psdi-light-text-color-heading);
-  --psdi-bg-color-primary          : #041e42;
-  --psdi-bg-color-primary-dark     : #041b3b;
-  --psdi-bg-color-primary-darker   : #031938;
-  --psdi-bg-color-primary-darkest  : #03152e;
-  --psdi-bg-color-primary-light    : #042149;
-  --psdi-bg-color-primary-lighter  : #05224c;
-  --psdi-bg-color-primary-lightest : #052756;
+  --psdi-bg-color-primary         : #041e42;
+  --psdi-bg-color-primary-dark    : #041b3b;
+  --psdi-bg-color-primary-darker  : #031938;
+  --psdi-bg-color-primary-darkest : #03152e;
+  --psdi-bg-color-primary-light   : #042149;
+  --psdi-bg-color-primary-lighter : #05224c;
+  --psdi-bg-color-primary-lightest: #052756;
 
   /* Primary color (dark mode) */
-  --psdi-dm-text-color-primary-body   : var(--psdi-dark-text-color-body);
-  --psdi-dm-text-color-primary-heading: var(--psdi-dark-text-color-heading);
-  --psdi-dm-bg-color-primary          : #96caf4;
-  --psdi-dm-bg-color-primary-dark     : #72b8f0;
-  --psdi-dm-bg-color-primary-darker   : #61afee;
-  --psdi-dm-bg-color-primary-darkest  : #2b94e9;
-  --psdi-dm-bg-color-primary-light    : #badcf8;
-  --psdi-dm-bg-color-primary-lighter  : #cbe5fa;
-  --psdi-dm-bg-color-primary-lightest : #ffffff;
+  --psdi-dm-bg-color-primary         : #96caf4;
+  --psdi-dm-bg-color-primary-dark    : #72b8f0;
+  --psdi-dm-bg-color-primary-darker  : #61afee;
+  --psdi-dm-bg-color-primary-darkest : #2b94e9;
+  --psdi-dm-bg-color-primary-light   : #badcf8;
+  --psdi-dm-bg-color-primary-lighter : #cbe5fa;
+  --psdi-dm-bg-color-primary-lightest: #ffffff;
 
   /* Secondary color (light mode) */
   --psdi-text-color-secondary-body   : var(--psdi-dark-text-color-body);
@@ -73,39 +70,65 @@
   --psdi-dm-bg-color-secondary-lightest : #f3f3f3;
 
   /* Success color */
-  --psdi-bg-color-success         : #5aa2ae;
-  --psdi-bg-color-success-dark    : #4e949f;
-  --psdi-bg-color-success-darker  : #4a8c97;
-  --psdi-bg-color-success-darkest : #3d737c;
-  --psdi-bg-color-success-light   : #6cacb7;
-  --psdi-bg-color-success-lighter : #75b1bb;
-  --psdi-bg-color-success-lightest: #8fc0c8;
+  --ifm-color-success         : #5aa2ae;
+  --ifm-color-success-dark    : #4e949f;
+  --ifm-color-success-darker  : #4a8c97;
+  --ifm-color-success-darkest : #3d737c;
+  --ifm-color-success-light   : #6cacb7;
+  --ifm-color-success-lighter : #75b1bb;
+  --ifm-color-success-lightest: #8fc0c8;
 
   /* Info color */
-  --psdi-bg-color-info         : #3d7cc9;
-  --psdi-bg-color-info-dark    : #336fb8;
-  --psdi-bg-color-info-darker  : #3069ae;
-  --psdi-bg-color-info-darkest : #28578f;
-  --psdi-bg-color-info-light   : #518acf;
-  --psdi-bg-color-info-lighter : #5c91d2;
-  --psdi-bg-color-info-lightest: #7aa6da;
+  --ifm-color-info         : #3d7cc9;
+  --ifm-color-info-dark    : #336fb8;
+  --ifm-color-info-darker  : #3069ae;
+  --ifm-color-info-darkest : #28578f;
+  --ifm-color-info-light   : #518acf;
+  --ifm-color-info-lighter : #5c91d2;
+  --ifm-color-info-lightest: #7aa6da;
 
   /* Warning color */
-  --psdi-bg-color-warning         : #ff9e18;
-  --psdi-bg-color-warning-dark    : #fb9200;
-  --psdi-bg-color-warning-darker  : #ed8a00;
-  --psdi-bg-color-warning-darkest : #c37100;
-  --psdi-bg-color-warning-light   : #ffaa34;
-  --psdi-bg-color-warning-lighter : #ffb042;
-  --psdi-bg-color-warning-lightest: #ffc16c;
+  --ifm-color-warning         : #ff9e18;
+  --ifm-color-warning-dark    : #fb9200;
+  --ifm-color-warning-darker  : #ed8a00;
+  --ifm-color-warning-darkest : #c37100;
+  --ifm-color-warning-light   : #ffaa34;
+  --ifm-color-warning-lighter : #ffb042;
+  --ifm-color-warning-lightest: #ffc16c;
 
   /* Danger color */
-  --psdi-bg-color-danger         : #993366;
-  --psdi-bg-color-danger-dark    : #8a2e5c;
-  --psdi-bg-color-danger-darker  : #822b57;
-  --psdi-bg-color-danger-darkest : #6b2447;
-  --psdi-bg-color-danger-light   : #a83870;
-  --psdi-bg-color-danger-lighter : #b03b75;
-  --psdi-bg-color-danger-lightest: #c24785;
+  --ifm-color-danger         : #993366;
+  --ifm-color-danger-dark    : #8a2e5c;
+  --ifm-color-danger-darker  : #822b57;
+  --ifm-color-danger-darkest : #6b2447;
+  --ifm-color-danger-light   : #a83870;
+  --ifm-color-danger-lighter : #b03b75;
+  --ifm-color-danger-lightest: #c24785;
 
+  /* Set specific colors to used based on light/dark-mode */
+  /* Define light mode here first, as default */
+  --ifm-background-color          : var(--psdi-bg-color-default);
+  --ifm-color-primary             : var(--psdi-bg-color-primary);
+  --ifm-background-color-secondary: var(--psdi-bg-color-secondary);
+
+  --ifm-font-color-base        : var(--psdi-dark-text-color-body);
+  --ifm-hero-text-color        : var(--psdi-light-text-color-body);
+  --ifm-heading-color          : inherit;
+  --ifm-font-color-secondary   : var(--psdi-text-color-secondary-body);
+  --ifm-heading-color-secondary: inherit;
+
+}
+
+[data-theme='dark'] {
+
+  /* Set dark mode colors here */
+  --ifm-background-color          : var(--psdi-dm-bg-color-default);
+  --ifm-color-primary             : var(--psdi-dm-bg-color-primary);
+  --ifm-background-color-secondary: var(--psdi-dm-bg-color-secondary);
+
+  --ifm-font-color-base        : var(--psdi-light-text-color-body);
+  --ifm-hero-text-color        : var(--psdi-dark-text-color-body);
+  --ifm-heading-color          : inherit;
+  --ifm-font-color-secondary   : var(--psdi-dm-text-color-secondary-body);
+  --ifm-heading-color-secondary: inherit;
 }
