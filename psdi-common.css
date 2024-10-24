@@ -141,9 +141,10 @@
 
   --ifm-font-color-base        : var(--psdi-dark-text-color-body);
   --ifm-hero-text-color        : var(--psdi-light-text-color-body);
-  --ifm-heading-color          : inherit;
+  --ifm-heading-color          : var(--psdi-dark-text-color-heading);
+  --psdi-heading-color-inverse : var(--psdi-light-text-color-heading);
   --ifm-font-color-secondary   : var(--psdi-text-color-secondary-body);
-  --ifm-heading-color-secondary: inherit;
+  --ifm-heading-color-secondary: var(--psdi-dark-text-color-heading);
 
   --lm-display: inherit;
   --dm-display: none;
@@ -169,12 +170,18 @@
 
   --ifm-font-color-base        : var(--psdi-light-text-color-body);
   --ifm-hero-text-color        : var(--psdi-dark-text-color-body);
-  --ifm-heading-color          : inherit;
+  --ifm-heading-color          : var(--psdi-light-text-color-heading);
+  --psdi-heading-color-inverse : var(--psdi-dark-text-color-heading);
   --ifm-font-color-secondary   : var(--psdi-dm-text-color-secondary-body);
-  --ifm-heading-color-secondary: inherit;
+  --ifm-heading-color-secondary: var(--psdi-dark-text-color-heading);
 
   --lm-display: none;
   --dm-display: inherit;
+}
+
+body {
+  color      : var(--psdi-text-color-default-body);
+  font-family: var(--ifm-font-color-base);
 }
 
 h1,
@@ -188,6 +195,39 @@ h6 {
   font-weight: bold;
   line-height: 1.25;
   margin     : 0 0 1rem 0;
+}
+
+.hero,
+.footer {
+  color: var(--ifm-hero-text-color);
+}
+
+.hero h1,
+.hero h2,
+.hero h3,
+.hero h4,
+.hero h5,
+.hero h6,
+.footer h1,
+.footer h2,
+.footer h3,
+.footer h4,
+.footer h5,
+.footer h6 {
+  color: var(--psdi-heading-color-inverse);
+}
+
+.secondary {
+  color: var(--ifm-font-color-secondary);
+}
+
+.secondary h1,
+.secondary h2,
+.secondary h3,
+.secondary h4,
+.secondary h5,
+.secondary h6 {
+  color: var(--ifm-heading-color-secondary);
 }
 
 /* Link styling - to match main page, we make links bold and make underline
@@ -241,4 +281,9 @@ a svg {
 footer img {
   background-color: var(--psdi-bg-color-primary);
   border-radius   : 5px;
+}
+
+footer img.dm-only {
+  background-color: inherit;
+  border-radius   : 0;
 }
