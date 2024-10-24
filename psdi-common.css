@@ -8,9 +8,10 @@
 
 
   /* Font */
-  --ifm-font-size-base  : 17px;
-  --ifm-line-height-base: 1.65;
-  --ifm-font-family-base: Lato, Helvetica, Arial, Lucida, sans-serif;
+  --ifm-font-size-base     : 17px;
+  --ifm-line-height-base   : 1.65;
+  --ifm-font-family-base   : Lato, Helvetica, Arial, Lucida, sans-serif;
+  --ifm-heading-font-family: Oswald, Helvetica, Arial, Lucida, sans-serif;
 
   /* Background and text colors */
 
@@ -109,6 +110,7 @@
   /* Define light mode here first, as default */
   --ifm-background-color          : var(--psdi-bg-color-default);
   --ifm-color-primary             : var(--psdi-bg-color-primary);
+  --ifm-color-secondary           : var(--psdi-bg-color-secondary);
   --ifm-background-color-secondary: var(--psdi-bg-color-secondary);
 
   --ifm-font-color-base        : var(--psdi-dark-text-color-body);
@@ -124,6 +126,7 @@
   /* Set dark mode colors here */
   --ifm-background-color          : var(--psdi-dm-bg-color-default);
   --ifm-color-primary             : var(--psdi-dm-bg-color-primary);
+  --ifm-color-secondary           : var(--psdi-dm-bg-color-secondary);
   --ifm-background-color-secondary: var(--psdi-dm-bg-color-secondary);
 
   --ifm-font-color-base        : var(--psdi-light-text-color-body);
