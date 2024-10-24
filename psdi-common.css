@@ -106,11 +106,17 @@
   --ifm-color-danger-lighter : #b03b75;
   --ifm-color-danger-lightest: #c24785;
 
+  /* Button color */
+  --ifm-button-background-color     : var(--psdi-bg-color-secondary);
+  --ifm-button-background-color-dark: var(--psdi-bg-color-secondary-dark);
+  --ifm-button-color                : var(--psdi-dark-text-color-heading);
+
   /* Set specific colors to used based on light/dark-mode */
   /* Define light mode here first, as default */
   --ifm-background-color          : var(--psdi-bg-color-default);
   --ifm-color-primary             : var(--psdi-bg-color-primary);
   --ifm-color-secondary           : var(--psdi-bg-color-secondary);
+  --ifm-color-secondary-dark      : var(--psdi-bg-color-secondary-dark);
   --ifm-background-color-secondary: var(--psdi-bg-color-secondary);
 
   --ifm-font-color-base        : var(--psdi-dark-text-color-body);
@@ -127,6 +133,7 @@
   --ifm-background-color          : var(--psdi-dm-bg-color-default);
   --ifm-color-primary             : var(--psdi-dm-bg-color-primary);
   --ifm-color-secondary           : var(--psdi-dm-bg-color-secondary);
+  --ifm-color-secondary-dark      : var(--psdi-dm-bg-color-secondary-dark);
   --ifm-background-color-secondary: var(--psdi-dm-bg-color-secondary);
 
   --ifm-font-color-base        : var(--psdi-light-text-color-body);
