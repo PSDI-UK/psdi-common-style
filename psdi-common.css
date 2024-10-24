@@ -106,15 +106,35 @@
   --ifm-color-danger-lighter : #b03b75;
   --ifm-color-danger-lightest: #c24785;
 
+  /* Footer */
+  --ifm-footer-background-color: var(--ifm-color-primary);
+  --ifn-footer-title-color     : var(--ifm-font-color-base-inverse);
+  --ifm-footer-color           : var(--ifm-font-color-base-inverse);
+  --ifm-footer-link-color      : var(--ifm-font-color-base-inverse);
+  --ifm-footer-link-hover-color: var(--ifm-font-color-base-inverse);
+
   /* Button color */
   --ifm-button-background-color     : var(--psdi-bg-color-secondary);
   --ifm-button-background-color-dark: var(--psdi-bg-color-secondary-dark);
   --ifm-button-color                : var(--psdi-dark-text-color-heading);
 
+  /* Link styling */
+  --ifm-link-color             : inherit;
+  --ifm-link-hover-color       : inherit;
+  --ifm-navbar-link-hover-color: inherit;
+
   /* Set specific colors to used based on light/dark-mode */
   /* Define light mode here first, as default */
-  --ifm-background-color          : var(--psdi-bg-color-default);
-  --ifm-color-primary             : var(--psdi-bg-color-primary);
+  --ifm-background-color: var(--psdi-bg-color-default);
+
+  --ifm-color-primary         : var(--psdi-bg-color-primary);
+  --ifm-color-primary-dark    : var(--psdi-bg-color-primary-dark);
+  --ifm-color-primary-darker  : var(--psdi-bg-color-primary-darker);
+  --ifm-color-primary-darkest : var(--psdi-bg-color-primary-darkest);
+  --ifm-color-primary-light   : var(--psdi-bg-color-primary-light);
+  --ifm-color-primary-lighter : var(--psdi-bg-color-primary-lighter);
+  --ifm-color-primary-lightest: var(--psdi-bg-color-primary-lightest);
+
   --ifm-color-secondary           : var(--psdi-bg-color-secondary);
   --ifm-color-secondary-dark      : var(--psdi-bg-color-secondary-dark);
   --ifm-background-color-secondary: var(--psdi-bg-color-secondary);
@@ -125,13 +145,24 @@
   --ifm-font-color-secondary   : var(--psdi-text-color-secondary-body);
   --ifm-heading-color-secondary: inherit;
 
+  --lm-display: inherit;
+  --dm-display: none;
+
 }
 
 [data-theme='dark'] {
 
   /* Set dark mode colors here */
-  --ifm-background-color          : var(--psdi-dm-bg-color-default);
-  --ifm-color-primary             : var(--psdi-dm-bg-color-primary);
+  --ifm-background-color: var(--psdi-dm-bg-color-default);
+
+  --ifm-color-primary         : var(--psdi-dm-bg-color-primary);
+  --ifm-color-primary-dark    : var(--psdi-dm-bg-color-primary-dark);
+  --ifm-color-primary-darker  : var(--psdi-dm-bg-color-primary-darker);
+  --ifm-color-primary-darkest : var(--psdi-dm-bg-color-primary-darkest);
+  --ifm-color-primary-light   : var(--psdi-dm-bg-color-primary-light);
+  --ifm-color-primary-lighter : var(--psdi-dm-bg-color-primary-lighter);
+  --ifm-color-primary-lightest: var(--psdi-dm-bg-color-primary-lightest);
+
   --ifm-color-secondary           : var(--psdi-dm-bg-color-secondary);
   --ifm-color-secondary-dark      : var(--psdi-dm-bg-color-secondary-dark);
   --ifm-background-color-secondary: var(--psdi-dm-bg-color-secondary);
@@ -141,4 +172,73 @@
   --ifm-heading-color          : inherit;
   --ifm-font-color-secondary   : var(--psdi-dm-text-color-secondary-body);
   --ifm-heading-color-secondary: inherit;
+
+  --lm-display: none;
+  --dm-display: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color      : var(--ifm-heading-color);
+  font-family: var(--ifm-heading-font-family);
+  font-weight: bold;
+  line-height: 1.25;
+  margin     : 0 0 1rem 0;
+}
+
+/* Link styling - to match main page, we make links bold and make underline
+   disappear when hovered over, and don't show the extra icon. */
+a {
+  color      : inherit;
+  font-weight: bold;
+}
+
+.content_knG7 a:hover,
+a:hover {
+  text-decoration: none;
+}
+
+/* For links which contain longer text content, don't underline any text in paragraphs,
+   but do underline (and remove on hover) in the headings */
+a:has(>h1),
+a:has(>h2),
+a:has(>h3),
+a:has(>h4),
+a:has(>h5),
+a:has(>h6) {
+  text-decoration: none;
+}
+
+a h1,
+a h2,
+a h3,
+a h4,
+a h5,
+a h6 {
+  text-decoration: underline;
+}
+
+a:hover h1,
+a:hover h2,
+a:hover h3,
+a:hover h4,
+a:hover h5,
+a:hover h6 {
+  text-decoration: none;
+}
+
+/* Don't display the icons Docusaurus adds to links */
+a svg {
+  display: none;
+}
+
+/* Footer image styling - Give images in the footer a dark background so the
+   text in them will be still be readable */
+footer img {
+  background-color: var(--psdi-bg-color-primary);
+  border-radius   : 5px;
 }

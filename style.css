@@ -1,29 +1,5 @@
 @import url("psdi-common.css");
 
-:root {
-
-  --alt-color-blue         : var(--ifm-color-info);
-  --alt-color-blue-semipale: var(--ifm-color-info-light);
-  --alt-color-blue-pale    : var(--ifm-color-info-lighter);
-  --alt-color-green        : var(--ifm-color-success);
-
-  --lm-display: inherit;
-  --dm-display: none;
-
-}
-
-[data-theme='dark'] {
-
-  --alt-color-blue         : var(--ifm-color-info-darkest);
-  --alt-color-blue-semipale: var(--ifm-color-info-darker);
-  --alt-color-blue-pale    : var(--ifm-color-info-dark);
-  --alt-color-green        : var(--ifm-color-success-darkest);
-
-  --lm-display: none;
-  --dm-display: inherit;
-
-}
-
 * {
   box-sizing: border-box;
 }
@@ -41,47 +17,8 @@ body {
   margin          : 0px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color      : var(--ifm-heading-color);
-  font-family: var(--ifm-heading-font-family);
-  font-weight: bold;
-  line-height: 1.25;
-  margin     : 0 0 1rem 0;
-}
-
 p {
   margin: 0 0 1.25rem 0;
-}
-
-a {
-  color      : inherit;
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-button {
-  background-color: var(--alt-color-blue);
-  color           : var(--ifm-font-color-base);
-  border-radius   : 8px;
-  font            : 18px;
-  padding         : 6px;
-  width           : 150px;
-}
-
-button:hover {
-  background-color: var(--alt-color-blue-semipale);
-}
-
-button:active {
-  background-color: var(--alt-color-blue-pale);
 }
 
 .lm-only {
