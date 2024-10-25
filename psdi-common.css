@@ -296,6 +296,18 @@ a svg {
   display: none;
 }
 
+/* Header image styling - Give images in the header a light background so the
+   text in them will be still be readable */
+.navbar img {
+  background-color: var(--psdi-bg-color-default);
+  border-radius   : 5px;
+}
+
+.navbar img.dm-only {
+  background-color: inherit;
+  border-radius   : 0;
+}
+
 /* Footer image styling - Give images in the footer a dark background so the
    text in them will be still be readable */
 footer img {
