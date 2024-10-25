@@ -327,6 +327,7 @@ a svg {
   border-radius   : 5px;
 }
 
+.navbar img.lm-only,
 .navbar img.dm-only {
   background-color: inherit;
   border-radius   : 0;
