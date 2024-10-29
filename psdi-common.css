@@ -184,6 +184,14 @@ body {
   font-family: var(--ifm-font-family-base);
 }
 
+.lm-only {
+  display: var(--lm-display);
+}
+
+.dm-only {
+  display: var(--dm-display);
+}
+
 h1,
 h2,
 h3,
@@ -326,22 +334,4 @@ a svg {
 
 #__docusaurus .navbar__title {
   display: unset;
-}
-
-.navbar img.lm-only,
-.navbar img.dm-only {
-  background-color: inherit;
-  border-radius   : 0;
-}
-
-/* Footer image styling - Give images in the footer a dark background so the
-   text in them will be still be readable */
-footer img {
-  background-color: var(--psdi-bg-color-primary);
-  border-radius   : 5px;
-}
-
-footer img.dm-only {
-  background-color: inherit;
-  border-radius   : 0;
 }
