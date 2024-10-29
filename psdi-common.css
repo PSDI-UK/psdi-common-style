@@ -361,7 +361,7 @@ a svg {
   flex                 : 1 1 60%;
   display              : grid;
   grid-template-columns: 40% 60%;
-  grid-template-rows   : 3rem 1rem 12rem 1rem 2rem;
+  grid-template-rows   : 3rem 1rem 13rem 1rem 2rem;
   margin-right         : 0;
   padding-right        : 0;
 }
@@ -371,7 +371,7 @@ a svg {
   flex                 : 1 1 40%;
   display              : grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows   : 3rem 1rem 12rem 1rem 2rem;
+  grid-template-rows   : 3rem 1rem 13rem 1rem 2rem;
   margin-left          : 0;
   padding-left         : 0;
 }
