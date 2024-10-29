@@ -335,3 +335,16 @@ a svg {
 #__docusaurus .navbar__title {
   display: unset;
 }
+
+.footer-icon-list {
+  margin-top     : 1.5rem;
+  display        : flex;
+  flex-direction : row;
+  justify-content: left;
+  height         : 1.5rem;
+  gap            : 1rem
+}
+
+.footer .footer-icon-list img {
+  height: 100%;
+}
