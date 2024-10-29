@@ -13,8 +13,8 @@ body {
   display         : flex;
   flex-direction  : column;
   justify-content : space-between;
-  padding         : 0px;
-  margin          : 0px;
+  padding         : 0;
+  margin          : 0;
 }
 
 p {
@@ -27,7 +27,7 @@ p {
 
 body>* {
   flex-grow: 1;
-  padding  : 8px 0;
+  padding  : 0.5rem 0;
 }
 
 *:has(> .max-width-box) {
@@ -36,7 +36,7 @@ body>* {
 }
 
 .max-width-box {
-  flex: 0 1 1440px;
+  max-width: 1440px;
 }
 
 .hero {
@@ -49,13 +49,16 @@ body>* {
 
 .header .max-width-box {
   display        : flex;
-  flex-shrink    : 1;
-  justify-content: space-between;
+  flex           : auto;
+  justify-content: space-around;
   align-items    : center;
 }
 
 .header-left {
   display       : flex;
+  flex          : 1 1 15%;
+  min-width     : 7.5rem;
+  max-width     : 15rem;
   flex-direction: row;
   align-items   : center;
 }
@@ -66,9 +69,12 @@ body>* {
 }
 
 .navbar__items--right {
-  display       : flex;
-  flex-direction: row;
-  align-items   : center;
+  display        : flex;
+  flex           : 1 1 70%;
+  flex-direction : row;
+  flex-wrap      : wrap;
+  justify-content: right;
+  align-items    : center;
 }
 
 .clean-btn {
@@ -103,7 +109,7 @@ ul {
   display       : flex;
   flex-direction: column;
   align-items   : center;
-  padding       : 4rem;
+  margin        : 4rem;
 }
 
 .hero__title {
@@ -130,7 +136,6 @@ ul {
   transition-property         : color, background, border-color;
   -webkit-user-select         : none;
   user-select                 : none;
-  white-space                 : nowrap;
 }
 
 .button:hover {
@@ -164,6 +169,7 @@ ul {
   width          : 100%;
   display        : flex;
   justify-content: space-around;
+  flex-wrap      : wrap;
 }
 
 .sample-card {
