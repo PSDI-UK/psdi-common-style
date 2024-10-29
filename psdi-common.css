@@ -385,7 +385,8 @@ a svg {
 }
 
 .footer img {
-  height: 4rem;
+  max-height: 4rem;
+  max-width : 100%;
 }
 
 #footer-icon-list {
