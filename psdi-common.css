@@ -408,6 +408,10 @@ a svg {
   padding: 0;
 }
 
+.funding-text {
+  line-height: 1.5rem;
+}
+
 .footer__col:has(img) {
   padding-top: 0rem;
 }
