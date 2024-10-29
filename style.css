@@ -261,39 +261,3 @@ ul {
   font-size  : 24px;
   font-weight: 700;
 }
-
-.footer {
-  background-color: var(--ifm-color-primary);
-  color           : var(--ifm-hero-text-color);
-  padding         : 2rem;
-}
-
-.row {
-  display        : flex;
-  flex-direction : row;
-  justify-content: space-between;
-
-}
-
-.footer__col {
-  margin : 0 1rem;
-  padding: 0;
-  flex   : 1 1 300px;
-}
-
-.footer__col:has(img) {
-  padding-top: 0rem;
-}
-
-.footer__title {
-  color      : var(--psdi-heading-color-inverse);
-  font-weight: bold;
-}
-
-.footer__items li {
-  padding: 0.5rem 0;
-}
-
-.footer img {
-  height: 4rem;
-}
