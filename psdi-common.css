@@ -188,6 +188,15 @@ body {
   font-family: var(--ifm-font-family-base);
 }
 
+*:has(> .max-width-box) {
+  display        : flex;
+  justify-content: center;
+}
+
+.max-width-box {
+  max-width: 1320px;
+}
+
 .lm-only {
   display: var(--lm-display);
 }

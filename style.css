@@ -18,15 +18,6 @@ body>* {
   padding  : 0.5rem 0;
 }
 
-*:has(> .max-width-box) {
-  display        : flex;
-  justify-content: center;
-}
-
-.max-width-box {
-  max-width: 1320px;
-}
-
 .hero {
   background-color: var(--ifm-color-primary);
 }
