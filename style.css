@@ -1,9 +1,5 @@
 @import url("psdi-common.css");
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   min-height      : 100vh;
   font-family     : var(--ifm-font-family-base);
@@ -15,14 +11,6 @@ body {
   justify-content : space-between;
   padding         : 0;
   margin          : 0;
-}
-
-p {
-  margin: 0 0 1.25rem 0;
-}
-
-.text--center {
-  text-align: center;
 }
 
 body>* {
@@ -98,11 +86,6 @@ body>* {
 
 .clean-btn:active {
   background: inherit;
-}
-
-ul {
-  list-style: none;
-  padding   : 0;
 }
 
 .hero .max-width-box {
