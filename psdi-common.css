@@ -339,7 +339,7 @@ a svg {
 .footer {
   background-color: var(--ifm-color-primary);
   color           : var(--ifm-hero-text-color);
-  padding         : 0.5rem 2rem 2rem 2rem;
+  padding         : 0.5rem 2rem 0.5rem 2rem;
 }
 
 .footer .max-width-box {
@@ -347,6 +347,14 @@ a svg {
   flex-direction: column;
   align-items   : stretch;
   text-align    : left;
+}
+
+.footer .container-fluid {
+  padding: 0;
+}
+
+.footer .footer__bottom {
+  margin: 0;
 }
 
 .footer__links {
@@ -423,7 +431,8 @@ a svg {
 }
 
 .footer__items li {
-  padding: 0.5rem 0;
+  line-height: 1.5rem;
+  padding    : 0.25rem 0;
 }
 
 .footer img {
@@ -467,4 +476,9 @@ a svg {
   .footer__hline.small-screen-only {
     display: block;
   }
+}
+
+.footer__copyright__text {
+  line-height: 1.5rem;
+  padding    : 0;
 }
