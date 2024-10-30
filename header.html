@@ -1,0 +1,45 @@
+<div class="max-width-box navbar">
+  <div class="header-left">
+    <a class="navbar__brand" href="#">
+      <div class="navbar__logo">
+        <img src="https://psdi-uk.github.io/css-template/images/PSDI_Logo-darktext.png"
+          alt="PSDI logo" class="lm-only">
+        <img src="https://psdi-uk.github.io/css-template/images/PSDI_Logo-lighttext.png"
+          alt="PSDI logo" class="dm-only">
+      </div>
+    </a>
+  </div>
+  <div class="navbar__items navbar__items--right">
+    <a href="#" class="navbar__item navbar__link">Data Search</a>
+    <a href="#" class="navbar__item navbar__link">What We Provide</a>
+    <a href="#" class="navbar__item navbar__link">Guidance</a>
+    <a href="#" class="navbar__item navbar__link">Community</a>
+    <a href="#" class="navbar__item navbar__link">About PSDI</a>
+    <button class="clean-btn color-mode-toggle"
+      title="Switch between dark and light mode (currently light mode)"
+      aria-label="Lightmode/darkmode toggle button">
+      <img src="https://psdi-uk.github.io/css-template/images/lightmode-toggle-lm.svg"
+        alt="Lightmode toggle icon" class="lm-only">
+      <img src="https://psdi-uk.github.io/css-template/images/lightmode-toggle-dm.svg"
+        alt="Darkmode toggle icon" class="dm-only">
+    </button>
+  </div>
+</div>
+
+<script>
+  const LIGHT_MODE = "light";
+  const DARK_MODE = "dark";
+
+  // Toggle between light and dark mode
+  function toggleMode() {
+    let currentMode = document.documentElement.getAttribute("data-theme");
+    if (currentMode == DARK_MODE)
+      document.documentElement.setAttribute("data-theme", LIGHT_MODE);
+    else
+      document.documentElement.setAttribute("data-theme", DARK_MODE);
+  }
+
+  // Connect the toggle function to the button
+  const modeToggleButton = document.querySelector(".color-mode-toggle");
+  modeToggleButton.addEventListener("click", toggleMode);
+</script>
