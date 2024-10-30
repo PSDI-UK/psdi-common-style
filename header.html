@@ -40,6 +40,8 @@
   }
 
   // Connect the toggle function to the button
-  const modeToggleButton = document.querySelector(".color-mode-toggle");
-  modeToggleButton.addEventListener("click", toggleMode);
+  const lModeToggleButton = document.querySelectorAll(".color-mode-toggle");
+  lModeToggleButton.forEach(function (modeToggleButton) {
+    modeToggleButton.addEventListener("click", toggleMode);
+  });
 </script>
