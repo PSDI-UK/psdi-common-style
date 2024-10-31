@@ -214,9 +214,7 @@ body {
 
 .header-left {
   display       : flex;
-  flex          : 1 1 15%;
-  min-width     : 7.5rem;
-  max-width     : 15rem;
+  flex          : 1 1 40%;
   flex-direction: row;
   align-items   : center;
 }
@@ -228,7 +226,7 @@ body {
 
 .navbar__items--right {
   display        : flex;
-  flex           : 1 1 70%;
+  flex           : 1 1 60%;
   flex-direction : row;
   flex-wrap      : wrap;
   justify-content: right;
@@ -396,23 +394,24 @@ a svg {
   display       : flex;
   flex-direction: row;
   align-items   : center;
+  flex-wrap     : wrap;
   padding-right : 0 0.75rem;
 }
 
+.navbar__title {
+  display: unset;
+  color  : var(--ifm-heading-color);
+  margin : 0 0 0.5rem 0.5rem;
+}
+
 .navbar__logo img {
-  width: 100%;
+  width    : 100%;
+  min-width: 7.5rem;
+  max-width: 15rem;
 }
 
 #__docusaurus .navbar__logo img {
   height: 2rem;
-}
-
-.navbar__title {
-  display: none;
-}
-
-#__docusaurus .navbar__title {
-  display: unset;
 }
 
 .footer {
