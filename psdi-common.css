@@ -214,7 +214,7 @@ body {
 
 .header-left {
   display       : flex;
-  flex          : 1 1 40%;
+  flex          : 1 1 50%;
   flex-direction: row;
   align-items   : center;
 }
@@ -226,7 +226,7 @@ body {
 
 .navbar__items--right {
   display        : flex;
-  flex           : 1 1 60%;
+  flex           : 1 1 50%;
   flex-direction : row;
   flex-wrap      : wrap;
   justify-content: right;
@@ -394,8 +394,13 @@ a svg {
   display       : flex;
   flex-direction: row;
   align-items   : center;
-  flex-wrap     : wrap;
   padding-right : 0 0.75rem;
+}
+
+@media (max-width: 700px) {
+  .navbar__brand {
+    flex-wrap: wrap;
+  }
 }
 
 .navbar__title {
