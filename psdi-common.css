@@ -8,10 +8,12 @@
 
 
   /* Font */
-  --ifm-font-size-base     : 1rem;
-  --ifm-line-height-base   : 1.65;
-  --ifm-font-family-base   : Lato, Helvetica, Arial, Lucida, sans-serif;
-  --ifm-heading-font-family: Oswald, Helvetica, Arial, Lucida, sans-serif;
+  --ifm-font-size-base      : 1rem;
+  --ifm-line-height-base    : 1.5;
+  --ifm-font-family-base    : Lato, Helvetica, Arial, Lucida, sans-serif;
+  --ifm-heading-font-family : Oswald, Helvetica, Arial, Lucida, sans-serif;
+  --ifm-font-weight-base    : normal;
+  --psdi-letter-spacing-base: normal;
 
   /* Background and text colors */
 
@@ -187,8 +189,11 @@ body {
   min-height      : 100vh;
   font-family     : var(--ifm-font-family-base);
   font-size       : var(--ifm-font-size-base);
+  font-weight     : var(--ifm-font-weight-base);
   background-color: var(--ifm-background-color);
   color           : var(--ifm-font-color-base);
+  letter-spacing  : var(--psdi-letter-spacing-base);
+  line-height     : var(--ifm-line-height-base);
   display         : flex;
   flex-direction  : column;
   justify-content : space-between;
@@ -196,14 +201,48 @@ body {
   margin          : 0;
 }
 
-body>* {
-  flex-grow: 1;
-  padding  : 0.5rem 0;
+#cover {
+  position  : fixed;
+  height    : 100%;
+  width     : 100%;
+  top       : 0;
+  left      : 0;
+  background: var(--ifm-background-color);
+  z-index   : 9999;
+}
+
+select,
+option {
+  font-family     : var(--ifm-font-family-base);
+  font-size       : var(--ifm-font-size-base);
+  font-weight     : var(--ifm-font-weight-base);
+  background-color: var(--ifm-background-color);
+  color           : var(--ifm-font-color-base);
+  letter-spacing  : var(--psdi-letter-spacing-base);
+  line-height     : var(--ifm-line-height-base);
+}
+
+button,
+input.button {
+  font-family     : var(--ifm-font-family-base);
+  font-size       : var(--ifm-font-size-base);
+  font-weight     : var(--ifm-font-weight-base);
+  color           : var(--ifm-hero-text-color);
+  background-color: var(--ifm-color-primary);
+  letter-spacing  : var(--psdi-letter-spacing-base);
+  line-height     : var(--ifm-line-height-base);
+  border-radius   : 0.25rem;
+  margin          : 0.25rem;
 }
 
 *:has(> .max-width-box) {
   display        : flex;
   justify-content: center;
+}
+
+body>* {
+  flex-grow: 1;
+  padding  : 0.5rem 0;
 }
 
 .max-width-box {
@@ -234,7 +273,7 @@ body>* {
 
 .navbar__item {
   padding    : 0.5rem 0.75rem;
-  font-weight: 500;
+  font-weight: var(--ifm-font-weight-base);
 }
 
 .navbar__items--right {
@@ -261,6 +300,10 @@ body>* {
   width          : 2rem;
 }
 
+[data-theme='dark'] .clean-btn {
+  background-color: black;
+}
+
 .clean-btn:hover {
   background: var(--ifm-background-color-secondary);
 }
@@ -278,7 +321,6 @@ h6 {
   color      : var(--ifm-heading-color);
   font-family: var(--ifm-heading-font-family);
   font-weight: bold;
-  line-height: 1.25;
   margin     : 0 0 1rem 0;
 }
 
@@ -545,17 +587,12 @@ a svg {
   padding: 0;
 }
 
-.funding-text {
-  line-height: 1.5rem;
-}
-
 .footer__col:has(img) {
   padding-top: 0rem;
 }
 
 .footer__items li {
-  line-height: 1.5rem;
-  padding    : 0.25rem 0;
+  padding: 0.25rem 0;
 }
 
 .footer img {
@@ -602,8 +639,5 @@ a svg {
 }
 
 .footer__copyright__text {
-  line-height: 1.5rem;
-  padding    : 0;
+  padding: 0;
 }
-
-/* Special settings for this site */
