@@ -212,7 +212,8 @@ body {
 }
 
 select,
-option {
+option,
+input {
   font-family     : var(--ifm-font-family-base);
   font-size       : var(--ifm-font-size-base);
   font-weight     : var(--ifm-font-weight-base);
@@ -220,6 +221,12 @@ option {
   color           : var(--ifm-font-color-base);
   letter-spacing  : var(--psdi-letter-spacing-base);
   line-height     : var(--ifm-line-height-base);
+}
+
+input::placeholder {
+  color      : var(--ifm-font-color-base);
+  font-weight: 100;
+  font-style : italic;
 }
 
 button,
@@ -255,6 +262,12 @@ body>* {
 
 .dm-only {
   display: var(--dm-display);
+}
+
+.header,
+.hero,
+.footer {
+  flex: none;
 }
 
 .header .max-width-box {
