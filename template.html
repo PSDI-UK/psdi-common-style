@@ -10,13 +10,14 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lexend:400" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="style.css">
-  <script src="color_mode.js" type="module"></script>
+  <link rel="stylesheet" href="https://psdi-uk.github.io/css-template/psdi-common.css">
+  <script src="https://psdi-uk.github.io/css-template/color_mode.js" type="module"></script>
   <script type="module" defer>
-    import { connectModeToggleButton } from './color_mode.js';
+    import { connectModeToggleButton } from 'https://psdi-uk.github.io/css-template/color_mode.js';
     connectModeToggleButton();
   </script>
-  <title>PSDI Mockup</title>
+  <!-- TODO: Edit the below line to have the desired title of your page -->
+  <title>PSDI Template File</title>
 </head>
 
 <body>
@@ -35,8 +36,10 @@
         </a>
       </div>
       <div class="navbar__items navbar__items--right">
+        <!-- TODO: Edit, add, or remove the below links, which will appear on the right side of the header -->
         <a href="./index.html" class="navbar__item navbar__link">Mockup</a>
         <a href="./template.html" class="navbar__item navbar__link">Template</a>
+
         <button class="clean-btn color-mode-toggle"
           title="Switch between dark and light mode (currently light mode)"
           aria-label="Lightmode/darkmode toggle button">
@@ -51,112 +54,48 @@
 
   <div class="hero">
     <div class="max-width-box">
-      <h1 class="hero__title">PSDI Mockup</h1>
-      <p class="hero__subtitle">This is a mockup of a webpage in the common
-        styling used for PSDI sites</p>
-      <a class="button button--lg" href="https://psdistg.wpengine.com/">See the prototype PSDI
-        website for comparison</a>
+      <!-- TODO: Edit the below line to have the desired title of your page -->
+      <h1 class="hero__title">PSDI Template File</h1>
+      <!-- TODO: Edit or remove the below line for the page subtitle -->
+      <p class="hero__subtitle">A template for raw html files in the PSDI format</p>
     </div>
   </div>
 
-  <div class="text-panel">
+  <div class="body-panel">
     <div class="max-width-box">
-      <h1>h1. Text panel</h1>
-      <p class="large-text">Large, attention-grabbing text!</p>
-      <p class="large-text bold-text">Large bold, attention-grabbinger text!</p>
-      <h2>h2. Purpose</h2>
-      <p>This panel shows simple text and headings of each different level.</p>
-      <h3>h3. Normal text across a couple paragraphs</h3>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <p>Veniam obcaecati illo iure corporis ea architecto veritatis velit dignissimos commodi,
-        reprehenderit eveniet magni
-        facere natus! A cupiditate dolores ipsa repellendus reiciendis!</p>
-      <h3>h3. Normal text in different subsections</h3>
-      <h4>h4. Subsection 1</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      <h4>h4. Subsection 2</h4>
-      <p> Cupiditate itaque nobis impedit necessitatibus vero totam recusandae perferendis quo!</p>
-      <h5>h5. Subsubsection</h5>
-      <p>Officia facilis soluta aperiam...</p>
-      <h6>h6. Subsubsubsection</h6>
-      <p>...accusantium consectetur in ipsam quis voluptates debitis
-        enim.</p>
+
+      <!-- TODO: Delete the below block, which contains the instructions for how to use the template file. -->
+      <div class="delete-this-block">
+        <h2>How to Use</h2>
+        <ol>
+          <li>Copy this file (either from the repo, or by saving it) to your own project, and rename as desired. If you
+            want the page to be the main page of its website, it should be named "index.html".</li>
+          <li>Open the file with your editor of choice. Look through the file for all sections marked with
+            a "TODO" comment, and follow the instructions to customise it.</li>
+          <li>Test locally that the page appears as desired, by opening up the file with your internet browser of
+            choice.</li>
+        </ol>
+      </div>
+
+      <!-- TODO: Place content you wish to appear in a main body section of the page here. You can copy and paste this
+       block (from the <div class="body-panel"> wrapper) to have multiple such sections.
+       
+       If you're comfortable writing raw HTML, you can do so directly. Otherwise, you can use an online converter to
+       convert text in a format of your choice to HTML. For instance, you can use https://markdowntohtml.com/ to convert
+       Markdown to html.
+       
+       Take care that this page already has a top-level header element (h1 in HTML, # in Markdown, etc.), so you don't
+       want to add another in this section. The highest-level header in this section should be h2/##/etc.-->
+
     </div>
   </div>
 
   <div class="secondary">
     <div class="max-width-box">
-      <h2 class="samples-heading">Color Scheme Samples</h2>
-      <div class="samples-display">
-        <div class="sample-card">
-          <div class="color-sample info-bg">
-            <p>Sample text</p>
-            <p class="bold-text">Sample bold text</p>
-            <p class="large-text">Sample large text</p>
-            <p class="large-text bold-text">Sample large bold text</p>
-            <p class="inverse-text">Sample inverse text</p>
-            <p class="inverse-text bold-text">Sample inverse bold text</p>
-            <p class="inverse-text large-text">Sample inverse large text</p>
-            <p class="inverse-text large-text bold-text">Sample inverse large bold text</p>
-          </div>
-          <div class="sample-label">Info color</div>
-        </div>
-        <div class="sample-card">
-          <div class="color-sample success-bg">
-            <p>Sample text</p>
-            <p class="bold-text">Sample bold text</p>
-            <p class="large-text">Sample large text</p>
-            <p class="large-text bold-text">Sample large bold text</p>
-            <p class="inverse-text">Sample inverse text</p>
-            <p class="inverse-text bold-text">Sample inverse bold text</p>
-            <p class="inverse-text large-text">Sample inverse large text</p>
-            <p class="inverse-text large-text bold-text">Sample inverse large bold text</p>
-          </div>
-          <div class="sample-label">Success color</div>
-        </div>
-        <div class="sample-card">
-          <div class="color-sample warning-bg">
-            <p>Sample text</p>
-            <p class="bold-text">Sample bold text</p>
-            <p class="large-text">Sample large text</p>
-            <p class="large-text bold-text">Sample large bold text</p>
-            <p class="inverse-text">Sample inverse text</p>
-            <p class="inverse-text bold-text">Sample inverse bold text</p>
-            <p class="inverse-text large-text">Sample inverse large text</p>
-            <p class="inverse-text large-text bold-text">Sample inverse large bold text</p>
-          </div>
-          <div class="sample-label">Warning color</div>
-        </div>
-        <div class="sample-card">
-          <div class="color-sample danger-bg">
-            <p>Sample text</p>
-            <p class="bold-text">Sample bold text</p>
-            <p class="large-text">Sample large text</p>
-            <p class="large-text bold-text">Sample large bold text</p>
-            <p class="inverse-text">Sample inverse text</p>
-            <p class="inverse-text bold-text">Sample inverse bold text</p>
-            <p class="inverse-text large-text">Sample inverse large text</p>
-            <p class="inverse-text large-text bold-text">Sample inverse large bold text</p>
-          </div>
-          <div class="sample-label">Danger color</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="quote-panel">
-    <div class="max-width-box">
-      <div class="big-flexigap"></div>
-      <div class="quote-display">
-        <p class="quote verylarge-text italics-text">Lorem ipsum dolor sit amet consectetur
-          adipisicing
-          elit. Ratione dolores quasi excepturi dicta impedit, suscipit eum ut, id, tempore omnis
-          iste corrupti repellendus aliquid distinctio. Asperiores consequatur consectetur
-          temporibus hic.</p>
-        <div class="attribution secondary-text-dark">- Very large italics text, suitable for a quote
-        </div>
-      </div>
-      <div class="big-flexigap"></div>
+      <!-- TODO: Place content you wish to appear in a secondary section of the page here. It will appear on a
+       differently-colored background. You can copy and paste this block (from the <div class="secondary"> wrapper) to
+       have multiple such sections, or delete this block if you don't want any. -->
+       
     </div>
   </div>
 
