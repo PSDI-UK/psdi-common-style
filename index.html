@@ -6,17 +6,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon"
     href="https://psdi-uk.github.io/css-template/images/logo.svg">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lexend:400" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="color_mode.js" type="module"></script>
+  <script type="module" defer>
+    import { connectModeToggleButton } from './color_mode.js';
+    connectModeToggleButton();
+  </script>
   <title>PSDI Mockup</title>
 </head>
 
 <body>
 
-  <header class="header" id="psdi-header-stub"></header>
-  <script>
-    $("#psdi-header-stub").load("local_header.html");
-  </script>
+  <header class="header" id="psdi-header">
+    <div class="max-width-box navbar">
+      <div class="header-left">
+        <a class="navbar__brand" href="./">
+          <div class="navbar__logo">
+            <img src="https://psdi-uk.github.io/css-template/images/PSDI_Logo-darktext.png"
+              alt="PSDI logo" class="lm-only">
+            <img src="https://psdi-uk.github.io/css-template/images/PSDI_Logo-lighttext.png"
+              alt="PSDI logo" class="dm-only">
+          </div>
+          <h5 class="navbar__title"></h5>
+        </a>
+      </div>
+      <div class="navbar__items navbar__items--right">
+        <a href="#" class="navbar__item navbar__link">Data Search</a>
+        <a href="#" class="navbar__item navbar__link">What We Provide</a>
+        <a href="#" class="navbar__item navbar__link">Guidance</a>
+        <a href="#" class="navbar__item navbar__link">Community</a>
+        <a href="#" class="navbar__item navbar__link">About PSDI</a>
+        <button class="clean-btn color-mode-toggle"
+          title="Switch between dark and light mode (currently light mode)"
+          aria-label="Lightmode/darkmode toggle button">
+          <img src="https://psdi-uk.github.io/css-template/images/lightmode-toggle-lm.svg"
+            alt="Lightmode toggle icon" class="lm-only">
+          <img src="https://psdi-uk.github.io/css-template/images/lightmode-toggle-dm.svg"
+            alt="Darkmode toggle icon" class="dm-only">
+        </button>
+      </div>
+    </div>
+  </header>
 
   <div class="hero">
     <div class="max-width-box">
@@ -130,10 +164,7 @@
   </div>
 
   <footer class="footer">
-    <!-- This is the backup version of the footer, in case the remote one fails to load. Ideally this should be
-    kept up to date with the remote one, but it's not a high priority. This should not be used as a basis for any
-    changes, and should only be pasted over with updated versions of the remote footer. -->
-    <div class="max-width-box" id="psdi-backup-footer">
+    <div class="max-width-box">
       <div class="footer__links">
         <div id="footer__links__left">
           <div class="footer__title">
@@ -150,10 +181,8 @@
           <ul class="footer__col footer__items clean-list">
             <li>
               <img class="lm-only"
-                src="https://psdi-uk.github.io/css-template/images/UKRI-lighttext.png"
-                alt="UKRI logo">
-              <img class="dm-only"
-                src="https://psdi-uk.github.io/css-template/images/UKRI-darktext.png"
+                src="https://psdi-uk.github.io/css-template/images/UKRI-lighttext.png" alt="UKRI logo">
+              <img class="dm-only" src="https://psdi-uk.github.io/css-template/images/UKRI-darktext.png"
                 alt="UKRI logo">
             </li>
             <li>
@@ -221,15 +250,6 @@
       </div>
       <div class="footer__copyright__text text--center">Copyright © 2024 PSDI</div>
     </div>
-    <div id="psdi-footer"></div>
-    <script>
-      $("#psdi-footer").load("https://psdi-uk.github.io/css-template/footer.html",
-        function (response, status, xhr) {
-          if (status != "error") {
-            $("#psdi-backup-footer").remove();
-          }
-        });
-    </script>
   </footer>
 
 </body>
