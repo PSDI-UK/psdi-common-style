@@ -20,9 +20,24 @@ function toggleMode() {
 }
 
 export function connectModeToggleButton() {
-    // Connect the mode toggle function to the button
-    const lModeToggleButton = document.querySelectorAll(".color-mode-toggle");
-    lModeToggleButton.forEach(function (modeToggleButton) {
-      modeToggleButton.addEventListener("click", toggleMode);
+  // Connect the mode toggle function to the button
+  const lModeToggleButton = document.querySelectorAll(".color-mode-toggle");
+  lModeToggleButton.forEach(function (modeToggleButton) {
+    modeToggleButton.addEventListener("click", toggleMode);
+  });
+}
+
+export function addHeaderLinks() {
+  // We want to load in the links, but preserve the existing mode toggle button alongside them, so this function
+  // handles saving it and re-adding it
+
+  let headerLinksParent = $("#psdi-header .navbar__items--right");
+  let modeToggle = $("#psdi-header .color-mode-toggle");
+
+  headerLinksParent.load("header-links.html",
+    function (response, status, xhr) {
+      if (status != "error") {
+        headerLinksParent[0].appendChild(modeToggle[0]);
+      }
     });
 }

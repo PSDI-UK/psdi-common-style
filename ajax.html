@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="https://psdi-uk.github.io/css-template/images/logo.svg">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lexend:400" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://psdi-uk.github.io/css-template/psdi-common.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://psdi-uk.github.io/css-template/psdi-common.js" type="module"></script>
+  <script type="module" defer>
+    import { connectModeToggleButton } from 'https://psdi-uk.github.io/css-template/psdi-common.js';
+    connectModeToggleButton();
+  </script>
+  <title>PSDI AJAX Demonstration</title>
+</head>
+
+<body>
+  <div class="announcementBar_mb4j" role="banner">
+    <div class="max-width-box announcementBarContent_xLdY">Important announcements go here</div>
+  </div>
+
+  <header class="header" id="psdi-header"></header>
+  <script type="module">
+    import { addHeaderLinks } from './psdi-common.js';
+    $("#psdi-header").load("psdi-common-header.html",
+      function (response, status, xhr) {
+        if (status != "error") {
+          addHeaderLinks();
+        }
+      });
+  </script>
+
+  <div class="hero">
+    <div class="max-width-box">
+      <h1 class="hero__title">PSDI Template File</h1>
+      <p class="hero__subtitle">A template for raw html files in the PSDI format</p>
+    </div>
+  </div>
+
+  <div class="body-panel">
+    <div class="max-width-box">
+
+      <div class="delete-this-block">
+        <h2>How to Use</h2>
+        <ol>
+          <li>Copy this file (either from the repo, or by saving it) to your own project, and rename as desired. If you
+            want the page to be the main page of its website, it should be named "index.html".</li>
+          <li>Open the file with your editor of choice. Look through the file for all sections marked with
+            a "TODO" comment, and follow the instructions to customise it.</li>
+          <li>Test locally that the page appears as desired, by opening up the file with your internet browser of
+            choice.</li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="secondary">
+    <div class="max-width-box">
+
+    </div>
+  </div>
+
+  <footer class="footer" id="psdi-footer"></footer>
+  <script>
+    $("#psdi-footer").load("psdi-common-footer.html");
+  </script>
+
+</body>
+
+</html>
