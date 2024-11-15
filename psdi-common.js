@@ -57,12 +57,12 @@ $(document).ready(function () {
 
   $("#cover").fadeOut(1000);
 
-  $("#psdi-header").load("psdi-common-header.html",
+  $("#psdi-header").load("https://psdi-uk.github.io/css-template/psdi-common-header.html",
     function (response, status, xhr) {
       if (status != "error") {
         addHeaderLinks();
       }
     });
 
-  $("#psdi-footer").load("psdi-common-footer.html", finalizeLoad);
+  $("#psdi-footer").load("https://psdi-uk.github.io/css-template/psdi-common-footer.html", finalizeLoad);
 });
