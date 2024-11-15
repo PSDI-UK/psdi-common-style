@@ -38,6 +38,7 @@ export function addHeaderLinks() {
     function (response, status, xhr) {
       if (status != "error") {
         headerLinksParent[0].appendChild(modeToggle[0]);
+        connectModeToggleButton();
       }
     });
 }
