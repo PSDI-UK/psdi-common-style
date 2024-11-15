@@ -26,6 +26,16 @@
 
   <header class="header" id="psdi-header"></header>
 
+  <script type="module">
+    import { setBrandLinkTarget, setHeaderLinksSource } from "https://psdi-uk.github.io/css-template/psdi-common.js";
+    // TODO: The following functions are used to set the link target of clicking on the brand in the header, and the
+    // HTML file to be used as a source for the links to appear in the header of this page. The values currently
+    // supplied are the defaults - if they're fine, this section can be deleted to save space. Otherwise, they can
+    // be modified to set the desired values
+    setBrandLinkTarget("./");
+    setHeaderLinksSource("./header-links.html");
+  </script>
+
   <div class="hero">
     <div class="max-width-box">
       <h1 class="hero__title">PSDI Template File</h1>

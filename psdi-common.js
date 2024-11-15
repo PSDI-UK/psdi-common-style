@@ -1,5 +1,10 @@
 const LIGHT_MODE = "light";
 const DARK_MODE = "dark";
+const DEFAULT_HEADER_LINKS_SOURCE = "./header_links.html";
+const DEFAULT_BRAND_LINK_TARGET = "./";
+
+let brandLinkTarget = DEFAULT_BRAND_LINK_TARGET;
+let headerLinksSource = DEFAULT_HEADER_LINKS_SOURCE;
 
 // Load color mode from session storage and apply it
 const mode = sessionStorage.getItem("mode");
@@ -27,6 +32,14 @@ export function connectModeToggleButton() {
   });
 }
 
+export function setBrandLinkTarget(s) {
+  brandLinkTarget = s;
+}
+
+export function setHeaderLinksSource(s) {
+  headerLinksSource = s;
+}
+
 let loadSteps = 2;
 
 function finalizeLoad() {
@@ -43,7 +56,7 @@ export function addHeaderLinks() {
   let headerLinksParent = $("#psdi-header .navbar__items--right");
   let modeToggle = $("#psdi-header .color-mode-toggle");
 
-  headerLinksParent.load("header-links.html",
+  headerLinksParent.load(headerLinksSource,
     function (response, status, xhr) {
       if (status != "error") {
         headerLinksParent[0].appendChild(modeToggle[0]);
@@ -60,6 +73,7 @@ $(document).ready(function () {
   $("#psdi-header").load("https://psdi-uk.github.io/css-template/psdi-common-header.html",
     function (response, status, xhr) {
       if (status != "error") {
+        $("#psdi-header a.navbar__brand")[0].href = brandLinkTarget;
         addHeaderLinks();
       }
     });
