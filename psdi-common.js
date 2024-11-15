@@ -42,3 +42,15 @@ export function addHeaderLinks() {
       }
     });
 }
+
+$(document).ready(function () {
+
+  $("#psdi-header").load("psdi-common-header.html",
+    function (response, status, xhr) {
+      if (status != "error") {
+        addHeaderLinks();
+      }
+    });
+
+  $("#psdi-footer").load("psdi-common-footer.html");
+});

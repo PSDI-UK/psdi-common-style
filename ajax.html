@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lexend:400" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://psdi-uk.github.io/css-template/psdi-common.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <script src="https://psdi-uk.github.io/css-template/psdi-common.js" type="module"></script>
+  <script src="./psdi-common.js" type="module"></script>
   <title>PSDI AJAX Demonstration</title>
 </head>
 
@@ -21,15 +21,6 @@
   </div>
 
   <header class="header" id="psdi-header"></header>
-  <script type="module">
-    import { addHeaderLinks } from './psdi-common.js';
-    $("#psdi-header").load("psdi-common-header.html",
-      function (response, status, xhr) {
-        if (status != "error") {
-          addHeaderLinks();
-        }
-      });
-  </script>
 
   <div class="hero">
     <div class="max-width-box">
@@ -63,9 +54,6 @@
   </div>
 
   <footer class="footer" id="psdi-footer"></footer>
-  <script>
-    $("#psdi-footer").load("psdi-common-footer.html");
-  </script>
 
 </body>
 
