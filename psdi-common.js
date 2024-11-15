@@ -27,6 +27,15 @@ export function connectModeToggleButton() {
   });
 }
 
+let loadSteps = 2;
+
+function finalizeLoad() {
+  --loadSteps;
+  if (loadSteps <= 0) {
+    $("#cover").hide();
+  }
+}
+
 export function addHeaderLinks() {
   // We want to load in the links, but preserve the existing mode toggle button alongside them, so this function
   // handles saving it and re-adding it
@@ -40,10 +49,13 @@ export function addHeaderLinks() {
         headerLinksParent[0].appendChild(modeToggle[0]);
         connectModeToggleButton();
       }
+      finalizeLoad();
     });
 }
 
 $(document).ready(function () {
+
+  $("#cover").fadeOut(1000);
 
   $("#psdi-header").load("psdi-common-header.html",
     function (response, status, xhr) {
@@ -52,5 +64,5 @@ $(document).ready(function () {
       }
     });
 
-  $("#psdi-footer").load("psdi-common-footer.html");
+  $("#psdi-footer").load("psdi-common-footer.html", finalizeLoad);
 });
