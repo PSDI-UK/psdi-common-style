@@ -120,6 +120,10 @@
   --ifm-button-background-color-dark: var(--psdi-bg-color-secondary-dark);
   --ifm-button-color                : var(--psdi-dark-text-color-heading);
 
+  /* Border colors */
+  --psdi-border-color-light: #f5f6f7;
+  --psdi-border-color-dark: #111111;
+
   /* Link styling */
   --ifm-link-color             : inherit;
   --ifm-link-hover-color       : inherit;
@@ -147,6 +151,8 @@
   --psdi-heading-color-inverse : var(--psdi-light-text-color-heading);
   --ifm-font-color-secondary   : var(--psdi-text-color-secondary-body);
   --ifm-heading-color-secondary: var(--psdi-dark-text-color-heading);
+
+  --psdi-border-color: var(--psdi-border-color-light);
 
   --lm-display: inherit;
   --dm-display: none;
@@ -176,6 +182,8 @@
   --psdi-heading-color-inverse : var(--psdi-dark-text-color-heading);
   --ifm-font-color-secondary   : var(--psdi-dm-text-color-secondary-body);
   --ifm-heading-color-secondary: var(--psdi-dark-text-color-heading);
+
+  --psdi-border-color: var(--psdi-border-color-dark);
 
   --lm-display: none;
   --dm-display: inherit;
@@ -281,11 +289,12 @@ body>* {
 
 .announcementBar_mb4j {
   background-color: #ff89a2;
+  color           : black;
   display         : flex;
   flex-direction  : column;
   align-items     : center;
   padding         : 0;
-  border-bottom   : 1px solid #f5f6f7;
+  border-bottom   : 1px solid var(--psdi-border-color);
   height          : auto;
 }
 
