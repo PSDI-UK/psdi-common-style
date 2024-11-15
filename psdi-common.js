@@ -1,6 +1,6 @@
 const LIGHT_MODE = "light";
 const DARK_MODE = "dark";
-const DEFAULT_HEADER_LINKS_SOURCE = "./header_links.html";
+const DEFAULT_HEADER_LINKS_SOURCE = "./header-links.html";
 const DEFAULT_BRAND_LINK_TARGET = "./";
 
 let brandLinkTarget = DEFAULT_BRAND_LINK_TARGET;
