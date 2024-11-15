@@ -58,9 +58,10 @@ export function addHeaderLinks() {
 
   headerLinksParent.load(headerLinksSource,
     function (response, status, xhr) {
-      if (status != "error") {
-        headerLinksParent[0].appendChild(modeToggle[0]);
+      if (status == "error") {
+        headerLinksParent[0].textContent = "ERROR: Could not load header links";
       }
+      headerLinksParent[0].appendChild(modeToggle[0]);
       connectModeToggleButton();
       finalizeLoad();
     });
@@ -75,8 +76,16 @@ $(document).ready(function () {
       if (status != "error") {
         $("#psdi-header a.navbar__brand")[0].href = brandLinkTarget;
         addHeaderLinks();
+      } else {
+        $("#psdi-header")[0].textContent = "ERROR: Could not load page header";
       }
     });
 
-  $("#psdi-footer").load("https://psdi-uk.github.io/css-template/psdi-common-footer.html", finalizeLoad);
+  $("#psdi-footer").load("https://psdi-uk.github.io/css-template/psdi-common-footer.html",
+    function (response, status, xhr) {
+      if (status == "error") {
+        $("#psdi-footer")[0].textContent = "ERROR: Could not load page footer";
+      }
+      finalizeLoad();
+    });
 });
