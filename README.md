@@ -11,6 +11,24 @@ This project provides common resources to help provide a consistent style across
 
 ### Webpages
 
+The following pages are deployed to help demonstrate the PSDI style:
+
+#### Mockup
+
+**Deployed at:** https://psdi-uk.github.io/css-template/index.html
+
+...
+
+#### Static Template
+
+**Deployed at:** https://psdi-uk.github.io/css-template/template.html
+
+...
+
+#### AJAX Template
+
+**Deployed at:** https://psdi-uk.github.io/css-template/ajax.html
+
 ...
 
 ### Other Files
