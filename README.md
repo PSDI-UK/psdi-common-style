@@ -70,6 +70,12 @@ This file provides the HTML for the common footer on PSDI sites, which can be lo
 
 **Deployed at:** https://psdi-uk.github.io/css-template/psdi-common-header.html
 
+This file provides the HTML for the common header on PSDI sites, which can be loaded into a page via AJAX scripting. For proper formatting, it must be loaded into an element of the form:
+
+```HTML
+<header class="header" id="psdi-header"></header>
+```
+
 ...
 
 ## Copyright and License
