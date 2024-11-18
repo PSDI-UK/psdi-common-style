@@ -60,7 +60,11 @@ This file provides JavaScript functions used to handle AJAX loading of the commo
 
 **Deployed at:** https://psdi-uk.github.io/css-template/psdi-common-footer.html
 
-This file provides the HTML for the common footer on PSDI sites, which can be loaded into a page via AJAX scripting. For proper formatting, it must be loaded into a `<footer class="footer" id="psdi-footer"></footer>` element.
+This file provides the HTML for the common footer on PSDI sites, which can be loaded into a page via AJAX scripting. For proper formatting, it must be loaded into an element of the form:
+
+```HTML
+<footer class="footer" id="psdi-footer"></footer>
+```
 
 #### Common Header
 
