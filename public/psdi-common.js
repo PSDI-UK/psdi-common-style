@@ -1,8 +1,10 @@
 const LIGHT_MODE = "light";
 const DARK_MODE = "dark";
-const DEFAULT_HEADER_LINKS_SOURCE = "./header-links.html";
+const DEFAULT_TITLE = "";
 const DEFAULT_BRAND_LINK_TARGET = "./";
+const DEFAULT_HEADER_LINKS_SOURCE = "./header-links.html";
 
+let title = DEFAULT_TITLE;
 let brandLinkTarget = DEFAULT_BRAND_LINK_TARGET;
 let headerLinksSource = DEFAULT_HEADER_LINKS_SOURCE;
 
@@ -30,6 +32,10 @@ export function connectModeToggleButton() {
   lModeToggleButton.forEach(function (modeToggleButton) {
     modeToggleButton.addEventListener("click", toggleMode);
   });
+}
+
+export function setTitle(s) {
+  title = s;
 }
 
 export function setBrandLinkTarget(s) {
@@ -75,6 +81,7 @@ $(document).ready(function () {
     function (response, status, xhr) {
       if (status != "error") {
         $("#psdi-header a.navbar__brand")[0].href = brandLinkTarget;
+        $("#psdi-header .navbar__title")[0].textContent = title;
         addHeaderLinks();
       } else {
         $("#psdi-header")[0].textContent = "ERROR: Could not load page header";
