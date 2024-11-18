@@ -1,0 +1,5 @@
+# Protect files which are deployed publicly, as these are used by other sides
+# and could cause issues if changed without care
+*.html @brgillis
+*.css @brgillis
+*.js @brgillis
