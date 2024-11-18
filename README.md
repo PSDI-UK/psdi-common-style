@@ -1,5 +1,24 @@
 # CSS Template
 
-WARNING: This project is still under construction
+This project provides common resources to help provide a consistent style across PSDI websites. The contents of the "public/" directory are deployed at https://psdi-uk.github.io/css-template/, and can be imported by other projects to use the PSDI style and elements.
 
-This project provides a common CSS file/template which can be used across projects which generate websites, providing a consistent look and feel, and publishes a mockup website demonstrating the appearance. This mockup can be seen published at https://psdi-uk.github.io/css-template/ or by loading index.html locally.
+## Contributors
+
+- Bryan Gillis (coding)
+- Cerys Willoughby (design)
+
+## Provided Resources
+
+### Webpages
+
+...
+
+### Other Files
+
+...
+
+## Copyright and License
+
+Copyright (c) PSDI Organisation, Bryan Gillis 2024
+
+Official license is awaiting the development of an official PSDI licensing policy.
