@@ -24,13 +24,13 @@ the style.
 
 **Deployed at:** https://psdi-uk.github.io/css-template/template.html
 
-...
+This is a template which can be copied to other projects to make static HTML pages. The source code of it includes various TODO notes in comments to guide the user through parts they need to edit to customise the page.
 
 #### AJAX Template
 
 **Deployed at:** https://psdi-uk.github.io/css-template/ajax.html
 
-...
+This is a template similar to the above, except it uses AJAX scripting to remotely load the common PSDI header and footer rather than copying them. This incurs a slight cost in loading time, but the resulting page will automatically inherit any updates to the header and footer without needing to be manually updated. This is deployed alongside the static template so that the additional loading time be observed.
 
 ### Other Files
 
