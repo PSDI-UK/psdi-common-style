@@ -34,6 +34,12 @@ This is a template similar to the above, except it uses AJAX scripting to remote
 
 ### Other Files
 
+#### Images
+
+**Deployed at:** https://psdi-uk.github.io/css-template/images
+
+This folder contains various images used in the common PSDI header and footer, including a favicon, PSDI and UKRI logos, and icons for social links. If either of the above templates is used, they will include references to these images, and no manual handling of them will be needed (unless e.g. an extra instance of one of the logos somewhere on the page is desired).
+
 ...
 
 ## Copyright and License
