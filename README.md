@@ -40,6 +40,32 @@ This is a template similar to the above, except it uses AJAX scripting to remote
 
 This folder contains various images used in the common PSDI header and footer, including a favicon, PSDI and UKRI logos, and icons for social links. If either of the above templates is used, they will include references to these images, and no manual handling of them will be needed (unless e.g. an extra instance of one of the logos somewhere on the page is desired).
 
+### Stylesheet
+
+**Deployed at:** https://psdi-uk.github.io/css-template/psdi-common.css
+
+A common CSS stylesheet which can be used for PSDI sites. If no extra styling is required, it can be used directly in the HTML header of a webpage. Alternatively, it can be imported at the top of a CSS stylesheet which provides further custom styling with the command, placed at the top of the file:
+
+```CSS
+@import url("https://psdi-uk.github.io/css-template/psdi-common.css");
+```
+
+### Scripts
+
+**Deployed at:** https://psdi-uk.github.io/css-template/psdi-common.js
+
+...
+
+### Common Footer
+
+**Deployed at:** https://psdi-uk.github.io/css-template/psdi-common-footer.html
+
+...
+
+#### Common Header
+
+**Deployed at:** https://psdi-uk.github.io/css-template/psdi-common-header.html
+
 ...
 
 ## Copyright and License
