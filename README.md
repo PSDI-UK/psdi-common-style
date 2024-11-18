@@ -76,7 +76,47 @@ This file provides the HTML for the common header on PSDI sites, which can be lo
 <header class="header" id="psdi-header"></header>
 ```
 
-...
+The header is customisable for each site, and at minimum, the site title will need to be set for it. This can be done through a script such as the following somewhere on the page (ideally immediately after the header element):
+
+```HTML
+<script type="module">
+import { setTitle,setBrandLinkTarget, setHeaderLinksSource } from
+    "https://psdi-uk.github.io/css-template/psdi-common.js";
+setTitle("Site Title");
+setBrandLinkTarget("./");
+setHeaderLinksSource("./header-links.html");
+</script>
+```
+
+Let's explain each of these functions:
+
+* `setTitle()`
+
+This determines the text that will appear in the header, identifying the website (the whole site, not the specific page). If this function is not called, the text will be blank.
+
+* `setBrandLinkTarget()`
+
+This sets the target that the PSDI brand in the header (including site title) will link to. By default, this is "./", which will link to an "index.html" page in the same directory as this file. If this default is fine, this function does not need to be called. If not (e.g. if the site's homepage is in a different directory), it must be called to set the proper address.
+
+* `setHeaderLinksSource()`
+
+This sets the location of an html file which should contain a list of links which you wish to appear in the top-right of the header, typically linking to different pages within the site. The content of this file should look something like:
+
+```HTML
+<a href="./index.html" class="navbar__item navbar__link">Home</a>
+<a href="./page-one.html" class="navbar__item navbar__link">Page One</a>
+<a href="./page-two.html" class="navbar__item navbar__link">Page Two</a>
+```
+
+The default source is "./header-links.html", which is relative to the location of the individual file (not the root of the site). If this is fine, you can create a "header-links.html" file and place it in the same directory as the other ".html" files, and this function call can be removed.
+
+It is possible for different pages within the same site to each link to different files for their header links, for instance if they use relative links and some files are in different directories. This can be done without this function call if you place a different "header-links.html" file in each directory.
+
+Some situations in which you might need to call this function are:
+
+* You wish to put the header links in a file with a different name
+* You wish for the header links to differ between different pages in the same directory
+* It is not possible or convenient to put a "header-links.html" file alongside a page (e.g. if the page needs to be built and placed in a directory which doesn't yet exist)
 
 ## Copyright and License
 
