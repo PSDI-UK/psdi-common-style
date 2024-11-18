@@ -17,7 +17,8 @@ The following pages are deployed to help demonstrate the PSDI style:
 
 **Deployed at:** https://psdi-uk.github.io/css-template/index.html
 
-...
+This page demonstrates what the PSDI style looks like, and includes various page elements to show how they appear in
+the style.
 
 #### Static Template
 
