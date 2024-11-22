@@ -118,6 +118,12 @@ Some situations in which you might need to call this function are:
 * You wish for the header links to differ between different pages in the same directory
 * It is not possible or convenient to put a "header-links.html" file alongside a page (e.g. if the page needs to be built and placed in a directory which doesn't yet exist)
 
+## Dependent Projects
+
+The following projects use public resources deployed by this project, and should be tested before any changes are made live to ensure no bugs are introduced:
+
+* [PSDI Data Conversion](https://github.com/PSDI-UK/psdi-data-conversion)
+
 ## Copyright and License
 
 Copyright (c) PSDI Organisation, Bryan Gillis 2024
