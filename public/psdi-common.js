@@ -9,7 +9,10 @@ let brandLinkTarget = DEFAULT_BRAND_LINK_TARGET;
 let headerLinksSource = DEFAULT_HEADER_LINKS_SOURCE;
 
 // Load color mode from session storage and apply it
-const mode = sessionStorage.getItem("mode");
+let mode = sessionStorage.getItem("mode");
+if(!mode) {
+  mode = LIGHT_MODE;
+}
 document.documentElement.setAttribute("data-theme", mode);
 
 function toggleMode() {
