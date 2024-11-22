@@ -351,15 +351,15 @@ body>* {
   width          : 2rem;
 }
 
-[data-theme='dark'] .clean-btn {
+[data-theme='dark'] #psdi-header .clean-btn {
   background-color: black;
 }
 
-.clean-btn:hover {
+#psdi-header .clean-btn:hover {
   background: var(--ifm-background-color-secondary);
 }
 
-.clean-btn:active {
+#psdi-header .clean-btn:active {
   background: inherit;
 }
 
