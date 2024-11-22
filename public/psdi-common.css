@@ -327,7 +327,7 @@ body>* {
   font-weight: var(--ifm-font-weight-base);
 }
 
-.navbar__items--right {
+#psdi-header .navbar__items--right {
   display        : flex;
   flex           : 1 1 50%;
   flex-direction : row;
@@ -336,7 +336,7 @@ body>* {
   align-items    : center;
 }
 
-.clean-btn {
+#psdi-header .clean-btn {
   background     : none;
   border         : none;
   color          : inherit;
@@ -550,6 +550,8 @@ a svg {
 
 #__docusaurus .navbar__logo img {
   height: 2rem;
+  min-width: auto;
+  max-width: auto;
 }
 
 .footer {
