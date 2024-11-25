@@ -123,6 +123,7 @@ Some situations in which you might need to call this function are:
 The following projects use public resources deployed by this project, and should be tested before any changes are made live to ensure no bugs are introduced:
 
 * [PSDI Data Conversion](https://github.com/PSDI-UK/psdi-data-conversion)
+* [PSDI Metadata](https://github.com/PSDI-UK/metadata)
 
 ## Copyright and License
 
