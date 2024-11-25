@@ -133,13 +133,13 @@ In order to allow testing of changes to the deployed assets of this project with
 2. When ready, push the feature branch to the fork (if maintened by someone other than Bryan in the future, your own fork can be used instead, with your username substituted), and merge it into the `main` branch of the fork.
 3. Wait for the GitHub Actions job on the fork has completed and the changes to be live
 4. For each dependent project in [the list above](#dependent-projects) (ideally all of them, but at minimum test on one which uses all changed elements):
-  1. Pull the most recent version of its `main` branch locally
-  2. If desired, create a temporary branch for testing any changes
-  3. Do a global find-and-replace in the project of "psdi-uk.github.io/css-template" to "brgillis.github.io/css-template"
-  4. Save all changed files, and do a clean local build of the project
-  5. Check the built site locally and ensure that all components provided by this project are working correctly
-  6. If any issues are found, correct them, wait for redeployment, and repeat until checks pass for all dependent projects
-5. Once all checks pass, open a pull request to merge the `main` branch of the fork into the `main` branch of the origin project
+    1. Pull the most recent version of its `main` branch locally
+    2. If desired, create a temporary branch for testing any changes
+    3. Do a global find-and-replace in the project of "psdi-uk.github.io/css-template" to "brgillis.github.io/css-template"
+    4. Save all changed files, and do a clean local build of the project
+    5. Check the built site locally and ensure that all components provided by this project are working correctly
+    6. If any issues are found, correct them, wait for redeployment, and repeat until checks pass for all dependent projects
+5. Once all checks pass, clean up any changes to projects you were testing with (reset if you didn't commit anything, or if on a branch, switch back to the main branch and discard the testing branch), open a pull request to merge the `main` branch of the fork into the `main` branch of the origin project
 6. Undertake standard checks for a PR, and once it's passed, the branch can be merged
 7. Clean up, including pushing the new state of the origin project to the fork
 
