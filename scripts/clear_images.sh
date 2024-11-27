@@ -9,7 +9,10 @@ if [ -z ${IMG_TARGET+x} ]; then
   IMG_TARGET=$DEFAULT_IMG_TARGET
 fi
 
-mkdir -p $IMG_TARGET
+# Silently exit if the target directory doesn't exist
+if [ ! -d $IMG_TARGET ]; then
+    exit 0
+fi
 
 for SOURCE_FILENAME in $IMG_SOURCE/*; do
     FILENAME=$(basename ${SOURCE_FILENAME})
@@ -18,3 +21,6 @@ for SOURCE_FILENAME in $IMG_SOURCE/*; do
         rm $DEST_FILENAME
     fi
 done
+
+# Remove any created directories if present and empty, up to two levels up from the target
+rmdir --ignore-fail-on-non-empty $IMG_TARGET $IMG_TARGET/.. $IMG_TARGET/../.. >/dev/null 2>&1
