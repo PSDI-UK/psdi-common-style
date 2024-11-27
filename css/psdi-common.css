@@ -122,7 +122,7 @@
 
   /* Border colors */
   --psdi-border-color-light: #f5f6f7;
-  --psdi-border-color-dark: #111111;
+  --psdi-border-color-dark : #111111;
 
   /* Link styling */
   --ifm-link-color             : inherit;
@@ -549,7 +549,7 @@ a svg {
 }
 
 #__docusaurus .navbar__logo img {
-  height: 2rem;
+  height   : 2rem;
   min-width: auto;
   max-width: auto;
 }

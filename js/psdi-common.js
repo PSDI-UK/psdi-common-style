@@ -10,7 +10,7 @@ let headerLinksSource = DEFAULT_HEADER_LINKS_SOURCE;
 
 // Load color mode from session storage and apply it
 let mode = sessionStorage.getItem("mode");
-if(!mode) {
+if (!mode) {
   mode = LIGHT_MODE;
 }
 document.documentElement.setAttribute("data-theme", mode);
