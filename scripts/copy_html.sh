@@ -26,14 +26,16 @@ fi
 
 if [ ! -z $HEADER_LINKS_SOURCE ]; then
     # Replace the header links stub in the common header with the desired value
+    LINE_TO_REPACE_ESCAPED='<!-- Add common header links here -->'
     ESCAPED_HEADER_LINKS=$(printf '%s\n' "`cat $HEADER_LINKS_SOURCE`" | sed -e 's/[\/&]/\\&/g')
-    REPLACE_CMD="sed -i -e 's/\$REPLACEME_HEADER_LINKS/$ESCAPED_HEADER_LINKS/' $TARGET_DIR/psdi-common-header.html"
+    REPLACE_CMD="sed -i -e 's/$LINE_TO_REPACE_ESCAPED/$ESCAPED_HEADER_LINKS/' $TARGET_DIR/psdi-common-header.html"
     eval $REPLACE_CMD
 fi
 
 if [ ! -z $IMG_LOC ]; then
     # Replace the image location stub in the common header with the desired value
+    LINE_TO_REPACE_ESCAPED='https:\/\/psdi-uk.github.io\/css-template\/images\/'
     ESCAPED_IMG_LOC=$(printf '%s\n' "$IMG_LOC" | sed -e 's/[\/&]/\\&/g')
-    REPLACE_CMD="sed -i -e 's/\$REPLACEME_IMG_LOC/$ESCAPED_IMG_LOC/g' $TARGET_DIR/psdi-common-header.html"
+    REPLACE_CMD="sed -i -e 's/$LINE_TO_REPACE_ESCAPED/$ESCAPED_IMG_LOC\//g' $TARGET_DIR/psdi-common-header.html"
     eval $REPLACE_CMD
 fi
