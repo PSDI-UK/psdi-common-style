@@ -3,7 +3,7 @@
 # This script clears content copied from one directory to another, leaving alone any content in the target that
 # wasn't created by copying from the source
 
-DEFAULT_CONTENT_TYPE="img"
+DEFAULT_CONTENT_TYPE=img
 
 # The ennvar CONTENT_TYPE can be used to set the type of content to be copied. Valid values should match one of the
 # directory names in this project (e.g. "img", "js", etc.)
@@ -11,9 +11,9 @@ if [ -z ${CONTENT_TYPE+x} ]; then
   CONTENT_TYPE=$DEFAULT_CONTENT_TYPE
 fi
 
-ROOT="$(dirname -- "$(readlink -f "${BASH_SOURCE}")")/.."
-SOURCE_DIR="$ROOT/$CONTENT_TYPE"
-DEFAULT_TARGET_DIR="$ROOT/../$CONTENT_TYPE"
+ROOT=$(dirname -- $(readlink -f $BASH_SOURCE))/..
+SOURCE_DIR=$ROOT/$CONTENT_TYPE
+DEFAULT_TARGET_DIR=$ROOT/../$CONTENT_TYPE
 
 # The ennvar TARGET_DIR can be used to set the target directory to copy files to
 if [ -z $TARGET_DIR ]; then

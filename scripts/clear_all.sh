@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SCRIPTS="$(dirname -- "$(readlink -f "${BASH_SOURCE}")")"
+SCRIPTS=$(dirname -- $(readlink -f $BASH_SOURCE))
 
 DEFAULT_TARGET_BASE_DIR=$SCRIPTS/../..
 
