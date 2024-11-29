@@ -105,6 +105,22 @@ Some situations in which you might need to call this function are:
 * You wish for the header links to differ between different pages in the same directory
 * It is not possible or convenient to put a "header-links.html" file alongside a page (e.g. if the page needs to be built and placed in a directory which doesn't yet exist)
 
+## How to Use
+
+There are two ways to use the assets provided by this project: The versions deployed by GitHub Pages can be used live, or they can be downloaded in a release of this project and use locally as resources for your site builder. These options are discussed in detail in the following sections.
+
+In short, using the live versions is easier to set up for most builders, but can increase page load times and carries the risk of the page failing if this project goes down or a bug is inadvertently deployed to the production branch. Downloaded assets allows for more careful control of them, with less risk of an upstream change or downtime causing site failure, but will require more work to implement and maintain.
+
+A hybrid approach is also possible, such as using remote images, stylesheets, and JS scripts, but downloading and incorporating HTML elements with your site builder. Since the HTML elements are the cause of longer page load times when used live, incorporating them as downloaded assets instead will eliminate this drawback and not involve as much work as downloading and using all assets.
+
+### Using Live Versions
+
+TODO
+
+### Downloading and Building
+
+TODO
+
 ## Dependent Projects
 
 The following projects use public resources deployed by this project, and should be tested before any changes are made live to ensure no bugs are introduced:
