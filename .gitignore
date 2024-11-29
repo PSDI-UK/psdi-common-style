@@ -1,3 +1,13 @@
 .*
 !.gitignore
 !.github
+
+# Directory created when testing functionality
+static/
+
+# Script created to clean up downloaded assets
+cleanup-common-style.sh
+
+# Downloaded assets
+psdi-assets.tar.gz
+psdi-common-style-*.*.*
