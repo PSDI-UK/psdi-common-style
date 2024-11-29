@@ -26,8 +26,6 @@ else
     curl -L -o $PACKAGE_FILENAME $LOCATION
 fi
 
-
-
 # Get the directory name within the archive
 ASSET_SUBDIR=`tar tf $PACKAGE_FILENAME | head -n 1`
 ASSET_DIR=$ROOTDIR/$ASSET_SUBDIR
@@ -36,10 +34,19 @@ echo "Extracting assets to $ASSET_DIR"
 cd $ROOTDIR
 tar xf $PACKAGE_FILENAME
 
+# Clean up the tarball unless cleanup is disabled
+if [ "$CLEAN_UP_ASSETS" = "true" ]; then
+    rm $PACKAGE_FILENAME
+fi
+
 if [ "$FETCH_ONLY" = "true" ]; then
     echo "FETCH_ONLY is set to 'true', so assets won't be copied. They're available in the following directory:"
     echo $ASSET_DIR
 else
     echo "Copying assets to configured locations"
     $ASSET_DIR/scripts/copy_all.sh
+    
+    if [ "$CLEAN_UP_ASSETS" = "true" ]; then
+        rm -r $ASSET_DIR
+    fi
 fi
