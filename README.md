@@ -1,6 +1,6 @@
-# CSS Template
+# PSDI Common Style
 
-This project provides common resources to help provide a consistent style across PSDI websites. The contents of the "public/" directory are deployed at https://psdi-uk.github.io/css-template/, and can be imported by other projects to use the PSDI style and elements.
+This project provides common resources to help provide a consistent style across PSDI websites. The contents of this project are are deployed live at https://psdi-uk.github.io/psdi-common-style/, and can be imported by other projects to use the PSDI style and elements.
 
 ## Contributors
 
@@ -9,58 +9,45 @@ This project provides common resources to help provide a consistent style across
 
 ## Provided Resources
 
-### Webpages
+### Images
 
-The following pages are deployed to help demonstrate the PSDI style:
+**Deployed at:** https://psdi-uk.github.io/psdi-common-style/img/
 
-#### Mockup
+This folder contains various images used in the common PSDI header and footer, including a favicon, PSDI and UKRI logos, and icons for social links. Most of the images are linked in the header and footer elements, with the exception of the favicon, which needs to be linked in the header of each HTML file with a line such as:
 
-**Deployed at:** https://psdi-uk.github.io/css-template/index.html
-
-This page demonstrates what the PSDI style looks like, and includes various page elements to show how they appear in
-the style.
-
-#### Static Template
-
-**Deployed at:** https://psdi-uk.github.io/css-template/template.html
-
-This is a template which can be copied to other projects to make static HTML pages. The source code of it includes various TODO notes in comments to guide the user through parts they need to edit to customise the page.
-
-#### AJAX Template
-
-**Deployed at:** https://psdi-uk.github.io/css-template/ajax.html
-
-This is a template similar to the above, except it uses AJAX scripting to remotely load the common PSDI header and footer rather than copying them. This incurs a slight cost in loading time, but the resulting page will automatically inherit any updates to the header and footer without needing to be manually updated. This is deployed alongside the static template so that the additional loading time be observed.
-
-### Other Files
-
-#### Images
-
-**Deployed at:** https://psdi-uk.github.io/css-template/images
-
-This folder contains various images used in the common PSDI header and footer, including a favicon, PSDI and UKRI logos, and icons for social links. If either of the above templates is used, they will include references to these images, and no manual handling of them will be needed (unless e.g. an extra instance of one of the logos somewhere on the page is desired).
+```HTML
+<link rel="icon" type="image/x-icon" href="https://psdi-uk.github.io/psdi-common-style/css/psdi-icon-dark.svg">
+```
 
 ### Stylesheet
 
-**Deployed at:** https://psdi-uk.github.io/css-template/psdi-common.css
+**Deployed at:** https://psdi-uk.github.io/psdi-common-style/css/psdi-common.css
 
-A common CSS stylesheet which can be used for PSDI sites. If no extra styling is required, it can be used directly in the HTML header of a webpage. Alternatively, it can be imported at the top of a CSS stylesheet which provides further custom styling with the command, placed at the top of the file:
+A common CSS stylesheet which can be used for PSDI sites. If no extra styling is required, it can be used directly in the HTML header of a webpage through adding the following line to the header:
+
+```HTML
+<link rel="stylesheet" href="https://psdi-uk.github.io/psdi-common-style/css/psdi-common.css">
+```
+
+Alternatively, it can be imported at the top of a CSS stylesheet which provides further custom styling with the following command, placed at the top of the file:
 
 ```CSS
-@import url("https://psdi-uk.github.io/css-template/psdi-common.css");
+@import url("https://psdi-uk.github.io/psdi-common-style/css/psdi-common.css");
 ```
 
 ### Scripts
 
-**Deployed at:** https://psdi-uk.github.io/css-template/psdi-common.js
+**Deployed at:** https://psdi-uk.github.io/psdi-common-style/js/psdi-common.js
 
 This file provides JavaScript functions used to handle AJAX loading of the common header and footer, plus the code for the light-mode/dark-mode toggle button in the common header.
 
-### Common Footer
+### HTML Elements
 
-**Deployed at:** https://psdi-uk.github.io/css-template/psdi-common-footer.html
+#### Common Footer
 
-This file provides the HTML for the common footer on PSDI sites, which can be loaded into a page via AJAX scripting. For proper formatting, it must be loaded into an element of the form:
+**Deployed at:** https://psdi-uk.github.io/psdi-common-style/html/psdi-common-footer.html
+
+This file provides the HTML for the common footer on PSDI sites, which can be loaded into a page via AJAX scripting or incorporated directly through the site's builder (implementation details will differ depending on the builder used). For proper formatting, it must be loaded into or put within an element of the form:
 
 ```HTML
 <footer class="footer" id="psdi-footer"></footer>
@@ -68,20 +55,20 @@ This file provides the HTML for the common footer on PSDI sites, which can be lo
 
 #### Common Header
 
-**Deployed at:** https://psdi-uk.github.io/css-template/psdi-common-header.html
+**Deployed at:** https://psdi-uk.github.io/psdi-common-style/html/psdi-common-header.html
 
-This file provides the HTML for the common header on PSDI sites, which can be loaded into a page via AJAX scripting. For proper formatting, it must be loaded into an element of the form:
+This file provides the HTML for the common header on PSDI sites, which can be loaded into a page via AJAX scripting or incorporated directly through the site's builder (implementation details will differ depending on the builder used). For proper formatting, it must be loaded into or put within an element of the form:
 
 ```HTML
 <header class="header" id="psdi-header"></header>
 ```
 
-The header is customisable for each site, and at minimum, the site title will need to be set for it. This can be done through a script such as the following somewhere on the page (ideally immediately after the header element):
+The header is customisable for each site, and at minimum, the site title will need to be set for it. If the header is loaded through AJAX scripting, this can be done through a script such as the following somewhere on the page (ideally immediately after the header element):
 
 ```HTML
 <script type="module">
 import { setTitle,setBrandLinkTarget, setHeaderLinksSource } from
-    "https://psdi-uk.github.io/css-template/psdi-common.js";
+    "https://psdi-uk.github.io/psdi-common-style/js/psdi-common.js";
 setTitle("Site Title");
 setBrandLinkTarget("./");
 setHeaderLinksSource("./header-links.html");
@@ -122,15 +109,14 @@ Some situations in which you might need to call this function are:
 
 The following projects use public resources deployed by this project, and should be tested before any changes are made live to ensure no bugs are introduced:
 
-* [PSDI Data Conversion](https://github.com/PSDI-UK/psdi-data-conversion)
-* [PSDI Metadata](https://github.com/PSDI-UK/metadata)
+TODO: Update once other projects migrate to using this new project
 
 ## Testing
 
-In order to allow testing of changes to the deployed assets of this project without risk of breaking something, this project uses a fork in @brgillis's namespace: https://github.com/brgillis/css-template, deployed at https://brgillis.github.io/css-template/. The recommended procedure for testing is:
+In order to allow testing of changes to the deployed assets of this project without risk of breaking something, the recommended procedure is to deploy the changes in a fork in the user's namespace. The recommended procedure for testing is:
 
 1. Prepare all changes in a feature branch.
-2. When ready, push the feature branch to the fork (if maintened by someone other than Bryan in the future, your own fork can be used instead, with your username substituted), and merge it into the `main` branch of the fork.
+2. When ready, push the feature branch to the fork, and merge it into the `main` branch of the fork. If this is the first time setting up the fork, you will need to manually enable GitHub Pages and the deployment workflow for it, then trigger the workflow
 3. Wait for the GitHub Actions job on the fork has completed and the changes to be live
 4. For each dependent project in [the list above](#dependent-projects) (ideally all of them, but at minimum test on one which uses all changed elements):
     1. Pull the most recent version of its `main` branch locally
@@ -142,8 +128,6 @@ In order to allow testing of changes to the deployed assets of this project with
 5. Once all checks pass, clean up any changes to projects you were testing with (reset if you didn't commit anything, or if on a branch, switch back to the main branch and discard the testing branch), open a pull request to merge the `main` branch of the fork into the `main` branch of the origin project
 6. Undertake standard checks for a PR, and once it's passed, the branch can be merged
 7. Clean up, including pushing the new state of the origin project to the fork
-
-Note that only the `public` directory of this project is deployed, so changes entirely outside of it do not need to undergo this testing procedure.
 
 ## Copyright and License
 
