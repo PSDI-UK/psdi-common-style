@@ -14,20 +14,22 @@ if [ -z $TARGET_CSS_DIR ]; then
   TARGET_CSS_DIR=$TARGET_BASE_DIR/css
 fi
 
-TARGET_DIR=$TARGET_CSS_DIR $SCRIPTS/copy_css.sh
+TARGET_DIR=$TARGET_CSS_DIR CONTENT_TYPE=css $SCRIPTS/copy_dir.sh
 
 # The ennvar TARGET_IMG_DIR can be used to set the directory to contain image files
 if [ -z $TARGET_IMG_DIR ]; then
   TARGET_IMG_DIR=$TARGET_BASE_DIR/img
 fi
 
-TARGET_DIR=$TARGET_IMG_DIR $SCRIPTS/copy_img.sh
+TARGET_DIR=$TARGET_IMG_DIR CONTENT_TYPE=img $SCRIPTS/copy_dir.sh
 
 # The ennvar TARGET_HTML_DIR can be used to set the directory to contain html files
 if [ -z $TARGET_HTML_DIR ]; then
   TARGET_HTML_DIR=$TARGET_BASE_DIR/html
 fi
 
+# A custom script is used to copy HTML files, which handles updating the content in the common header according to
+# envvars set for it
 TARGET_DIR=$TARGET_HTML_DIR $SCRIPTS/copy_html.sh
 
 # The ennvar TARGET_JS_DIR can be used to set the directory to contain JS files
@@ -35,4 +37,4 @@ if [ -z $TARGET_JS_DIR ]; then
   TARGET_JS_DIR=$TARGET_BASE_DIR/js
 fi
 
-TARGET_DIR=$TARGET_JS_DIR $SCRIPTS/copy_js.sh
+TARGET_DIR=$TARGET_JS_DIR CONTENT_TYPE=js $SCRIPTS/copy_dir.sh
