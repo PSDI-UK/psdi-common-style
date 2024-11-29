@@ -34,7 +34,7 @@ echo "Extracting assets to $ASSET_DIR"
 cd $ROOTDIR
 tar xf $PACKAGE_FILENAME
 
-# Clean up the tarball unless cleanup is disabled
+# Clean up the tarball if cleanup is enabled
 if [ "$CLEAN_UP_ASSETS" = "true" ]; then
     rm $PACKAGE_FILENAME
 fi
@@ -46,6 +46,7 @@ else
     echo "Copying assets to configured locations"
     $ASSET_DIR/scripts/copy_all.sh
     
+    # Clean up the extracted assets if cleanup is enabled
     if [ "$CLEAN_UP_ASSETS" = "true" ]; then
         rm -r $ASSET_DIR
     else
