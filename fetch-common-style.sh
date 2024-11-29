@@ -48,5 +48,13 @@ else
     
     if [ "$CLEAN_UP_ASSETS" = "true" ]; then
         rm -r $ASSET_DIR
+    else
+        # If we don't clean up assets, create a script to clean up copied files
+        CLEANUP_SCRIPT=$ROOTDIR/cleanup-common-style.sh
+        echo "#!/bin/bash" > $CLEANUP_SCRIPT
+        echo "# Generated script to clean copied style assets" >> $CLEANUP_SCRIPT
+        echo "source $ROOTDIR/fetch-common-style.conf" >> $CLEANUP_SCRIPT
+        echo "$ASSET_DIR/scripts/clear_all.sh" >> $CLEANUP_SCRIPT
+        chmod +x $CLEANUP_SCRIPT
     fi
 fi
