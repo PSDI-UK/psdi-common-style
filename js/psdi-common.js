@@ -88,6 +88,8 @@ $(document).ready(function () {
         addHeaderLinks();
       } else {
         $("#psdi-header")[0].textContent = "ERROR: Could not load page header";
+        connectModeToggleButton();
+        finalizeLoad();
       }
     });
 
