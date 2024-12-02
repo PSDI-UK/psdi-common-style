@@ -80,6 +80,8 @@ $(document).ready(function () {
 
   $("#cover").fadeOut(1000);
 
+  // TODO: Implement checks here so these elements are only loaded if they have no children
+
   $("#psdi-header").load("https://psdi-uk.github.io/css-template/psdi-common-header.html",
     function (response, status, xhr) {
       if (status != "error") {
