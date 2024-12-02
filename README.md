@@ -167,6 +167,47 @@ The former line loads JQuery, which is a dependency for the common script, and t
 
 #### HTML Elements
 
+Common HTML elements are the most difficult to use live, thanks to the fact that HTML has no built-in mechanism to reuse code elements. The solution we've determined to be best for live use of these elements is to have them loaded in by JavaScript code when the page is otherwise finished loading. This requires the following steps to implement for each page which uses these elements:
+
+First, include the appropriate scripts in the file. See [the section above](#scripts-1) for how to load the live versions of these scripts. This will set up the appropriate functions to handle loading in elements when the page is otherwise loaded and setting up other functionality.
+
+If you wish to add the common header to your page, add the following HTML element where you want it to appear (typically at or near the top of the `<body>` element):
+
+```HTML
+<header class="header" id="psdi-header"></header>
+```
+
+The JS code will look for this element to determine where to load in the header. It is important that this element contains no child elements, as they will be overwritten by the loading anyway, and the code will check for their presence to determine whether or not live loading is desired, using the presence of child elements as an indication that live loading is not desired.
+
+The header allows customisation of various attributes. These can be configured by adding the following snippet somewhere on the page, ideally right after the header stub:
+
+```HTML
+  <script type="module">
+    import { setTitle, setBrandLinkTarget, setHeaderLinksSource } from
+      "https://psdi-uk.github.io/psdi-common-style/js/psdi-common.js";
+    // The following functions are used to set the site title, the link target of clicking on the brand in the
+    // header, and the HTML file to be used as a source for the links to appear in the header of this page. The values
+    // currently supplied for the latter two elements are the defaults - if they're fine, those function calls can be
+    // deleted to save space. Otherwise, they can be modified to set the desired values. The default title is blank,
+    // and so it should always be modified to show the proper page title.
+    setTitle("TODO: Place title here");
+    setBrandLinkTarget("./");
+    setHeaderLinksSource("./header-links.html");
+  </script>
+```
+
+The desired site title and target for when the user clicks on the brand in the header can be updated simply. Setting up links that you wish to appear in the header takes a bit more work though. In addition to setting the name of a file where these links can be found in this function calls, you also have to create this file and deploy it alongside the other pages of your site. The contents of this should look something like:
+
+```HTML
+<a href="./index.html" class="navbar__item navbar__link">Home</a>
+<a href="./page-one.html" class="navbar__item navbar__link">Page One</a>
+<a href="./page-two.html" class="navbar__item navbar__link">Page Two</a>
+```
+
+Typically, the same header links file will be used for all pages in a site, but different files can be used for different pages if desired; they simply need to point to different files in their function calls to `setHeaderLinksSource`.
+
+TODO: Footer and cover
+
 ### Downloading and Building
 
 TODO
