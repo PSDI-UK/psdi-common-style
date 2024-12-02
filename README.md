@@ -152,7 +152,20 @@ Or include it in an existing stylesheet by adding the following line to the top,
 
 If you choose to link to the stylesheet within your HTML files, keep in mind that the order that CSS declarations are made matters, with later declarations having precedence. This means that you'll generally want to declare the common stylesheet before any custom stylesheet you might have, so you can selectively override declarations in it as needed.
 
-Linking a remote stylesheet in either of this methods will generally have no negative impact on load time compared to using a local stylesheet.
+Linking a remote stylesheet in either of these methods will generally have no negative impact on load time compared to using a local stylesheet.
+
+#### Scripts
+
+At present, the common script file is only necessary to use if you're also using the common HTML elements (whether using them live or building with them). If you are doing this, you must import the script in any HTML file which loads these elements by adding the following lines to their headers:
+
+```HTML
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="https://psdi-uk.github.io/psdi-common-style/js/psdi-common.js" type="module"></script>
+```
+
+The former line loads JQuery, which is a dependency for the common script, and the second line loads the script itself. This will set up necessary functions to be called when the page is otherwise finished loading to load in the common HTML elements (if applicable), hook up JS functions where applicable, and remove the page loading cover if one exists.
+
+#### HTML Elements
 
 ### Downloading and Building
 
