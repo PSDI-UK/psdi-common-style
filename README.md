@@ -125,6 +125,7 @@ A hybrid approach is also possible, such as using remote images, stylesheets, an
 * May be difficult or impossible to implement with some site builders (notably Docusaurus)
 * In the case that a breaking change and/or bug is pushed through to this project, or the site for this project goes down, will immediately affect and break the display of dependent project
 * For live versions of HTML elements in particular, will result in slightly longer load times for pages
+* Customisation of common HTML elements is limited to what the interface provides
 
 #### Images
 
@@ -222,6 +223,43 @@ The above will result in the header and footer loading in momentarily after the 
 The common stylesheet sets this cover to match the page's background color, in front of all other elements. The common scripts set it to disappear as soon as both the header and footer are loaded or fail to load. If anything goes wrong and the trigger to hide it isn't called for some reason, the cover will fade away over the course of one second.
 
 ### Downloading and Building
+
+**Advantages:**
+
+* More resilient to outages and bugs; things can only possibly break when your project triggers a build
+* Can work with any site builder, including ones such as Docusaurus which can't use live assets
+* Can avoid longer page loads which result from loading remote HTML assets
+* Allows deeper customisation of HTML elements
+
+**Disadvantages:**
+
+* More work to implement for most site builders
+* Updates to common assets won't be reflected until site is rebuilt
+
+#### Overview
+
+This project makes available the common assets in [its various subfolders](#provided-resources). The general procedure for using them is:
+
+1. In the build step of your project, download the contents of this repository
+2. Extra the repository and copy the contents to a location accessible by your site builder
+3. Make any desired customisations to the assets
+4. Build with your site builder
+
+This procedure is flexible and can be set up as you like. For convenience, this project provides a script in the root directory, `fetch-common-style.sh`, along with a configuration file for it, `fetch-common-style.conf`, plus other bash scripts that it calls in the `scripts/` directory, which handle the most common use cases of using these assets. This section will cover using this script, but you don't need to be limited by it. Feel free to use your own script or modify this script for your purposes if needed.
+
+Whatever you choose to do, you will need some script to handle it. Here we will assume you decide to use this script. To do this, you'll need to:
+
+1. Copy the latest version of `fetch-common-style.sh` and `fetch-common-style.conf` from this project to the root directory of your project.
+2. Modify the configuration in `fetch-common-style.conf` as desired
+3. Update the build steps of your project so that `fetch-common-style.sh` is called before your site is built
+
+The following sections go over this script and its configuration in more detail.
+
+#### The Fetch Script
+
+TODO
+
+#### Fetching Configuration
 
 TODO
 
