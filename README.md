@@ -257,7 +257,30 @@ The following sections go over this script and its configuration in more detail.
 
 #### The Fetch Script
 
-TODO
+The fetch script executes the following actions:
+
+1. Downloads the desired release of this project, unless it's already been downloaded
+2. Extracts the common assets and copies them to the desired locations
+3. Modifies some of the copied assets according to configuration settings
+4. (Optional) Cleans up the downloaded project release and extracted assets, leaving only the copies
+5. (Otherwise) Creates a script `cleanup-common-style.sh` which can be called to delete all copies of the assets, leaving behind the downloaded project and its folder of extracted assets
+
+This script takes no command-line arguments; all configuration of its functionality is handled by the variables set in `fetch-common-assets.conf`, which should be present in the same folder as it. It is alternatively possible to set the configuration through specifying variables in the execution of this script when the configuration file is absent, but this is not recommended unless it is fine to use all or nearly-all default values.
+
+The final step of this script creates another script, `cleanup-common-style.sh`, which deletes copied assets. The purpose of this script is to help with a "clean" step provided by your site builder, to also remove any assets copied by the fetch script. This can be useful for instance if the copied versions aren't listed in your `.gitignore` file and you wish not to commit them; you can call this script to clean them up.
+
+It is recommended to set up your `.gitignore` file to ignore downloaded assets and the generated `cleanup-common-style.sh`. This can be done by adding the following lines to it:
+
+```
+# Script created to clean up downloaded assets
+cleanup-common-style.sh
+
+# Downloaded assets
+psdi-assets.tar.gz
+psdi-common-style-*.*.*
+```
+
+Ideally, you will also want to ignore the copied versions of these assets. If it is possible to keep them separate from all assets deployed with your project (e.g. place all of these assets in a "downloaded_assets" directory which contains nothing else), you can add this location to your `.gitignore`. Otherwise, you can add them individually by name, or else use the cleanup script to remove them so they won't end up committed to your repository.
 
 #### Fetching Configuration
 
