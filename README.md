@@ -115,7 +115,44 @@ A hybrid approach is also possible, such as using remote images, stylesheets, an
 
 ### Using Live Versions
 
-TODO
+**Advantages:**
+
+* Easier to set up in most cases, especially for static HTML sites which don't already use a builder
+* Updates to common elements will be applied immediately, without needing to wait for a rebuild
+
+**Disadvantages:**
+
+* May be difficult or impossible to implement with some site builders (notably Docusaurus)
+* In the case that a breaking change and/or bug is pushed through to this project, or the site for this project goes down, will immediately affect and break the display of dependent project
+* For live versions of HTML elements in particular, will result in slightly longer load times for pages
+
+#### Images
+
+Images are the simplest resource to use live. Simply set the `<img>` element to point directly to the live source, e.g.:
+
+```HTML
+<img src="https://psdi-uk.github.io/psdi-common-style/img/psdi-logo-darktext.png" alt="PSDI logo" class="lm-only">
+```
+
+This will generally have no negative impact on load time compared to using a local image resource.
+
+#### Stylesheet
+
+The PSDI common stylesheet can be used in one of two ways. You can either use it directly in your HTML files by adding the following line to their headers:
+
+```HTML
+<link rel="stylesheet" href="https://psdi-uk.github.io/psdi-common-style/css/psdi-common.css">
+```
+
+Or include it in an existing stylesheet by adding the following line to the top, before any declarations:
+
+```CSS
+@import url("https://psdi-uk.github.io/psdi-common-style/css/psdi-common.css");
+```
+
+If you choose to link to the stylesheet within your HTML files, keep in mind that the order that CSS declarations are made matters, with later declarations having precedence. This means that you'll generally want to declare the common stylesheet before any custom stylesheet you might have, so you can selectively override declarations in it as needed.
+
+Linking a remote stylesheet in either of this methods will generally have no negative impact on load time compared to using a local stylesheet.
 
 ### Downloading and Building
 
