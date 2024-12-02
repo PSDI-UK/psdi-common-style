@@ -1,8 +1,15 @@
 #!/bin/bash
 
-# Source the configuration file to get settings in its envvars
+# Source the configuration file to get settings in its envvars, if it exists
 ROOTDIR=$(dirname -- $(readlink -f $BASH_SOURCE))
-source $ROOTDIR/fetch-common-style.conf
+
+CONF_FILE=$ROOTDIR/fetch-common-style.conf
+if [ -f $CONF_FILE ]; then
+    echo "Sourcing configuration from $CONF_FILE"
+    source $CONF_FILE
+else
+    echo "No configuration file found at $CONF_FILE; configuration will be controlled by environmental variables"
+fi
 
 PACKAGE_FILENAME=$ROOTDIR/psdi-assets.tar.gz
 
