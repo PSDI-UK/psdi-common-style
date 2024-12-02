@@ -171,7 +171,7 @@ Common HTML elements are the most difficult to use live, thanks to the fact that
 
 First, include the appropriate scripts in the file. See [the section above](#scripts-1) for how to load the live versions of these scripts. This will set up the appropriate functions to handle loading in elements when the page is otherwise loaded and setting up other functionality.
 
-If you wish to add the common header to your page, add the following HTML element where you want it to appear (typically at or near the top of the `<body>` element):
+If you wish to add the common header to your page, add the following stub HTML element where you want it to appear (typically at or near the top of the `<body>` element):
 
 ```HTML
 <header class="header" id="psdi-header"></header>
@@ -206,7 +206,20 @@ The desired site title and target for when the user clicks on the brand in the h
 
 Typically, the same header links file will be used for all pages in a site, but different files can be used for different pages if desired; they simply need to point to different files in their function calls to `setHeaderLinksSource`.
 
-TODO: Footer and cover
+The common footer can be added just like the header, though it doesn't allow any customisation. Simply add the following stub HTML element where you want the footer to appear in your page (typically at or near the bottom of the `<body>` element):
+
+```HTML
+<footer class="footer" id="psdi-footer"></footer>
+```
+
+The above will result in the header and footer loading in momentarily after the rest of the page. This can result in a disruptive experience for the user, so one thing you may want to do is add a page cover until this loading is finished. With the common [scripts](#scripts-1) and [stylesheet](#stylesheet-1), all you need to add to enable this feature is the following HTML element somewhere in the `<body>` of your page:
+
+```HTML
+<!-- Cover to hide element loading and make page transitions seem smoother -->
+<div id="cover"></div>
+```
+
+The common stylesheet sets this cover to match the page's background color, in front of all other elements. The common scripts set it to disappear as soon as both the header and footer are loaded or fail to load. If anything goes wrong and the trigger to hide it isn't called for some reason, the cover will fade away over the course of one second.
 
 ### Downloading and Building
 
