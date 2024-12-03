@@ -50,8 +50,6 @@ if [ "$CLEAN_UP_ASSETS" = "true" ]; then
     rm $PACKAGE_FILENAME
 fi
 
-# TODO: Add purge script to delete downloaded assets
-
 if [ "$FETCH_ONLY" = "true" ]; then
     echo "FETCH_ONLY is set to 'true', so assets won't be copied. They're available in the following directory:"
     echo $ASSET_DIR
@@ -66,9 +64,32 @@ else
         # If we don't clean up assets, create a script to clean up copied files
         CLEANUP_SCRIPT=$ROOTDIR/cleanup-common-style.sh
         echo "#!/bin/bash" > $CLEANUP_SCRIPT
+        echo "" >> $CLEANUP_SCRIPT
         echo "# Generated script to clean copied style assets" >> $CLEANUP_SCRIPT
+        echo "" >> $CLEANUP_SCRIPT
         echo "source $ROOTDIR/fetch-common-style.conf" >> $CLEANUP_SCRIPT
         echo "$ASSET_DIR/scripts/clear_all.sh" >> $CLEANUP_SCRIPT
         chmod +x $CLEANUP_SCRIPT
     fi
+fi
+
+# Create a script to purge downloaded assets if cleanup is not enabled
+if [ "$CLEAN_UP_ASSETS" != "true" ]; then
+
+    PURGE_SCRIPT=$ROOTDIR/purge-common-style.sh
+    echo "#!/bin/bash" > $PURGE_SCRIPT
+    echo "" >> $PURGE_SCRIPT
+    echo "# Generated script to purge copied style assets" >> $PURGE_SCRIPT
+    echo "" >> $PURGE_SCRIPT
+
+    if [ -f CLEANUP_SCRIPT ]; then
+        echo "# Run the cleanup script first" >> $PURGE_SCRIPT
+        echo $CLEANUP_SCRIPT >> $PURGE_SCRIPT
+        echo "" >> $PURGE_SCRIPT
+    fi
+
+    echo "rm $PACKAGE_FILENAME" >> $PURGE_SCRIPT
+    echo "rm -r $ASSET_DIR" >> $PURGE_SCRIPT
+
+    chmod +x $PURGE_SCRIPT
 fi
