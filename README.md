@@ -286,7 +286,19 @@ Ideally, you will also want to ignore the copied versions of these assets. If it
 
 #### Fetching Configuration
 
-TODO
+The configuration file `fetch-common-style.conf` in this repository can be copied to your project to use for configuring the fetch script. It must be placed in the same directory as that script so that it can be found. The comments in that file explain the purpose of each option, so here we will simply go over the most important bits to pay attention to.
+
+Each option can be set to use a reasonable default value by leaving the line blank after the variable, i.e. you will get the default version option with the line:
+
+```BASH
+export ASSET_VER=
+```
+
+The default options will usually be fine for most cases, with the one notable exception being the `SITE_TITLE` option, which sets the title of the website displayed in the header (if you don't use the common HTML element for the header though, you don't need to worry about this). As each site will have a different title, this will of course need to be set individually for your project. Note that the site title will be displayed immediately to the right of the PSDI logo, so you can leave "PSDI" out of the title. E.g. if your project is the PSDI Tutorial Centre, you would want to set the title as:
+
+```BASH
+export SITE_TITLE="Tutorial Centre"
+```
 
 ## Dependent Projects
 
