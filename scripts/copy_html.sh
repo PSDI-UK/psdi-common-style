@@ -12,6 +12,12 @@ fi
 
 # If envvars are specific to set specific locations within the copied html files, update the new ones in-place
 
+# Replace the site title in the common header with the desired value
+LINE_TO_REPACE_ESCAPED='$REPLACEME_SITE_TITLE'
+ESCAPED_SITE_TITLE=$(printf '%s\n' "$SITE_TITLE" | sed -e 's/[\/&]/\\&/g')
+REPLACE_CMD="sed -i -e 's/$LINE_TO_REPACE_ESCAPED/$ESCAPED_SITE_TITLE/' $TARGET_DIR/psdi-common-header.html"
+eval $REPLACE_CMD
+
 if [ ! -z $BRAND_LINK ]; then
     LINE_TO_REPLACE_LHS='<a class="navbar__brand" href="' # Everything before the default link
     LINE_TO_REPLACE_LINK='\.\/' # The default link, escaped for regex input
@@ -33,9 +39,10 @@ if [ ! -z $HEADER_LINKS_SOURCE ]; then
 fi
 
 if [ ! -z $IMG_LOC ]; then
-    # Replace the image location stub in the common header with the desired value
-    LINE_TO_REPACE_ESCAPED='https:\/\/psdi-uk.github.io\/css-template\/images\/'
+    # Replace the image location stub in the common header and footer with the desired value
+    LINE_TO_REPACE_ESCAPED='https:\/\/psdi-uk.github.io\/psdi-common-style\/images\/'
     ESCAPED_IMG_LOC=$(printf '%s\n' "$IMG_LOC" | sed -e 's/[\/&]/\\&/g')
-    REPLACE_CMD="sed -i -e 's/$LINE_TO_REPACE_ESCAPED/$ESCAPED_IMG_LOC\//g' $TARGET_DIR/psdi-common-header.html"
-    eval $REPLACE_CMD
+    REPLACE_CMD_HEAD="sed -i -e 's/$LINE_TO_REPACE_ESCAPED/$ESCAPED_IMG_LOC\//g' $TARGET_DIR"
+    eval $REPLACE_CMD_HEAD/psdi-common-header.html
+    eval $REPLACE_CMD_HEAD/psdi-common-footer.html
 fi
