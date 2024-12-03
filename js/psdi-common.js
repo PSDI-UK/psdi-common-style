@@ -1,5 +1,7 @@
-const LIGHT_MODE = "light";
-const DARK_MODE = "dark";
+// This file provides common functions related to the PSDI common assets. Most of these are run automatically as
+// appropriate, except the first batch of functions exported below. These are exposed to the user so that they can
+// customise aspects of the common HTML header
+
 const DEFAULT_TITLE = "";
 const DEFAULT_BRAND_LINK_TARGET = "./";
 const DEFAULT_HEADER_LINKS_SOURCE = "./header-links.html";
@@ -7,6 +9,25 @@ const DEFAULT_HEADER_LINKS_SOURCE = "./header-links.html";
 let title = DEFAULT_TITLE;
 let brandLinkTarget = DEFAULT_BRAND_LINK_TARGET;
 let headerLinksSource = DEFAULT_HEADER_LINKS_SOURCE;
+
+export function setTitle(s) {
+  // Public function for the user to set the site title that will appear in the header, to the right of the PSDI logo
+  title = s;
+}
+
+export function setBrandLinkTarget(s) {
+  // Public function for the user to set the target that clicking on the PSDI brand should link to
+  brandLinkTarget = s;
+}
+
+export function setHeaderLinksSource(s) {
+  // Public function to set the name of an HTML file containing the links to appear on the right side of the header
+  // for a given page
+  headerLinksSource = s;
+}
+
+const LIGHT_MODE = "light";
+const DARK_MODE = "dark";
 
 // Load color mode from session storage and apply it
 let mode = sessionStorage.getItem("mode");
@@ -37,21 +58,11 @@ export function connectModeToggleButton() {
   });
 }
 
-export function setTitle(s) {
-  title = s;
-}
-
-export function setBrandLinkTarget(s) {
-  brandLinkTarget = s;
-}
-
-export function setHeaderLinksSource(s) {
-  headerLinksSource = s;
-}
-
-let loadSteps = 2;
+// Counter for elements that need to be loaded - each we request loading will increment this by 1
+let loadSteps = 0;
 
 function finalizeLoad() {
+  // Decrement the load steps and check if all steps are finished. If so, remove the cover
   --loadSteps;
   if (loadSteps <= 0) {
     $("#cover").hide();
@@ -66,7 +77,7 @@ export function addHeaderLinks() {
   let modeToggle = $("#psdi-header .color-mode-toggle");
 
   headerLinksParent.load(headerLinksSource,
-    function (response, status, xhr) {
+    function (_response, status, _xhr) {
       if (status == "error") {
         headerLinksParent[0].textContent = "ERROR: Could not load header links";
       }
@@ -78,24 +89,51 @@ export function addHeaderLinks() {
 
 $(document).ready(function () {
 
+  // Start fading out the cover over one second as a failsafe in case something goes wrong and it never gets removed
   $("#cover").fadeOut(1000);
 
-  $("#psdi-header").load("https://psdi-uk.github.io/css-template/psdi-common-header.html",
-    function (response, status, xhr) {
-      if (status != "error") {
-        $("#psdi-header a.navbar__brand")[0].href = brandLinkTarget;
-        $("#psdi-header .navbar__title")[0].textContent = title;
-        addHeaderLinks();
-      } else {
-        $("#psdi-header")[0].textContent = "ERROR: Could not load page header";
-      }
-    });
+  // Count the elements we'll need to load first, to avoid prematurely removing the cover
+  // We load an element only if it's a pure stub with no children; otherwise we assume it is intended to be used
+  // as-is and not overwritten by a load
 
-  $("#psdi-footer").load("https://psdi-uk.github.io/css-template/psdi-common-footer.html",
-    function (response, status, xhr) {
-      if (status == "error") {
-        $("#psdi-footer")[0].textContent = "ERROR: Could not load page footer";
-      }
-      finalizeLoad();
-    });
+  const headerStub = $("#psdi-header");
+  let loadHeader = false;
+  if (headerStub[0].childNodes.length == 0) {
+    loadHeader = true;
+    ++loadSteps;
+  }
+
+  const footerStub = $("#psdi-footer");
+  let loadFooter = false;
+  if (footerStub[0].childNodes.length == 0) {
+    loadFooter = true;
+    ++loadSteps;
+  }
+
+  // Load only if the header stub has no children
+  if (loadHeader) {
+    $("#psdi-header").load("https://psdi-uk.github.io/css-template/psdi-common-header.html",
+      function (_response, status, _xhr) {
+        if (status != "error") {
+          $("#psdi-header a.navbar__brand")[0].href = brandLinkTarget;
+          $("#psdi-header .navbar__title")[0].textContent = title;
+          addHeaderLinks();
+        } else {
+          $("#psdi-header")[0].textContent = "ERROR: Could not load page header";
+          connectModeToggleButton();
+          finalizeLoad();
+        }
+      });
+  }
+
+  // Load only if the footer stub has no children
+  if (loadFooter) {
+    $("#psdi-footer").load("https://psdi-uk.github.io/css-template/psdi-common-footer.html",
+      function (_response, status, _xhr) {
+        if (status == "error") {
+          $("#psdi-footer")[0].textContent = "ERROR: Could not load page footer";
+        }
+        finalizeLoad();
+      });
+  }
 });
