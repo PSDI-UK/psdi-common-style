@@ -5,8 +5,9 @@
 # Directory created when testing functionality
 static/
 
-# Script created to clean up downloaded assets
+# Scripts created to clean up and purge downloaded assets
 cleanup-common-style.sh
+purge-common-style.sh
 
 # Downloaded assets
 psdi-assets.tar.gz
