@@ -19,7 +19,7 @@ if [ -f $PACKAGE_FILENAME ]; then
     echo "Assets are already available at $PACKAGE_FILENAME"
 else
     # If ASSET_VER is not set, download the latest release
-    if [ -z $TARGET_DIR ]; then
+    if [ -z $ASSET_VER ]; then
         # Code snippet courtesy of
         # https://geraldonit.com/2019/01/15/how-to-download-the-latest-github-repo-release-via-command-line/
         LOCATION=$(curl -s https://api.github.com/repos/psdi-uk/psdi-common-style/releases/latest \
