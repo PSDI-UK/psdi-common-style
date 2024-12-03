@@ -26,10 +26,10 @@ for SOURCE_FILENAME in $SOURCE_DIR/*; do
     FILENAME=$(basename ${SOURCE_FILENAME})
     DEST_FILENAME="$TARGET_DIR/$FILENAME"
     if [ -e $DEST_FILENAME ]; then
-        echo "ERROR: File or directory $DEST_FILENAME already exists. This script will fail to ensure you don't " \
+        echo "WARNING: File or directory $DEST_FILENAME already exists. This script will exit to ensure you don't " \
              "inadvertently  overwrite a local version you're keeping for a reason. If it can be safely deleted, " \
-             "call the 'clear_images.sh' script or manually delete it." >&2
-        exit 1
+             "call the 'clear_images.sh' script or manually delete it."
+        exit 0
     else
         cp -r $SOURCE_FILENAME $DEST_FILENAME
     fi

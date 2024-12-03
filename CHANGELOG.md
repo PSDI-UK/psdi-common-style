@@ -1,5 +1,22 @@
 # Changelog for PSDI Common Style project
 
+## v0.2.1
+
+### New and Changed Functionality
+
+* Changed behavior of `scripts/copy_dir.sh` when a target file already exists to exit with a warning instead of a failure. This is a common occurence in rebuilds, and shouldn't trigger an error
+
+### Bugfixes
+
+* Fixed inconsistent changing of directory in `fetch-common-style.sh`
+* Fixed not using default BASE_TARGET_DIR in `fetch-common-style.conf`
+
+### Documentation Changes
+
+### Miscellaneous Changes
+
+* Misc. formatting changes
+
 ## v0.2.0
 
 * First feature-complete release
