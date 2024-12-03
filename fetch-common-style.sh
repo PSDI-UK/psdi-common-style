@@ -90,6 +90,13 @@ if [ "$CLEAN_UP_ASSETS" != "true" ]; then
 
     echo "rm $PACKAGE_FILENAME" >> $PURGE_SCRIPT
     echo "rm -r $ASSET_DIR" >> $PURGE_SCRIPT
+    echo "" >> $PURGE_SCRIPT
+
+    echo "# Delete cleanup script (if present) and self" >> $PURGE_SCRIPT
+    if [ -f $CLEANUP_SCRIPT ]; then
+        echo "rm $CLEANUP_SCRIPT" >> $PURGE_SCRIPT
+    fi
+    echo "rm $PURGE_SCRIPT" >> $PURGE_SCRIPT
 
     chmod +x $PURGE_SCRIPT
 fi
