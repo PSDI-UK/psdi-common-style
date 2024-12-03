@@ -34,7 +34,7 @@ fi
 
 if [ ! -z $IMG_LOC ]; then
     # Replace the image location stub in the common header and footer with the desired value
-    LINE_TO_REPACE_ESCAPED='https:\/\/psdi-uk.github.io\/css-template\/images\/'
+    LINE_TO_REPACE_ESCAPED='https:\/\/psdi-uk.github.io\/psdi-common-style\/images\/'
     ESCAPED_IMG_LOC=$(printf '%s\n' "$IMG_LOC" | sed -e 's/[\/&]/\\&/g')
     REPLACE_CMD_HEAD="sed -i -e 's/$LINE_TO_REPACE_ESCAPED/$ESCAPED_IMG_LOC\//g' $TARGET_DIR"
     eval $REPLACE_CMD_HEAD/psdi-common-header.html
