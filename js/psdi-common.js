@@ -121,7 +121,6 @@ $(document).ready(function () {
       });
   }
 
-
   // Load only if the footer stub has no children
   if (loadFooter) {
     $("#psdi-footer").load("https://psdi-uk.github.io/css-template/psdi-common-footer.html",
