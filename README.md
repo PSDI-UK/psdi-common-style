@@ -306,6 +306,8 @@ The default options will usually be fine for most cases, with the one notable ex
 export SITE_TITLE="Tutorial Centre"
 ```
 
+By default, the assets will be copied to `css`, `html`, `img`, and `js` directories within the same directory as the fetch script. This can be modified either by setting the `TARGET_BASE_DIR` option for the directory to contain all of these subdirectories, or the `TARGET_CSS_DIR`, `TARGET_IMG_DIR`, etc. options to directly set the subdirectly for each asset type to be copied to.
+
 ## Dependent Projects
 
 The following projects use public resources deployed by this project, and should be tested before any changes are made live to ensure no bugs are introduced:
