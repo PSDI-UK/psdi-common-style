@@ -82,7 +82,7 @@ if [ "$CLEAN_UP_ASSETS" != "true" ]; then
     echo "# Generated script to purge copied style assets" >> $PURGE_SCRIPT
     echo "" >> $PURGE_SCRIPT
 
-    if [ -f CLEANUP_SCRIPT ]; then
+    if [ -f $CLEANUP_SCRIPT ]; then
         echo "# Run the cleanup script first" >> $PURGE_SCRIPT
         echo $CLEANUP_SCRIPT >> $PURGE_SCRIPT
         echo "" >> $PURGE_SCRIPT
