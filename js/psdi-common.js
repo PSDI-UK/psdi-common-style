@@ -38,14 +38,18 @@ export function connectModeToggleButton() {
 }
 
 export function setTitle(s) {
+  // Public function for the user to set the site title that will appear in the header, to the right of the PSDI logo
   title = s;
 }
 
 export function setBrandLinkTarget(s) {
+  // Public function for the user to set the target that clicking on the PSDI brand should link to
   brandLinkTarget = s;
 }
 
 export function setHeaderLinksSource(s) {
+  // Public function to set the name of an HTML file containing the links to appear on the right side of the header
+  // for a given page
   headerLinksSource = s;
 }
 
@@ -53,6 +57,7 @@ export function setHeaderLinksSource(s) {
 let loadSteps = 0;
 
 function finalizeLoad() {
+  // Decrement the load steps and check if all steps are finished. If so, remove the cover
   --loadSteps;
   if (loadSteps <= 0) {
     $("#cover").hide();
@@ -79,15 +84,29 @@ export function addHeaderLinks() {
 
 $(document).ready(function () {
 
+  // Start fading out the cover over one second as a failsafe in case something goes wrong and it never gets removed
   $("#cover").fadeOut(1000);
 
+  // Count the elements we'll need to load first, to avoid prematurely removing the cover
+  // We load an element only if it's a pure stub with no children; otherwise we assume it is intended to be used
+  // as-is and not overwritten by a load
+
   const headerStub = $("#psdi-header");
+  let loadHeader = false;
+  if (headerStub[0].childNodes.length == 0) {
+    loadHeader = true;
+    ++loadSteps;
+  }
+
+  const footerStub = $("#psdi-footer");
+  let loadFooter = false;
+  if (footerStub[0].childNodes.length == 0) {
+    loadFooter = true;
+    ++loadSteps;
+  }
 
   // Load only if the header stub has no children
-  if (headerStub[0].childNodes.length == 0) {
-
-    ++loadSteps;
-
+  if (loadHeader) {
     $("#psdi-header").load("https://psdi-uk.github.io/css-template/psdi-common-header.html",
       function (_response, status, _xhr) {
         if (status != "error") {
@@ -102,13 +121,9 @@ $(document).ready(function () {
       });
   }
 
-  const footerStub = $("#psdi-footer");
 
   // Load only if the footer stub has no children
-  if (footerStub[0].childNodes.length == 0) {
-
-    ++loadSteps;
-
+  if (loadFooter) {
     $("#psdi-footer").load("https://psdi-uk.github.io/css-template/psdi-common-footer.html",
       function (_response, status, _xhr) {
         if (status == "error") {
