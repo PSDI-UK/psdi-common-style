@@ -66,7 +66,7 @@ export function addHeaderLinks() {
   let modeToggle = $("#psdi-header .color-mode-toggle");
 
   headerLinksParent.load(headerLinksSource,
-    function (response, status, xhr) {
+    function (_response, status, _xhr) {
       if (status == "error") {
         headerLinksParent[0].textContent = "ERROR: Could not load header links";
       }
@@ -88,7 +88,7 @@ $(document).ready(function () {
     ++loadSteps;
 
     $("#psdi-header").load("https://psdi-uk.github.io/css-template/psdi-common-header.html",
-      function (response, status, xhr) {
+      function (_response, status, _xhr) {
         if (status != "error") {
           $("#psdi-header a.navbar__brand")[0].href = brandLinkTarget;
           $("#psdi-header .navbar__title")[0].textContent = title;
@@ -109,7 +109,7 @@ $(document).ready(function () {
     ++loadSteps;
 
     $("#psdi-footer").load("https://psdi-uk.github.io/css-template/psdi-common-footer.html",
-      function (response, status, xhr) {
+      function (_response, status, _xhr) {
         if (status == "error") {
           $("#psdi-footer")[0].textContent = "ERROR: Could not load page footer";
         }
