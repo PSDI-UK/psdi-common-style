@@ -43,6 +43,7 @@ else
     echo "Extracting assets to $ASSET_DIR"
     cd $ROOTDIR
     tar xf $PACKAGE_FILENAME
+    cd -
 fi
 
 # Clean up the tarball if cleanup is enabled
