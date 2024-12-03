@@ -18,7 +18,7 @@ This project provides common resources to help provide a consistent style across
 This folder contains various images used in the common PSDI header and footer, including a favicon, PSDI and UKRI logos, and icons for social links. Most of the images are linked in the header and footer elements, with the exception of the favicon, which needs to be linked in the header of each HTML file with a line such as:
 
 ```HTML
-<link rel="icon" type="image/x-icon" href="https://psdi-uk.github.io/psdi-common-style/css/psdi-icon-dark.svg">
+<link rel="icon" type="image/x-icon" href="https://psdi-uk.github.io/psdi-common-style/img/psdi-icon-dark.svg">
 ```
 
 ### Stylesheet
