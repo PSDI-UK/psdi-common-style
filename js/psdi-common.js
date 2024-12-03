@@ -49,7 +49,7 @@ export function setHeaderLinksSource(s) {
   headerLinksSource = s;
 }
 
-let loadSteps = 2;
+let loadSteps = 0;
 
 function finalizeLoad() {
   --loadSteps;
@@ -80,26 +80,40 @@ $(document).ready(function () {
 
   $("#cover").fadeOut(1000);
 
-  // TODO: Implement checks here so these elements are only loaded if they have no children
+  const headerStub = $("#psdi-header");
 
-  $("#psdi-header").load("https://psdi-uk.github.io/css-template/psdi-common-header.html",
-    function (response, status, xhr) {
-      if (status != "error") {
-        $("#psdi-header a.navbar__brand")[0].href = brandLinkTarget;
-        $("#psdi-header .navbar__title")[0].textContent = title;
-        addHeaderLinks();
-      } else {
-        $("#psdi-header")[0].textContent = "ERROR: Could not load page header";
-        connectModeToggleButton();
+  // Load only if the header stub has no children
+  if (headerStub[0].childNodes.length == 0) {
+
+    ++loadSteps;
+
+    $("#psdi-header").load("https://psdi-uk.github.io/css-template/psdi-common-header.html",
+      function (response, status, xhr) {
+        if (status != "error") {
+          $("#psdi-header a.navbar__brand")[0].href = brandLinkTarget;
+          $("#psdi-header .navbar__title")[0].textContent = title;
+          addHeaderLinks();
+        } else {
+          $("#psdi-header")[0].textContent = "ERROR: Could not load page header";
+          connectModeToggleButton();
+          finalizeLoad();
+        }
+      });
+  }
+
+  const footerStub = $("#psdi-footer");
+
+  // Load only if the footer stub has no children
+  if (footerStub[0].childNodes.length == 0) {
+
+    ++loadSteps;
+
+    $("#psdi-footer").load("https://psdi-uk.github.io/css-template/psdi-common-footer.html",
+      function (response, status, xhr) {
+        if (status == "error") {
+          $("#psdi-footer")[0].textContent = "ERROR: Could not load page footer";
+        }
         finalizeLoad();
-      }
-    });
-
-  $("#psdi-footer").load("https://psdi-uk.github.io/css-template/psdi-common-footer.html",
-    function (response, status, xhr) {
-      if (status == "error") {
-        $("#psdi-footer")[0].textContent = "ERROR: Could not load page footer";
-      }
-      finalizeLoad();
-    });
+      });
+  }
 });
