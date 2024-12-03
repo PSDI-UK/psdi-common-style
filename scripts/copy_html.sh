@@ -12,6 +12,12 @@ fi
 
 # If envvars are specific to set specific locations within the copied html files, update the new ones in-place
 
+# Replace the site title in the common header with the desired value
+LINE_TO_REPACE_ESCAPED='$REPLACEME_SITE_TITLE'
+ESCAPED_SITE_TITLE=$(printf '%s\n' "$SITE_TITLE" | sed -e 's/[\/&]/\\&/g')
+REPLACE_CMD="sed -i -e 's/$LINE_TO_REPACE_ESCAPED/$ESCAPED_SITE_TITLE/' $TARGET_DIR/psdi-common-header.html"
+eval $REPLACE_CMD
+
 if [ ! -z $BRAND_LINK ]; then
     LINE_TO_REPLACE_LHS='<a class="navbar__brand" href="' # Everything before the default link
     LINE_TO_REPLACE_LINK='\.\/' # The default link, escaped for regex input

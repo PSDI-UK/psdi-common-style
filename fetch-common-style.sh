@@ -37,14 +37,20 @@ fi
 ASSET_SUBDIR=`tar tf $PACKAGE_FILENAME | head -n 1`
 ASSET_DIR=$ROOTDIR/$ASSET_SUBDIR
 
-echo "Extracting assets to $ASSET_DIR"
-cd $ROOTDIR
-tar xf $PACKAGE_FILENAME
+if [ -d $ASSET_DIR ]; then
+    echo "Asset directory $ASSET_DIR already exists"
+else
+    echo "Extracting assets to $ASSET_DIR"
+    cd $ROOTDIR
+    tar xf $PACKAGE_FILENAME
+fi
 
 # Clean up the tarball if cleanup is enabled
 if [ "$CLEAN_UP_ASSETS" = "true" ]; then
     rm $PACKAGE_FILENAME
 fi
+
+# TODO: Add purge script to delete downloaded assets
 
 if [ "$FETCH_ONLY" = "true" ]; then
     echo "FETCH_ONLY is set to 'true', so assets won't be copied. They're available in the following directory:"
