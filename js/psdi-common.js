@@ -1,5 +1,7 @@
-const LIGHT_MODE = "light";
-const DARK_MODE = "dark";
+// This file provides common functions related to the PSDI common assets. Most of these are run automatically as
+// appropriate, except the first batch of functions exported below. These are exposed to the user so that they can
+// customise aspects of the common HTML header
+
 const DEFAULT_TITLE = "";
 const DEFAULT_BRAND_LINK_TARGET = "./";
 const DEFAULT_HEADER_LINKS_SOURCE = "./header-links.html";
@@ -7,6 +9,25 @@ const DEFAULT_HEADER_LINKS_SOURCE = "./header-links.html";
 let title = DEFAULT_TITLE;
 let brandLinkTarget = DEFAULT_BRAND_LINK_TARGET;
 let headerLinksSource = DEFAULT_HEADER_LINKS_SOURCE;
+
+export function setTitle(s) {
+  // Public function for the user to set the site title that will appear in the header, to the right of the PSDI logo
+  title = s;
+}
+
+export function setBrandLinkTarget(s) {
+  // Public function for the user to set the target that clicking on the PSDI brand should link to
+  brandLinkTarget = s;
+}
+
+export function setHeaderLinksSource(s) {
+  // Public function to set the name of an HTML file containing the links to appear on the right side of the header
+  // for a given page
+  headerLinksSource = s;
+}
+
+const LIGHT_MODE = "light";
+const DARK_MODE = "dark";
 
 // Load color mode from session storage and apply it
 let mode = sessionStorage.getItem("mode");
@@ -35,22 +56,6 @@ export function connectModeToggleButton() {
   lModeToggleButton.forEach(function (modeToggleButton) {
     modeToggleButton.addEventListener("click", toggleMode);
   });
-}
-
-export function setTitle(s) {
-  // Public function for the user to set the site title that will appear in the header, to the right of the PSDI logo
-  title = s;
-}
-
-export function setBrandLinkTarget(s) {
-  // Public function for the user to set the target that clicking on the PSDI brand should link to
-  brandLinkTarget = s;
-}
-
-export function setHeaderLinksSource(s) {
-  // Public function to set the name of an HTML file containing the links to appear on the right side of the header
-  // for a given page
-  headerLinksSource = s;
 }
 
 // Counter for elements that need to be loaded - each we request loading will increment this by 1
