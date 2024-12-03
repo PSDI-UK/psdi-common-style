@@ -265,13 +265,13 @@ The fetch script executes the following actions:
 2. Extracts the common assets and copies them to the desired locations
 3. Modifies some of the copied assets according to configuration settings
 4. (Optional) Cleans up the downloaded project release and extracted assets, leaving only the copies
-5. (Otherwise) Creates a script `cleanup-common-style.sh` which can be called to delete all copies of the assets, leaving behind the downloaded project and its folder of extracted assets
+5. (Otherwise) Creates a script `cleanup-common-style.sh` which can be called to delete all copies of the assets, leaving behind the downloaded project and its folder of extracted assets, and a script `purge-common-style.sh` which does this and also deletes the downloaded assets and these two scripts
 
 This script takes no command-line arguments; all configuration of its functionality is handled by the variables set in `fetch-common-assets.conf`, which should be present in the same folder as it. It is alternatively possible to set the configuration through specifying variables in the execution of this script when the configuration file is absent, but this is not recommended unless it is fine to use all or nearly-all default values.
 
-The final step of this script creates another script, `cleanup-common-style.sh`, which deletes copied assets. The purpose of this script is to help with a "clean" step provided by your site builder, to also remove any assets copied by the fetch script. This can be useful for instance if the copied versions aren't listed in your `.gitignore` file and you wish not to commit them; you can call this script to clean them up.
+The final step of this script creates two other scripts, `cleanup-common-style.sh` and `purge-common-style.sh`, which delete copied assets, the latter also deleting the downloaded files and these two scripts. The purpose of these scripts is to help with a "clean" or "purge" step provided by your site builder, to also remove any assets downloaded/copied by the fetch script. This can be useful for instance if the copied versions aren't listed in your `.gitignore` file and you wish not to commit them; you can call the cleanup script before committing all changes.
 
-It is recommended to set up your `.gitignore` file to ignore downloaded assets and the generated `cleanup-common-style.sh`. This can be done by adding the following lines to it:
+It is recommended to set up your `.gitignore` file to ignore downloaded assets and the generated `cleanup-common-style.sh` and `purge-common-style.sh`. This can be done by adding the following lines to it:
 
 ```
 # Script created to clean up downloaded assets

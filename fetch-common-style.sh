@@ -79,7 +79,7 @@ if [ "$CLEAN_UP_ASSETS" != "true" ]; then
     PURGE_SCRIPT=$ROOTDIR/purge-common-style.sh
     echo "#!/bin/bash" > $PURGE_SCRIPT
     echo "" >> $PURGE_SCRIPT
-    echo "# Generated script to purge copied style assets" >> $PURGE_SCRIPT
+    echo "# Generated script to clean up copied style assets, downloaded files, and created scripts" >> $PURGE_SCRIPT
     echo "" >> $PURGE_SCRIPT
 
     if [ -f $CLEANUP_SCRIPT ]; then
