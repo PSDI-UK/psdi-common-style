@@ -49,6 +49,7 @@ export function setHeaderLinksSource(s) {
   headerLinksSource = s;
 }
 
+// Counter for elements that need to be loaded - each we request loading will increment this by 1
 let loadSteps = 0;
 
 function finalizeLoad() {
