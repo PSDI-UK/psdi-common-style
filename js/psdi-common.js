@@ -98,14 +98,14 @@ $(document).ready(function () {
 
   const headerStub = $("#psdi-header");
   let loadHeader = false;
-  if (headerStub[0].childNodes.length == 0) {
+  if (headerStub.length > 0 && headerStub[0].childNodes.length == 0) {
     loadHeader = true;
     ++loadSteps;
   }
 
   const footerStub = $("#psdi-footer");
   let loadFooter = false;
-  if (footerStub[0].childNodes.length == 0) {
+  if (footerStub.length > 0 && footerStub[0].childNodes.length == 0) {
     loadFooter = true;
     ++loadSteps;
   }
