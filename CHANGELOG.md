@@ -4,6 +4,20 @@
 
 ### New and Changed Functionality
 
+* Added extra specifier for ul declaration in common CSS, so it'll take precedence in the WP site
+
+### Bugfixes
+
+* Fixed bug which occurred in common scripts when header stub wasn't present on a page, which prevented footer from being loaded
+
+### Documentation Changes
+
+### Miscellaneous Changes
+
+## v0.2.1
+
+### New and Changed Functionality
+
 * Changed behavior of `scripts/copy_dir.sh` when a target file already exists to exit with a warning instead of a failure. This is a common occurence in rebuilds, and shouldn't trigger an error
 
 ### Bugfixes
