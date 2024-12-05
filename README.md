@@ -312,7 +312,8 @@ By default, the assets will be copied to `css`, `html`, `img`, and `js` director
 
 The following projects use public resources deployed by this project, and should be tested before any changes are made live to ensure no bugs are introduced:
 
-TODO: Update once other projects migrate to using this new project
+* [PSDI Metadata](https://github.com/PSDI-UK/metadata) (live)
+* [Docusaurus Pages](http://github.com/PSDI-UK/docusaurus-pages) (downloaded)
 
 ## Testing
 
