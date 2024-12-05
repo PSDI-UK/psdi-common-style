@@ -1,6 +1,6 @@
 # PSDI Common Style
 
-**Version:** v0.2.3
+**Version:** v0.2.4
 
 This project provides common resources to help provide a consistent style across PSDI websites. The contents of this project are are deployed live at the various subdirectories of https://psdi-uk.github.io/psdi-common-style/, and can be imported by other projects to use the PSDI style and elements.
 
@@ -312,7 +312,8 @@ By default, the assets will be copied to `css`, `html`, `img`, and `js` director
 
 The following projects use public resources deployed by this project, and should be tested before any changes are made live to ensure no bugs are introduced:
 
-TODO: Update once other projects migrate to using this new project
+* [PSDI Metadata](https://github.com/PSDI-UK/metadata) (live)
+* [Docusaurus Pages](http://github.com/PSDI-UK/docusaurus-pages) (downloaded)
 
 ## Testing
 
