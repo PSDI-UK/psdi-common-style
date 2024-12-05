@@ -1,5 +1,17 @@
 # Changelog for PSDI Common Style project
 
+## v0.2.4
+
+### New and Changed Functionality
+
+### Bugfixes
+
+* Fixed bug where header and footer were still being loaded from css-template project instead of this one
+
+### Documentation Changes
+
+### Miscellaneous Changes
+
 ## v0.2.3
 
 ### New and Changed Functionality
