@@ -1,6 +1,18 @@
 # Changelog for PSDI Common Style project
 
-## v0.2.1
+## v0.2.3
+
+### New and Changed Functionality
+
+### Bugfixes
+
+* Fixed bug where page cover wouldn't be hidded if neither the header nor footer needed to be loaded remotely
+
+### Documentation Changes
+
+### Miscellaneous Changes
+
+## v0.2.2
 
 ### New and Changed Functionality
 
