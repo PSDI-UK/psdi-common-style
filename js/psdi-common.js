@@ -136,4 +136,8 @@ $(document).ready(function () {
         finalizeLoad();
       });
   }
+
+  if (loadSteps==0)
+    finalizeLoad();
+  
 });
