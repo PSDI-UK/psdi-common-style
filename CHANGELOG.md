@@ -1,5 +1,19 @@
 # Changelog for PSDI Common Style project
 
+## v0.2.5
+
+### New and Changed Functionality
+
+* Added Verdana as a possible font ahead of Arial
+
+### Bugfixes
+
+* Fixed bug where options selected in a select box would appear to lose their selection after focus is lost
+
+### Documentation Changes
+
+### Miscellaneous Changes
+
 ## v0.2.4
 
 ### New and Changed Functionality
