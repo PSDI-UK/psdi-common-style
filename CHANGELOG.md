@@ -1,5 +1,17 @@
 # Changelog for PSDI Common Style project
 
+## v0.2.6
+
+### New and Changed Functionality
+
+### Bugfixes
+
+* Fixed background color of selected options
+
+### Documentation Changes
+
+### Miscellaneous Changes
+
 ## v0.2.5
 
 ### New and Changed Functionality
