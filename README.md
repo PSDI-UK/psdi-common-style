@@ -314,6 +314,7 @@ The following projects use public resources deployed by this project, and should
 
 * [PSDI Metadata](https://github.com/PSDI-UK/metadata) (live)
 * [Docusaurus Pages](http://github.com/PSDI-UK/docusaurus-pages) (downloaded)
+* [PSDI Home](https://psdistg.wpengine.com/) (live)
 
 ## Testing
 
