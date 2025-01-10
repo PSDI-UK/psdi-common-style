@@ -240,7 +240,7 @@ input {
 }
 
 option:checked {
-  background-color: var(--ifm-background-color-primary);
+  background-color: var(--ifm-color-primary);
   color           : var(--ifm-hero-text-color);
 }
 
