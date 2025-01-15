@@ -1,5 +1,17 @@
 # Changelog for PSDI Common Style project
 
+## v0.2.7
+
+### New and Changed Functionality
+
+### Bugfixes
+
+* Fixed bug in CSS which was incorrectly removing list styling globally
+
+### Documentation Changes
+
+### Miscellaneous Changes
+
 ## v0.2.6
 
 ### New and Changed Functionality

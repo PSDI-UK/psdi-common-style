@@ -416,7 +416,7 @@ p {
   text-align: center;
 }
 
-ul,
+#psdi-header ul,
 #psdi-footer ul {
   list-style: none;
   padding   : 0;
