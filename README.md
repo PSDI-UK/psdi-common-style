@@ -1,7 +1,5 @@
 # PSDI Common Style
 
-**Version:** v0.2.4
-
 This project provides common resources to help provide a consistent style across PSDI websites. The contents of this project are are deployed live at the various subdirectories of https://psdi-uk.github.io/psdi-common-style/, and can be imported by other projects to use the PSDI style and elements.
 
 ## Contributors
