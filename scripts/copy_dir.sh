@@ -34,3 +34,12 @@ for SOURCE_FILENAME in $SOURCE_DIR/*; do
         cp -r $SOURCE_FILENAME $DEST_FILENAME
     fi
 done
+
+# For JavaScript files we need some special handling to replace references to common header/footer files
+if [ $CONTENT_TYPE = "js" ] && [ ! -z $HTML_LOC ]; then
+    # Replace the html location in the common JS file with the desired value
+    LINE_TO_REPLACE_ESCAPED='https:\/\/psdi-uk\.github\.io\/psdi-common-style\/html' # The default link, escaped for regex input
+    ESCAPED_HTML_LOC=$(printf '%s\n' "$HTML_LOC" | sed -e 's/[\/&]/\\&/g')
+    REPLACE_CMD="sed -i -E 's/$LINE_TO_REPLACE_ESCAPED/$ESCAPED_HTML_LOC/' $TARGET_DIR/psdi-common.js"
+    eval $REPLACE_CMD
+fi
