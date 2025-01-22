@@ -9,6 +9,8 @@
 
 ### Bugfixes
 
+- Fixed bug where brand link and title deliberately set in the header would be overwritten by defaults in the JS code
+
 ### Documentation Changes
 
 ### Miscellaneous Changes
