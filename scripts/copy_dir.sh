@@ -30,7 +30,7 @@ mkdir -p $TARGET_DIR
 for SOURCE_FILENAME in $SOURCE_DIR/*; do
     FILENAME=$(basename ${SOURCE_FILENAME})
     DEST_FILENAME="$TARGET_DIR/$FILENAME"
-    if [ $FORCE_OVERWRITE = "true" ] && [ -e $DEST_FILENAME ]; then
+    if [ $FORCE_OVERWRITE != "true" ] && [ -e $DEST_FILENAME ]; then
         echo "WARNING: File or directory $DEST_FILENAME already exists. This script will exit to ensure you don't " \
              "inadvertently  overwrite a local version you're keeping for a reason. If it can be safely deleted, " \
              "call the 'clear_images.sh' script or manually delete it."
