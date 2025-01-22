@@ -6,6 +6,8 @@
 
 ### Bugfixes
 
+- Fixed bug with incorrect default location for HTML assets
+
 ### Documentation Changes
 
 ### Miscellaneous Changes
