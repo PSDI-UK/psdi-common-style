@@ -1,5 +1,19 @@
 # Changelog for PSDI Common Style project
 
+## v0.4.1
+
+### New and Changed Functionality
+
+### Bugfixes
+
+- Fixed bug with incorrect default location for HTML assets
+
+### Documentation Changes
+
+### Miscellaneous Changes
+
+- Set up .gitattributes to hide files we don't want appearing in release tarballs
+
 ## v0.4.0
 
 ### New and Changed Functionality

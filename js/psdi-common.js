@@ -8,8 +8,8 @@ const ORIG_BRAND_LINK = "./"
 const DEFAULT_TITLE = "";
 const DEFAULT_BRAND_LINK_TARGET = "./";
 const DEFAULT_HEADER_LINKS_SOURCE = "./header-links.html";
-const DEFAULT_HEADER_SOURCE = "./psdi-common-header.html";
-const DEFAULT_FOOTER_SOURCE = "./psdi-common-footer.html";
+const DEFAULT_HEADER_SOURCE = "https://psdi-uk.github.io/psdi-common-style/html/psdi-common-header.html";
+const DEFAULT_FOOTER_SOURCE = "https://psdi-uk.github.io/psdi-common-style/html/psdi-common-footer.html";
 
 let title = DEFAULT_TITLE;
 let useDefaultTitle = true;
