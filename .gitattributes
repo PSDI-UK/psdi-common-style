@@ -1,0 +1,8 @@
+# To save bandwidth and space for the end user, we exclude some files from the asset releases
+
+# Exclude git and github utility files
+.git*           export-ignore
+.github/**      export-ignore
+
+# Exclude large files in the store
+store/**
