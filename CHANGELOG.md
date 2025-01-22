@@ -1,5 +1,20 @@
 # Changelog for PSDI Common Style project
 
+## v0.4.0
+
+### New and Changed Functionality
+
+- Added JavaScript functions to `psdi-common.js`, `setHeaderSource` and `setFooterSource`, to set the location of the header and footer on a per-file basis
+- Added configuration option in `fetch-common-style.sh`, `FORCE_OVERWRITE`, which will force the fetch script and copy scripts it calls to overwrite any files that already exist in target destinations
+
+### Bugfixes
+
+- Fixed bug where brand link and title deliberately set in the header would be overwritten by defaults in the JS code
+
+### Documentation Changes
+
+### Miscellaneous Changes
+
 ## v0.3.0
 
 ### New and Changed Functionality

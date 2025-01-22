@@ -2,28 +2,49 @@
 // appropriate, except the first batch of functions exported below. These are exposed to the user so that they can
 // customise aspects of the common HTML header
 
+const ORIG_TITLE = "$REPLACEME_SITE_TITLE"
+const ORIG_BRAND_LINK = "./"
+
 const DEFAULT_TITLE = "";
 const DEFAULT_BRAND_LINK_TARGET = "./";
 const DEFAULT_HEADER_LINKS_SOURCE = "./header-links.html";
+const DEFAULT_HEADER_SOURCE = "./psdi-common-header.html";
+const DEFAULT_FOOTER_SOURCE = "./psdi-common-footer.html";
 
 let title = DEFAULT_TITLE;
+let useDefaultTitle = true;
 let brandLinkTarget = DEFAULT_BRAND_LINK_TARGET;
+let useDefaultBrandLink = true;
 let headerLinksSource = DEFAULT_HEADER_LINKS_SOURCE;
+let headerSource = DEFAULT_HEADER_SOURCE
+let footerSource = DEFAULT_FOOTER_SOURCE
 
 export function setTitle(s) {
   // Public function for the user to set the site title that will appear in the header, to the right of the PSDI logo
   title = s;
+  useDefaultTitle = false;
 }
 
 export function setBrandLinkTarget(s) {
   // Public function for the user to set the target that clicking on the PSDI brand should link to
   brandLinkTarget = s;
+  useDefaultBrandLink = false;
 }
 
 export function setHeaderLinksSource(s) {
   // Public function to set the name of an HTML file containing the links to appear on the right side of the header
   // for a given page
   headerLinksSource = s;
+}
+
+export function setHeaderSource(s) {
+  // Public function to set the name of the header HTML file to be loaded
+  headerSource = s;
+}
+
+export function setFooterSource(s) {
+  // Public function to set the name of the footer HTML file to be loaded
+  footerSource = s;
 }
 
 const LIGHT_MODE = "light";
@@ -112,11 +133,20 @@ $(document).ready(function () {
 
   // Load only if the header stub has no children
   if (loadHeader) {
-    $("#psdi-header").load("https://psdi-uk.github.io/psdi-common-style/html/psdi-common-header.html",
+    $("#psdi-header").load(headerSource,
       function (_response, status, _xhr) {
         if (status != "error") {
-          $("#psdi-header a.navbar__brand")[0].href = brandLinkTarget;
-          $("#psdi-header .navbar__title")[0].textContent = title;
+          // Check if we should replace the brand link by if a value is set, or if the value in the header matches
+          // the original value in the source
+          let brandLinkElement = $("#psdi-header a.navbar__brand")[0];
+          if (!useDefaultBrandLink || String(brandLinkElement.href) == ORIG_BRAND_LINK)
+            brandLinkElement.href = brandLinkTarget;
+
+          // Check if we should replace the title by if a value is set, or if the value in the header matches
+          // the original value in the source
+          let titleElement = $("#psdi-header .navbar__title")[0];
+          if (!useDefaultTitle || String(titleElement.textContent) == ORIG_TITLE)
+            $("#psdi-header .navbar__title")[0].textContent = title;
           addHeaderLinks();
         } else {
           $("#psdi-header")[0].textContent = "ERROR: Could not load page header";
@@ -128,7 +158,7 @@ $(document).ready(function () {
 
   // Load only if the footer stub has no children
   if (loadFooter) {
-    $("#psdi-footer").load("https://psdi-uk.github.io/psdi-common-style/html/psdi-common-footer.html",
+    $("#psdi-footer").load(footerSource,
       function (_response, status, _xhr) {
         if (status == "error") {
           $("#psdi-footer")[0].textContent = "ERROR: Could not load page footer";
@@ -137,7 +167,7 @@ $(document).ready(function () {
       });
   }
 
-  if (loadSteps==0)
+  if (loadSteps == 0)
     finalizeLoad();
-  
+
 });
