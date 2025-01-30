@@ -5,4 +5,4 @@
 .github/**      export-ignore
 
 # Exclude large files in the store
-store/**
+store/**        export-ignore
