@@ -20,6 +20,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: create pull request
-        run: gh pr create -B release -H ${{ env.BRANCH_NAME }} --title 'Merge ${{ env.BRANCH_NAME }} into release' --body ''
+        run: gh pr create -B release -H ${{ env.BRANCH_NAME }} --title 'Merge ${{ env.BRANCH_NAME }} into release' --body '' || echo "Pull request already exists"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
