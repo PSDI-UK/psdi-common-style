@@ -1,0 +1,23 @@
+# Pipeline to run on pushes to release candidate branches PRs to such branches
+
+# NOTE: It is assumed that all release candidate branches match the pattern 'rc-**'
+
+name: CI - Release Candidates
+run-name: CI - Release Candidates
+on:
+  workflow_dispatch:
+  push:
+    branches: ["rc-**"]
+
+env:
+  BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: create pull request
+        run: gh pr create -B release -H ${{ env.BRANCH_NAME }} --title 'Merge ${{ env.BRANCH_NAME }} into release' --body '' || echo "Pull request already exists"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
