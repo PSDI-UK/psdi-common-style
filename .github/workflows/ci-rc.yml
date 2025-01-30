@@ -9,6 +9,16 @@ on:
   push:
     branches: ["rc-**"]
 
+env:
+  BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+
 jobs:
   tag-release:
     uses: ./.github/workflows/tag-release.yml
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: create pull request
+        run: gh pr create -d -B release -H $BRANCH_NAME --title 'Merge $BRANCH_NAME into release' --body ''
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
