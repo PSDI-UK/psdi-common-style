@@ -18,6 +18,7 @@ jobs:
   create-pr:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: create pull request
         run: gh pr create -d -B release -H ${{ env.BRANCH_NAME }} --title 'Merge ${{ env.BRANCH_NAME }} into release' --body ''
         env:
