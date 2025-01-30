@@ -1,5 +1,17 @@
 # Changelog for PSDI Common Style project
 
+## v0.5.0
+
+### New and Changed functionality
+
+- Deploys assets live, but not in releases, in `store/`, starting with resource catalogue
+
+### Bugfixes
+
+### Documentation Changes
+
+### Miscellaneous Changes
+
 ## v0.4.1
 
 ### New and Changed Functionality
