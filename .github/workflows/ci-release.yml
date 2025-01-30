@@ -1,0 +1,12 @@
+# Pipeline to run on release branch only
+
+name: ci-release
+run-name: ci-release
+on:
+  workflow_dispatch:
+  push:
+    branches: ["release"]
+
+jobs:
+  test-package:
+    uses: ./.github/workflows/tag-release.yml
