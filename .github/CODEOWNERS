@@ -1,3 +1,13 @@
+# Protect utility files
+.github/** @brgillis
+.gitattributes @brgillis
+
 # Protect files which are deployed publicly, as these are used by other sites
 # and could cause issues if changed without care
-* @brgillis
+css/** @brgillis
+html/** @brgillis
+img/** @brgillis
+js/** @brgillis
+scripts/** @brgillis
+fetch-common-style.conf @brgillis
+fetch-common-style.sh @brgillis
