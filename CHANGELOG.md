@@ -1,5 +1,19 @@
 # Changelog for PSDI Common Style project
 
+## v0.6.0
+
+### New and Changed functionality
+
+- Split the links in the brand in the header, so that the PSDI logo will link to the PSDI home page, and the site title
+  will link to the site homepage. Renamed `setBrandLinkTarget` function to `setTitleLinkTarget` to reflect this change,
+  but kept the previous name so as not to break backwards compatibility
+
+### Bugfixes
+
+### Documentation Changes
+
+### Miscellaneous Changes
+
 ## v0.5.0
 
 ### New and Changed functionality
