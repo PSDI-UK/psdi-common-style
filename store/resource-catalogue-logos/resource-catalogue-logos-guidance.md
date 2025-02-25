@@ -3,13 +3,13 @@ This folder contains images which are displayed in the PSDI Resource catalogue (
 The mapping of which logos correspond to which resources is given in https://psdi-uk.github.io/metadata/resource-catalogue/psdi-dcat.jsonld (in the "psdiDcatExt:logoURL" fields).
 
 ## File guidance
-While the majority of common images formats are fine, I would suggest a preference in favour of svg and png in order to avoid potential blurriness. For the size I would recommend that for non svg images they should ideally be at least 200px wide or at least 120px in height. The aspect ratio is flexible but should be within these constraints and will likely look better as either a square or rectangular with the width greater than the height. As file size I would recommend keeping them under 150KB to avoid the potential of long load times for users.
+While the majority of common images formats are fine, I would suggest a preference in favour of svg and png in order to avoid potential blurriness. For the size I would recommend that for non svg images they should ideally be at least 200px wide or at least 120px in height but as the resource theme pages can display larger images, logos for these should instead be at least 400px wide or at least 240px in height. The aspect ratio is flexible but should be within these constraints and will likely look better as either a square or rectangular with the width greater than the height. As file size I would recommend keeping them under 150KB to avoid the potential of long load times for users.
 
 Preferences
 * Format: svg, png, jpeg, webp, avif
 * File dimensions (for formats other than svg):
-    - Minimum width: 200px
-    - Minimum height: 120px
+    - Minimum width: 200px (400px for resource themes)
+    - Minimum height: 120px (240px for resource themes)
     - Width >= Height
 * Maximum file size: 150KB
 
