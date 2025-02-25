@@ -20,7 +20,7 @@ eval $REPLACE_CMD
 
 # Backwards compatibility patch - if the old name of "TITLE_LINK" was used, copy its value to TITLE_LINK
 if [ ! -z $BRAND_LINK ] && [ -z $TITLE_LINK ]; then
-  export TITLE_LINK = $BRAND_LINK
+  export TITLE_LINK=$BRAND_LINK
 fi
 
 if [ ! -z $TITLE_LINK ]; then
