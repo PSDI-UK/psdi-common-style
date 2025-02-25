@@ -8,33 +8,17 @@
   will link to the site homepage. Renamed `setBrandLinkTarget` function to `setTitleLinkTarget` to reflect this change,
   but kept the previous name so as not to break backwards compatibility
 
-### Bugfixes
-
-### Documentation Changes
-
-### Miscellaneous Changes
-
 ## v0.5.0
 
 ### New and Changed functionality
 
 - Deploys assets live, but not in releases, in `store/`, starting with resource catalogue
 
-### Bugfixes
-
-### Documentation Changes
-
-### Miscellaneous Changes
-
 ## v0.4.1
-
-### New and Changed Functionality
 
 ### Bugfixes
 
 - Fixed bug with incorrect default location for HTML assets
-
-### Documentation Changes
 
 ### Miscellaneous Changes
 
@@ -51,45 +35,23 @@
 
 - Fixed bug where brand link and title deliberately set in the header would be overwritten by defaults in the JS code
 
-### Documentation Changes
-
-### Miscellaneous Changes
-
 ## v0.3.0
 
 ### New and Changed Functionality
 
 - Added configuration option in `fetch-common-style.sh`, `HTML_LOC`, which sets the location to load common header and footer from, and functionality in the scripts to support this
 
-### Bugfixes
-
-### Documentation Changes
-
-### Miscellaneous Changes
-
 ## v0.2.7
-
-### New and Changed Functionality
 
 ### Bugfixes
 
 - Fixed bug in CSS which was incorrectly removing list styling globally
 
-### Documentation Changes
-
-### Miscellaneous Changes
-
 ## v0.2.6
-
-### New and Changed Functionality
 
 ### Bugfixes
 
 - Fixed background color of selected options
-
-### Documentation Changes
-
-### Miscellaneous Changes
 
 ## v0.2.5
 
@@ -101,33 +63,17 @@
 
 - Fixed bug where options selected in a select box would appear to lose their selection after focus is lost
 
-### Documentation Changes
-
-### Miscellaneous Changes
-
 ## v0.2.4
-
-### New and Changed Functionality
 
 ### Bugfixes
 
 - Fixed bug where header and footer were still being loaded from css-template project instead of this one
 
-### Documentation Changes
-
-### Miscellaneous Changes
-
 ## v0.2.3
-
-### New and Changed Functionality
 
 ### Bugfixes
 
 - Fixed bug where page cover wouldn't be hidded if neither the header nor footer needed to be loaded remotely
-
-### Documentation Changes
-
-### Miscellaneous Changes
 
 ## v0.2.2
 
@@ -139,10 +85,6 @@
 
 - Fixed bug which occurred in common scripts when header stub wasn't present on a page, which prevented footer from being loaded
 
-### Documentation Changes
-
-### Miscellaneous Changes
-
 ## v0.2.1
 
 ### New and Changed Functionality
@@ -153,8 +95,6 @@
 
 - Fixed inconsistent changing of directory in `fetch-common-style.sh`
 - Fixed not using default BASE_TARGET_DIR in `fetch-common-style.conf`
-
-### Documentation Changes
 
 ### Miscellaneous Changes
 
