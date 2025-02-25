@@ -18,6 +18,11 @@ ESCAPED_SITE_TITLE=$(printf '%s\n' "$SITE_TITLE" | sed -e 's/[\/&]/\\&/g')
 REPLACE_CMD="sed -i -e 's/$LINE_TO_REPACE_ESCAPED/$ESCAPED_SITE_TITLE/' $TARGET_DIR/psdi-common-header.html"
 eval $REPLACE_CMD
 
+# Backwards compatibility patch - if the old name of "TITLE_LINK" was used, copy its value to TITLE_LINK
+if [ ! -z $BRAND_LINK ] && [ -z $TITLE_LINK ]; then
+  export TITLE_LINK = $BRAND_LINK
+fi
+
 if [ ! -z $TITLE_LINK ]; then
     LINE_TO_REPLACE_LHS='<a class="navbar__title" href="' # Everything before the default link
     LINE_TO_REPLACE_LINK='\.\/' # The default link, escaped for regex input
