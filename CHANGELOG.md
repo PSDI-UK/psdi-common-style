@@ -1,6 +1,12 @@
 # Changelog for PSDI Common Style project
 
-## v0.6.0
+## v0.8.0
+
+### New and Changed functionality
+
+- Automatically download fonts used by the style
+
+## v0.7.0
 
 ### New and Changed functionality
 
