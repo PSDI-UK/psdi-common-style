@@ -1,5 +1,13 @@
 # Changelog for PSDI Common Style project
 
+## v0.9.0
+
+### New and Changed functionality
+
+- Added ability for a header or footer to be assigned the "fallback" class to indicate that the existing content is
+  there to be used as a fallback for if the remote content can't be loaded, and to try to load the remote content over
+  it
+
 ## v0.8.0
 
 ### New and Changed functionality
