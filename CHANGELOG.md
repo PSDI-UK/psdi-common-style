@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.9.1
+
+### Bugfixes
+
+- Fixed placeholder text formatting in input boxes for improved readability - now appears grey with normal weight
+
 ## v0.9.0
 
 ### New and Changed functionality
