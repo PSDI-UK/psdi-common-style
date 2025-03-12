@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.9.2
+
+### Miscellaneous Changes
+
+Updated Contact Us link in footer to support@psdi.ac.uk per feedback at demo
+
 ## v0.9.1
 
 ### Bugfixes
