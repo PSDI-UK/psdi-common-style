@@ -1,10 +1,25 @@
 # Changelog for PSDI Common Style project
 
+## v0.9.4
+
+### Styling Changes
+
+- Added links for Privacy, T&C, and mailing list to footer
+- Removed Instagram link from footer
+- Updated Copyright year in footer to 2025
+
+## v0.9.3
+
+### Styling Changes
+
+- Expanded PSDI abbreviation in copyright notice in footer
+- Added simple versions of PSDI logo, without the expansion of the abbreviation
+
 ## v0.9.2
 
 ### Miscellaneous Changes
 
-Updated Contact Us link in footer to support@psdi.ac.uk per feedback at demo
+- Updated Contact Us link in footer to support@psdi.ac.uk per feedback at demo
 
 ## v0.9.1
 
