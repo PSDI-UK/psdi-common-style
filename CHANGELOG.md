@@ -1,5 +1,13 @@
 # Changelog for PSDI Common Style project
 
+## v0.9.4
+
+### Styling Changes
+
+- Added links for Privacy, T&C, and mailing list to footer
+- Removed Instagram link from footer
+- Updated Copyright year in footer to 2025
+
 ## v0.9.3
 
 ### Styling Changes
