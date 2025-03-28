@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.10.0
+
+### Styling Changes
+
+- Point PSDI Home links to the staging website temporarily
+
 ## v0.9.5
 
 ### Bugfixes
