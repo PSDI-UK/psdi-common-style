@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.9.5
+
+### Bugfixes
+
+- Fix "JavaScript disabled" line accidentally left in common footer
+
 ## v0.9.4
 
 ### Styling Changes
