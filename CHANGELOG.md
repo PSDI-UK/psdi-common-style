@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.10.1
+
+### Bugfixes
+
+- Updated CSS styling so settings for horizontal lines won't be overridden by Bootstrap if that's loaded as well
+
 ## v0.10.0
 
 ### Styling Changes
