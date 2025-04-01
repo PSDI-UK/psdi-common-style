@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.10.2
+
+### Bugfixes
+
+- Updated CSS rules to fix a double-spacing issue between paragraphs on some sites
+
 ## v0.10.1
 
 ### Bugfixes
