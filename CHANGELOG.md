@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.10.3
+
+### Bugfixes
+
+- Increased z-index of page cover so it will appear over header on PSDI main page
+
 ## v0.10.2
 
 ### Bugfixes
