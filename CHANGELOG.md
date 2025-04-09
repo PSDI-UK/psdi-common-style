@@ -4,6 +4,12 @@
 
 ### Bugfixes
 
+- Fixed bug with how page titles wrap
+
+## v0.10.3
+
+### Bugfixes
+
 - Increased z-index of page cover so it will appear over header on PSDI main page
 
 ## v0.10.2
