@@ -1,10 +1,11 @@
 # Changelog for PSDI Common Style project
 
-## v0.10.3
+## v0.10.4
 
 ### Bugfixes
 
 - Fixed bug with how page titles wrap
+- Fixed spacing of title
 
 ## v0.10.3
 
