@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.10.5
+
+### Styling Changes
+
+- UKRI and EPSRC logos in the footer now link to their sites
+
 ## v0.10.4
 
 ### Bugfixes
