@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.10.6
+
+### Styling Changes
+
+- Header and footer PSDI links now point to production site
+
 ## v0.10.5
 
 ### Styling Changes
