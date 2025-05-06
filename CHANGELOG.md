@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.10.7
+
+### Bugfixes
+
+- Fixed bug with horizontal scrollbar on docusaurus sites
+
 ## v0.10.6
 
 ### Styling Changes
