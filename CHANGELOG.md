@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.10.8
+
+### Bugfixes
+
+- Updated PSDI X link in the footer to point directly to x.com rather than relying on a redirect
+
 ## v0.10.7
 
 ### Bugfixes
