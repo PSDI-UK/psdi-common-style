@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.10.9
+
+### Bugfixes
+
+- Fixed bug where the mode toggle button in the header wasn't always being connected
+
 ## v0.10.8
 
 ### Bugfixes
