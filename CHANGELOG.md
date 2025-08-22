@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.10.10
+
+### Bugfixes
+
+- Fixed so content is less likely to overflow the viewport width
+
 ## v0.10.9
 
 ### Bugfixes
