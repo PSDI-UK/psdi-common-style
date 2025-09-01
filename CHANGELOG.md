@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.10.11
+
+### Styling Changes
+
+- Buttons are now a bit more responsive - the cursor changes to a pointer, and they change color when hovered over
+
 ## v0.10.10
 
 ### Bugfixes
