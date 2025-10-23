@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.10.12
+
+### Styling Changes
+
+- Fixed announcement bar height for Docusaurus pages
+
 ## v0.10.11
 
 ### Styling Changes
