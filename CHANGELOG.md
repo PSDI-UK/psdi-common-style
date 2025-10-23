@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.10.13
+
+### Styling Changes
+
+- Increased size of text in announcement bar
+
 ## v0.10.12
 
 ### Styling Changes
