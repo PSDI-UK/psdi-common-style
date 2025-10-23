@@ -313,7 +313,7 @@ body>* {
   align-items     : center;
   padding         : 0;
   border-bottom   : 1px solid var(--psdi-border-color);
-  height          : auto;
+  height          : auto !important;
 }
 
 .announcementBarContent_xLdY {
