@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.10.14
+
+### Styling Changes
+
+- Made buttons which are focused appear the same as hovered buttons so they stand out better
+
 ## v0.10.13
 
 ### Styling Changes
