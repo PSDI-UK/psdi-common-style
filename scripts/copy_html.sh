@@ -38,7 +38,7 @@ fi
 if [ ! -z $HEADER_LINKS_SOURCE ]; then
     # Replace the header links stub in the common header with the desired value
     LINE_TO_REPACE_ESCAPED='<!-- Add common header links here -->'
-    ESCAPED_HEADER_LINKS=$(printf '%s\n' "`cat $HEADER_LINKS_SOURCE`" | sed -e 's/[\/&]/\\&/g')
+    ESCAPED_HEADER_LINKS=$(printf '%s\n' "`cat $HEADER_LINKS_SOURCE`" | sed -e 's/[\/&]/\\&/g' | sed -e 's/'\''/\\"/g')
     REPLACE_CMD="sed -i -e 's/$LINE_TO_REPACE_ESCAPED/$ESCAPED_HEADER_LINKS/' $TARGET_DIR/psdi-common-header.html"
     eval $REPLACE_CMD
 fi
