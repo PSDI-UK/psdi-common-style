@@ -14,7 +14,7 @@ fi
 
 # Replace the site title in the common header with the desired value
 LINE_TO_REPACE_ESCAPED='$REPLACEME_SITE_TITLE'
-ESCAPED_SITE_TITLE=$(printf '%s\n' "$SITE_TITLE" | sed -e 's/[\/&]/\\&/g')
+ESCAPED_SITE_TITLE=$(printf '%s\n' "$SITE_TITLE" | sed -e 's/[\/&]/\\&/g' | sed -e 's/'\''/’/g')
 REPLACE_CMD="sed -i -e 's/$LINE_TO_REPACE_ESCAPED/$ESCAPED_SITE_TITLE/' $TARGET_DIR/psdi-common-header.html"
 eval $REPLACE_CMD
 
@@ -30,7 +30,7 @@ if [ ! -z $TITLE_LINK ]; then
     LINE_TO_REPLACE_ESCAPED='('$LINE_TO_REPLACE_LHS')'$LINE_TO_REPLACE_LINK'('$LINE_TO_REPLACE_RHS')'
 
     # Replace the title link in the common header with the desired value
-    ESCAPED_TITLE_LINK=$(printf '%s\n' "$TITLE_LINK" | sed -e 's/[\/&]/\\&/g')
+    ESCAPED_TITLE_LINK=$(printf '%s\n' "$TITLE_LINK" | sed -e 's/[\/&]/\\&/g' | sed -e 's/'\''/\\"/g')
     REPLACE_CMD="sed -i -E 's/$LINE_TO_REPLACE_ESCAPED/\1$ESCAPED_TITLE_LINK\2/' $TARGET_DIR/psdi-common-header.html"
     eval $REPLACE_CMD
 fi

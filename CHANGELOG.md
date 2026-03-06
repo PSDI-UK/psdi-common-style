@@ -8,7 +8,7 @@
 
 ### Bugfixes
 
-- Fixed bug where single quotes in header links content would cause a crash of the script
+- Fixed bug where single quotes in replacement content would cause a crash of the script
 
 ## v0.10.14
 
