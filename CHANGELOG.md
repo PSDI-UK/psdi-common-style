@@ -1,5 +1,15 @@
 # Changelog for PSDI Common Style project
 
+## v0.11.0
+
+### New and Changed functionality
+
+- Added ability for fetch-common-style.sh to run a callback after execution is complete
+
+### Bugfixes
+
+- Fixed bug where single quotes in header links content would cause a crash of the script
+
 ## v0.10.14
 
 ### Styling Changes
