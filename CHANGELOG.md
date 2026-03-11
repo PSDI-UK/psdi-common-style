@@ -1,5 +1,12 @@
 # Changelog for PSDI Common Style project
 
+## v0.11.1
+
+### Styling Changes
+
+- Made cursor change to a pointer when hovering over any anchor elements, even if they don't have an href (with added
+  "no-pointer" class to disable this)
+
 ## v0.11.0
 
 ### New and Changed functionality
