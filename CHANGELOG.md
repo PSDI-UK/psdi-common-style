@@ -1,5 +1,24 @@
 # Changelog for PSDI Common Style project
 
+## v0.12.0
+
+### Breaking Changes
+
+- Common style CSS cleaned up to make the variables all more understandable - variables starting with "--ifm-" are now
+  clarified to be the ones other stylesheets should rely on, with "--psdi-" variables intended for internal use only.
+  Any projects which relied on "--psdi-" variables make break in response to this, and must be updated to instead refer
+  to the proper "--ifm-" variables instead.
+
+### Styling Changes
+
+- Revamped appearance of dark mode:
+  - Hero sections and footer now retain same coloration as in light mode
+  - Primary background softened from black to a very dark blue
+  - Secondary background made a very dark grey
+  - Added thin borders (only present in dark mode) separating page sections
+  - Button backgrounds updated to a blue, slightly lighter than the hero/footer background
+  - Input field backgrounds now black, to stand out from normal background
+
 ## v0.11.1
 
 ### Styling Changes
