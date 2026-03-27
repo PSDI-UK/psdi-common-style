@@ -9,6 +9,11 @@
   Any projects which relied on "--psdi-" variables make break in response to this, and must be updated to instead refer
   to the proper "--ifm-" variables instead.
 
+### New and Changed functionality
+
+- If the user hasn't previously explicitly selected light or dark mode, the default mode will be automatically
+  determined from their system preferences
+
 ### Styling Changes
 
 - Revamped appearance of dark mode:
