@@ -54,7 +54,7 @@ const LIGHT_MODE = "light";
 const DARK_MODE = "dark";
 
 // Check if the page supports dark mode by detecting if the page has a toggle button on it
-const l_toggle_buttons = document.querySelectorAll("button.color-mode-toggle");
+const l_toggle_buttons = document.querySelectorAll("button.color-mode-toggle, button.toggleButton_gllP");
 if (l_toggle_buttons.length > 0) {
   // Load color mode from session storage and apply it if it's already been set, or else get the user's system preference
   let mode = sessionStorage.getItem("mode");
