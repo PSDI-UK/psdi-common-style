@@ -16,7 +16,7 @@ jobs:
   create-pr:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: create pull request
         run: gh pr create -B release -H ${{ env.BRANCH_NAME }} --title 'Merge ${{ env.BRANCH_NAME }} into release' --body '' || echo "Pull request already exists"
         env:
