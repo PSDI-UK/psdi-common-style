@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.12.4
+
+### Bugfixes
+
+- Various fixes for dark mode appearance on Docusaurus sites
+
 ## v0.12.3
 
 ### Bugfixes
