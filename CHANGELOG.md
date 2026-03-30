@@ -1,5 +1,12 @@
 # Changelog for PSDI Common Style project
 
+## v0.12.2
+
+### Bugfixes
+
+- Fixed bug where style would be set to dark mode on sites that don't support it if the user's system is set to dark
+  mode
+
 ## v0.12.0
 
 ### Breaking Changes
