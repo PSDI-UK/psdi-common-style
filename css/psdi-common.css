@@ -211,6 +211,10 @@
   --ifm-heading-color-secondary-f2: var(--psdi-dark-text-color-heading-f2);
   --ifm-heading-color-secondary-f3: var(--psdi-dark-text-color-heading-f3);
 
+  --ifm-menu-color-active         : var(--psdi-color-primary);
+  --ifm-breadcrumb-color-active   : var(--psdi-color-primary);
+  --ifm-pagination-nav-color-hover: var(--psdi-color-primary);
+
   --lm-display: inherit;
   --dm-display: none;
 
@@ -218,14 +222,16 @@
 
   /* Footer */
   --ifm-footer-background-color: var(--ifm-color-primary);
-  --ifn-footer-title-color     : var(--ifm-hero-text-color);
+  --ifm-footer-title-color     : var(--ifm-hero-text-color);
   --ifm-footer-color           : var(--ifm-hero-text-color);
   --ifm-footer-link-color      : var(--ifm-hero-text-color);
   --ifm-footer-link-hover-color: var(--ifm-hero-text-color);
 
 }
 
-[data-theme='dark'] {
+[data-theme='dark'],
+[data-theme='dark'] .hero--primary,
+[data-theme='dark'] .hero {
 
   /* This section sets the mode-dependent variables to the values that they should take in dark mode */
   --ifm-background-color           : var(--psdi-dm-bg-color-default);
@@ -286,6 +292,10 @@
   --ifm-heading-color-secondary-f1: var(--psdi-light-text-color-heading-f1);
   --ifm-heading-color-secondary-f2: var(--psdi-light-text-color-heading-f2);
   --ifm-heading-color-secondary-f3: var(--psdi-light-text-color-heading-f3);
+
+  --ifm-menu-color-active         : var(--ifm-color-info);
+  --ifm-breadcrumb-color-active   : var(--ifm-color-info);
+  --ifm-pagination-nav-color-hover: var(--ifm-color-info);
 
   --lm-display: none;
   --dm-display: inherit;
@@ -810,4 +820,21 @@ a svg {
 
 .footer__copyright__text {
   padding: 0;
+}
+
+/* Docusaurus-specific fixes */
+
+.button.button--secondary {
+  color: var(--ifm-font-color-secondary);
+}
+
+.table-of-contents__link--active,
+.table-of-contents__link--active code,
+.table-of-contents__link:hover,
+.table-of-contents__link:hover code {
+  color: var(--ifm-menu-color-active) !important;
+}
+
+.cardContainer_fWXF:hover {
+  border-color: var(--ifm-menu-color-active) !important;
 }
