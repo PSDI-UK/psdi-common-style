@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.12.3
+
+### Bugfixes
+
+- Fixed styling of clean buttons so that normal button styling doesn't override them
+
 ## v0.12.2
 
 ### Bugfixes
