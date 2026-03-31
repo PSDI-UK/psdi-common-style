@@ -2,6 +2,10 @@
 
 ## v0.12.5
 
+### Bugfixes
+
+- Fixed bug where button styling wasn't being applied to file-select buttons
+
 ### Styling Changes
 
 - Added styling for cancel buttons
