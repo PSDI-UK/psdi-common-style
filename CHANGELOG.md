@@ -1,5 +1,12 @@
 # Changelog for PSDI Common Style project
 
+## v0.12.5
+
+### Styling Changes
+
+- Added styling for cancel buttons
+- Adjust styling for disabled buttons
+
 ## v0.12.4
 
 ### Bugfixes
