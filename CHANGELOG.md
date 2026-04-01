@@ -1,5 +1,16 @@
 # Changelog for PSDI Common Style project
 
+## v0.12.5
+
+### Bugfixes
+
+- Fixed bug where button styling wasn't being applied to file-select buttons
+
+### Styling Changes
+
+- Added styling for cancel buttons
+- Adjust styling for disabled buttons
+
 ## v0.12.4
 
 ### Bugfixes
