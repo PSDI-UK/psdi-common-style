@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.12.6
+
+### Styling Changes
+
+- Add more color variables to the --ifm palette
+
 ## v0.12.5
 
 ### Bugfixes
