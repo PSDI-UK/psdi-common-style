@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.12.7
+
+### Styling Changes
+
+- Made variants of secondary colors more distinct in dark mode
+
 ## v0.12.6
 
 ### Styling Changes
