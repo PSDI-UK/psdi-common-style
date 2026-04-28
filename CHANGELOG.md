@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.12.8
+
+### Bugfixes
+
+- New button styling will no longer be incorrectly applied to tribe themes
+
 ## v0.12.7
 
 ### Styling Changes
