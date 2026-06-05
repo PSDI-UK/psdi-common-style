@@ -1,5 +1,15 @@
 # Changelog for PSDI Common Style project
 
+## v0.13.0
+
+### New and Changed functionality
+
+- Added link to PSDI sitemap to common footer
+
+### Styling Changes
+
+- Moved "Contact Us" link in footer to the "Connect" column
+
 ## v0.12.8
 
 ### Bugfixes
