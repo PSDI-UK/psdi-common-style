@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.13.1
+
+### Bugfixes
+
+- Fixed improper border styling being applied to options in multi-row select boxes
+
 ## v0.13.0
 
 ### New and Changed functionality
