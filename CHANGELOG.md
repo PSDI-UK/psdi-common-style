@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.14.0
+
+### New and Changed Functionality
+
+- Added function to disconnect light/dark mode toggle buttons for when a site wants to do its own custom handling
+
 ## v0.13.1
 
 ### Bugfixes
