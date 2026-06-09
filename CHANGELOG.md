@@ -5,6 +5,7 @@
 ### Bugfixes
 
 - Fixed improper border styling being applied to options in multi-row select boxes
+- Fixed improper styling being applied to buttons that are made with `input[type="button"]`
 
 ## v0.13.0
 
