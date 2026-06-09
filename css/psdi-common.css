@@ -402,7 +402,7 @@ input[type="radio"]:hover {
   cursor: pointer;
 }
 
-:is(select, select[size="0"]>option, select[size="1"]>option, input) {
+:is(select, select[size="0"]>option, select[size="1"]>option, input:not(input[type="button"])) {
   font-family     : var(--ifm-font-family-base);
   font-size       : var(--ifm-font-size-base);
   font-weight     : var(--ifm-font-weight-base);
@@ -413,7 +413,7 @@ input[type="radio"]:hover {
   line-height     : var(--ifm-line-height-base);
 }
 
-:is(select, option, input):disabled {
+:is(select, option, input:not(input[type="button"])):disabled {
   background-color: var(--ifm-input-disabled-bg-color);
   border-color    : var(--ifm-input-disabled-border-color);
 }
@@ -479,6 +479,11 @@ input[type="file"]:not(.tribe-common *):disabled::file-selector-button:hover {
 option:checked {
   background-color: var(--ifm-color-primary);
   color           : var(--ifm-hero-text-color);
+}
+
+button:hover,
+input.button:hover {
+  cursor: pointer;
 }
 
 *:has(> .max-width-box) {
@@ -697,6 +702,11 @@ a {
 a:hover {
   text-decoration: none;
   cursor         : pointer;
+}
+
+a.no-pointer {
+  cursor: default;
+  cursor: pointer;
 }
 
 a.no-pointer {
