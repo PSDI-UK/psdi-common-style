@@ -701,11 +701,6 @@ a:hover {
 
 a.no-pointer {
   cursor: default;
-  cursor: pointer;
-}
-
-a.no-pointer {
-  cursor: default;
 }
 
 /* For links which contain longer text content, don't underline any text in paragraphs,
