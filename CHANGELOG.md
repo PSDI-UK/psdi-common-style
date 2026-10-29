@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.15.0
+
+### New and Changed Functionality
+
+- Fonts are now self-hosted for GDPR compliance
+
 ## v0.14.0
 
 ### New and Changed Functionality
