@@ -4,7 +4,7 @@
 
 ### New and Changed Functionality
 
-- Fonts are now self-hosted for GDPR compliance
+- Fonts are now self-hosted for GDPR compliance. This requires changes to the `fetch-common-style.conf` files used by projects which fetch styles from this repo, adding variables `TARGET_FONTS_DIR` and `FONTS_LOC` (see the updated version of that file in this project) set to the proper values
 
 ## v0.14.0
 
