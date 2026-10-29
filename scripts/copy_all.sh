@@ -14,7 +14,15 @@ if [ -z $TARGET_CSS_DIR ]; then
   TARGET_CSS_DIR=$TARGET_BASE_DIR/css
 fi
 
-TARGET_DIR=$TARGET_CSS_DIR CONTENT_TYPE=css $SCRIPTS/copy_dir.sh
+# A custom script is used to copy CSS files, which handles updating the URLs pointing to font files
+TARGET_DIR=$TARGET_CSS_DIR $SCRIPTS/copy_css.sh
+
+# The ennvar TARGET_FONTS_DIR can be used to set the directory to contain css files
+if [ -z $TARGET_FONTS_DIR ]; then
+  TARGET_FONTS_DIR=$TARGET_BASE_DIR/fonts
+fi
+
+TARGET_DIR=$TARGET_FONTS_DIR CONTENT_TYPE=fonts $SCRIPTS/copy_dir.sh
 
 # The ennvar TARGET_IMG_DIR can be used to set the directory to contain image files
 if [ -z $TARGET_IMG_DIR ]; then
