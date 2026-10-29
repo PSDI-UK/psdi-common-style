@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.15.1
+
+### Bugfixes
+
+- Fixed an issue in the Lato font stylesheet where extra bold styling was overriding normal bold styling
+
 ## v0.15.0
 
 ### New and Changed Functionality
