@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.15.2
+
+### Styling Changes
+
+- Updated styling for announcement bars, including support for an "info" class with blue styling
+
 ## v0.15.1
 
 ### Bugfixes
