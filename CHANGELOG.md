@@ -1,5 +1,11 @@
 # Changelog for PSDI Common Style project
 
+## v0.15.3
+
+### Styling Changes
+
+- Added fallback font specifications to minimise page shuffling when fonts are being loaded
+
 ## v0.15.2
 
 ### Styling Changes
