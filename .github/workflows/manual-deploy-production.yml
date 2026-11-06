@@ -17,7 +17,7 @@ jobs:
     name: Deploy to production
     uses: PSDI-UK/psdi-github-workflows-public/.github/workflows/deploy.yml@b6c4f4e032d6732d3a0b671532b6787962df408a
     with:
-      deployment_repo: psdi_common-style-deployment
+      deployment_repo: psdi-common-style-deployment
       environment: production
       prod: true
       test: false
