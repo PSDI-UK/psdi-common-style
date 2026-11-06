@@ -25,12 +25,13 @@ jobs:
   # For the tag, we need something unique for each push, so we use the SHA of the latest commit
   deploy-stfc-dev-k8s:
     needs: [container-push]
-    uses: PSDI-UK/psdi-github-workflows-public/.github/workflows/deploy.yml@c0f51fb2cbe8d5e6fcb495549c5eb0063b627558
+    uses: PSDI-UK/psdi-github-workflows-public/.github/workflows/deploy.yml@b6c4f4e032d6732d3a0b671532b6787962df408a
     with:
       container_tag: ${{ github.sha }}
       deployment_repo: psdi-common-style
       environment: development
       prod: false
+      test: false
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
       deployment_app_id: ${{ secrets.DEPLOYMENT_APP_ID }}

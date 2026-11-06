@@ -30,12 +30,13 @@ jobs:
     # When ready to enable this step, remove the following line
     if: false
     needs: [tag, container-push]
-    uses: PSDI-UK/psdi-github-workflows-public/.github/workflows/deploy.yml@c0f51fb2cbe8d5e6fcb495549c5eb0063b627558
+    uses: PSDI-UK/psdi-github-workflows-public/.github/workflows/deploy.yml@b6c4f4e032d6732d3a0b671532b6787962df408a
     with:
       container_tag: ${{ needs.tag.outputs.container_tag }}
       deployment_repo: psdi-common-style-deployment
       environment: staging
       prod: false
+      test: false
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
       deployment_app_id: ${{ secrets.DEPLOYMENT_APP_ID }}

@@ -15,13 +15,12 @@ on:
 jobs:
   deploy-stfc-production-k8s:
     name: Deploy to production
-    uses: PSDI-UK/psdi-github-workflows-public/.github/workflows/deploy.yml@c0f51fb2cbe8d5e6fcb495549c5eb0063b627558
+    uses: PSDI-UK/psdi-github-workflows-public/.github/workflows/deploy.yml@b6c4f4e032d6732d3a0b671532b6787962df408a
     with:
       deployment_repo: psdi_common-style-deployment
       environment: production
       prod: true
-      # TODO: Check the URL below to ensure it matches where this is deployed to
-      origin: https://psdi_common-style.psdi.ac.uk
+      test: false
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
       deployment_app_id: ${{ secrets.DEPLOYMENT_APP_ID }}
