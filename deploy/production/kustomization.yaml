@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: psdi-common-style-production
+resources:
+  - ../base
+  - namespace.yaml
+  - psdi-common-style-ingress.yaml
+images:
+  - name: psdi-common-style
+    newName: ghcr.io/psdi-uk/psdi-common-style/psdi-common-style
+    newTag: 0.0.1
+patches:
+  - path: deployment-env-patch.yaml

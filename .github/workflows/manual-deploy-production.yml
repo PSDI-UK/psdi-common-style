@@ -1,0 +1,28 @@
+# Workflow for manually triggering deployment of latest release version to the production environment
+
+# It is intended that this workflow be manually triggered after the 'ci-release.yml' job has been shown
+# to successfully deploy the latest release version to the staging cluster.
+
+# To be more specific, this workflow deploys the container in the GitHub Container Registry namespace for this
+# repo whose tag corresponds to the highest version number, while only considering tags of the form 'v*.*.*',
+# where '*' signify non-negative integers.
+
+name: Manual Trigger - Deploy to production cluster
+run-name: Manual Trigger - Deploy to production cluster
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy-stfc-production-k8s:
+    name: Deploy to production
+    uses: PSDI-UK/psdi-github-workflows-public/.github/workflows/deploy.yml@c0f51fb2cbe8d5e6fcb495549c5eb0063b627558
+    with:
+      deployment_repo: psdi_common-style-deployment
+      environment: production
+      prod: true
+      # TODO: Check the URL below to ensure it matches where this is deployed to
+      origin: https://psdi_common-style.psdi.ac.uk
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
+      deployment_app_id: ${{ secrets.DEPLOYMENT_APP_ID }}
+      deployment_app_private_key: ${{ secrets.DEPLOYMENT_APP_PRIVATE_KEY }}
