@@ -6,12 +6,6 @@ on:
   workflow_dispatch:
   push:
     branches: ["main"]
-    paths:
-      - "**/ci-main.yml"
-      - "PROJECT_NAME/**"
-      - "tests/**"
-      - "Dockerfile"
-      - "pyproject.toml"
 
 jobs:
   container-push:
@@ -26,7 +20,7 @@ jobs:
 
   # Deploy to Kubernetes Job
   # Requires an environment, which must reflect the target environment as defined in the
-  # GitHub repository: https://github.com/PSDI-UK/PROJECT_NAME_HYPHEN/settings/environments
+  # GitHub repository: https://github.com/PSDI-UK/psdi-common-style/settings/environments
   # The downstream deploy job leverages on Environment specific secrets, which also must be defined
   # For the tag, we need something unique for each push, so we use the SHA of the latest commit
   deploy-stfc-dev-k8s:

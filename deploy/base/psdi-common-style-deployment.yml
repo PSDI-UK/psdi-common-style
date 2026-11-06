@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: psdi-common-style
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: psdi-common-style
+  template:
+    metadata:
+      labels:
+        app: psdi-common-style
+      annotations:
+        elastic.co/dataset: kubernetes.container_logs.psdi_common_style
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 100
+              podAffinityTerm:
+                labelSelector:
+                  matchExpressions:
+                    - key: app
+                      operator: In
+                      values:
+                        - psdi-common-style
+                topologyKey: "kubernetes.io/hostname"
+      containers:
+        - name: psdi-common-style
+          image: psdi-common-style
+          volumeMounts:
+            - mountPath: /tmp
+              name: uploads
+          ports:
+            - containerPort: 8000
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "250m"
+            limits:
+              memory: "1Gi" # this value may need to increase if application stability declines
+              cpu: "1000m"
+      imagePullSecrets:
+        - name: github-psdi-registry-credentials
+      volumes:
+        - name: uploads
+          emptyDir:
+            sizeLimit: 1Gi
