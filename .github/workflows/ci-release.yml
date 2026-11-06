@@ -8,20 +8,35 @@ on:
     branches: ["release"]
 
 jobs:
-  tag-release:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v7
-      - name: Bump version and push tag
-        id: tag_version
-        uses: mathieudutour/github-tag-action@v7
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          release_branches: release
-          pre_release_branches: rc-*
-      - name: Create a GitHub release
-        uses: ncipollo/release-action@v1
-        with:
-          tag: ${{ steps.tag_version.outputs.new_tag }}
-          name: Release ${{ steps.tag_version.outputs.new_tag }}
-          body: ${{ steps.tag_version.outputs.changelog }}
+  tag:
+    uses: PSDI-UK/psdi-github-workflows-public/.github/workflows/tag.yml@c0f51fb2cbe8d5e6fcb495549c5eb0063b627558
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
+
+  container-push:
+    uses: PSDI-UK/psdi-github-workflows-public/.github/workflows/container-push.yml@c0f51fb2cbe8d5e6fcb495549c5eb0063b627558
+    needs: [tag]
+    with:
+      container_tag: ${{ needs.tag.outputs.container_tag }}
+      service_name: psdi_common_style
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
+
+  # Deploy to Kubernetes Job
+  # Requires an environment, which must reflect the target environment as defined in the
+  # GitHub repository: https://github.com/PSDI-UK/psdi_common_style/settings/environments
+  # The downstream deploy job leverages on Environment specific secrets, which also must be defined
+  deploy-stfc-staging-k8s:
+    # When ready to enable this step, remove the following line
+    if: false
+    needs: [tag, container-push]
+    uses: PSDI-UK/psdi-github-workflows-public/.github/workflows/deploy.yml@c0f51fb2cbe8d5e6fcb495549c5eb0063b627558
+    with:
+      container_tag: ${{ needs.tag.outputs.container_tag }}
+      deployment_repo: psdi-common-style-deployment
+      environment: staging
+      prod: false
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
+      deployment_app_id: ${{ secrets.DEPLOYMENT_APP_ID }}
+      deployment_app_private_key: ${{ secrets.DEPLOYMENT_APP_PRIVATE_KEY }}
