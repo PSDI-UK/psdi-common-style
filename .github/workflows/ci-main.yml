@@ -28,7 +28,7 @@ jobs:
     uses: PSDI-UK/psdi-github-workflows-public/.github/workflows/deploy.yml@b6c4f4e032d6732d3a0b671532b6787962df408a
     with:
       container_tag: ${{ github.sha }}
-      deployment_repo: psdi-common-style
+      deployment_repo: psdi-common-style-deployment
       environment: development
       prod: false
       test: false
