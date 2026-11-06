@@ -33,7 +33,7 @@ spec:
             - mountPath: /tmp
               name: uploads
           ports:
-            - containerPort: 8000
+            - containerPort: 80
           resources:
             requests:
               memory: "512Mi"
