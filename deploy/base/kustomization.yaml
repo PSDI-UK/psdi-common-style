@@ -1,9 +1,0 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-resources:
-  - psdi-common-style-admin-role-binding.yml
-  - psdi-common-style-admin-role.yml
-  - psdi-common-style-sa-secret.yml
-  - psdi-common-style-sa.yml
-  - psdi-common-style-deployment.yml
-  - psdi-common-style-service.yml
