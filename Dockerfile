@@ -1,5 +1,5 @@
 #
-# Dockerfile for image containerising PSDI's Knowledge Base site
+# Dockerfile for image containerising the PSDI Common Style site
 #
 #
 # Building the image
