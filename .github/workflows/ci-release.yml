@@ -9,12 +9,12 @@ on:
 
 jobs:
   tag:
-    uses: PSDI-UK/psdi-github-workflows-public/.github/workflows/tag.yml@c0f51fb2cbe8d5e6fcb495549c5eb0063b627558
+    uses: PSDI-UK/psdi-github-workflows-public/.github/workflows/tag.yml@6077506c3723a31fad3b6ff02c84c16f2a8ffc6c
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
 
   container-push:
-    uses: PSDI-UK/psdi-github-workflows-public/.github/workflows/container-push.yml@c0f51fb2cbe8d5e6fcb495549c5eb0063b627558
+    uses: PSDI-UK/psdi-github-workflows-public/.github/workflows/container-push.yml@6077506c3723a31fad3b6ff02c84c16f2a8ffc6c
     needs: [tag]
     with:
       container_tag: ${{ needs.tag.outputs.container_tag }}
