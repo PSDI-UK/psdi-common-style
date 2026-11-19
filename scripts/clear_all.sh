@@ -16,6 +16,13 @@ fi
 
 TARGET_DIR=$TARGET_CSS_DIR CONTENT_TYPE=css $SCRIPTS/clear_dir.sh
 
+# The ennvar TARGET_FONTS_DIR can be used to set the directory to contain font files
+if [ -z $TARGET_FONTS_DIR ]; then
+  TARGET_FONTS_DIR=$TARGET_BASE_DIR/fonts
+fi
+
+TARGET_DIR=$TARGET_FONTS_DIR CONTENT_TYPE=fonts $SCRIPTS/clear_dir.sh
+
 # The ennvar TARGET_IMG_DIR can be used to set the directory to contain image files
 if [ -z $TARGET_IMG_DIR ]; then
   TARGET_IMG_DIR=$TARGET_BASE_DIR/img
