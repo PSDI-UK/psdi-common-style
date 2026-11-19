@@ -1,5 +1,15 @@
 # Changelog for PSDI Common Style project
 
+## v0.15.4
+
+### Dependency Changes
+
+- The version of Nginx used in the Dockerfile is now explicitly specified
+
+### Bugfixes
+
+- Fixed an issue where the generated asset cleanup script would not clean up fonts
+
 ## v0.15.3
 
 ### Styling Changes
